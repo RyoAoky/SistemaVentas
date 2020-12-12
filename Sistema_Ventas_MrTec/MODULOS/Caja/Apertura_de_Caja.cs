@@ -37,7 +37,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    //MessageBox.Show(ex.Message);
                 }
             }
 
