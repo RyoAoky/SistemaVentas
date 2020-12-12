@@ -26,7 +26,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
             System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.CurrencyGroupSeparator = ",";
             System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator = ".";
             System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberGroupSeparator = ",";
-            //ManagementObjectSearcher MOS = new ManagementObjectSearcher("Select * From Win32_BaseBoard");
+            ManagementObjectSearcher MOS = new ManagementObjectSearcher("Select * From Win32_BaseBoard");
             foreach (ManagementObject getserial in MOS.Get())
             {
                 lblSerialPc.Text = getserial.Properties["SerialNumber"].Value.ToString();
