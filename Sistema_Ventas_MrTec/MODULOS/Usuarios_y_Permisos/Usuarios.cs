@@ -115,8 +115,7 @@ namespace Sistema_Ventas_MrTec
                     }
                     catch (Exception ex)
                     {
-
-
+                        MessageBox.Show(ex.Message);
                     }
 
 
@@ -124,7 +123,7 @@ namespace Sistema_Ventas_MrTec
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 

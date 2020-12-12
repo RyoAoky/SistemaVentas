@@ -161,7 +161,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
 
 
@@ -436,7 +436,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
         {
             try
             {
-                string resultado;
+                //string resultado;
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = Conexion.ConexionMaestra.Conexion;
 
@@ -459,7 +459,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
         {
             try
             {
-                string resultado;
+                //string resultado;
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = Conexion.ConexionMaestra.Conexion;
 
@@ -507,7 +507,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 panel_Restaurar_Contraseña.Visible = false;
 
             }
-            catch (Exception ex)
+            catch 
             {
                 MessageBox.Show("ERROR, revisa tu correo Electronico", "Restauracion de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
