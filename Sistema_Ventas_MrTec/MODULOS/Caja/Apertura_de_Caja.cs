@@ -16,6 +16,11 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
         public Apertura_de_Caja()
         {
             InitializeComponent();
+           
+        }
+
+        private void Apertura_de_Caja_Load(object sender, EventArgs e)
+        {
             System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("es-CO");
             System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.CurrencyDecimalSeparator = ".";
             System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.CurrencyGroupSeparator = ",";
@@ -35,8 +40,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
                     MessageBox.Show(ex.Message);
                 }
             }
-        }
 
+        }
         private void btnIniciar_Apertura_Click(object sender, EventArgs e)
         {
             try

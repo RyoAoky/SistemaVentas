@@ -292,6 +292,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
             this.MenuStrip1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.Load += new System.EventHandler(this.Apertura_de_Caja_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datalistado_caja)).EndInit();
             this.ResumeLayout(false);
 

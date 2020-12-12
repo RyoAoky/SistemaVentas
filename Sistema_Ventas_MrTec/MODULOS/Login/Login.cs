@@ -26,15 +26,19 @@ namespace Sistema_Ventas_MrTec.MODULOS
         public Login()
         {
             InitializeComponent();
+            
+        }
+        private void Login_Load(object sender, EventArgs e)
+        {
+
             dibujarUsuario();
             //mostrar_correos();
             panel_Inicio_de_Sesion.Visible = false;
-            panel_Restaurar_Contraseña.Visible = false;            
+            panel_Restaurar_Contraseña.Visible = false;
             progressBar1.Visible = false;
-            
+
             timer1.Start();
         }
-
         public void dibujarUsuario()
         {
             SqlConnection conn = new SqlConnection();
@@ -723,8 +727,6 @@ namespace Sistema_Ventas_MrTec.MODULOS
             panel_Inicio_de_Sesion.Visible = false;
             Panel_seleccionar_Cuenta.Visible = true;
         }
-
-
     }
     
 }
