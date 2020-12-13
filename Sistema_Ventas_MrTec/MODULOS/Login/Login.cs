@@ -15,6 +15,7 @@ using System.Management;
 using System.Xml;
 using Sistema_Ventas_MrTec.MODULOS.Caja;
 using Sistema_Ventas_MrTec.MODULOS.Ventas_Menu_Principal;
+using System.Deployment;
 
 namespace Sistema_Ventas_MrTec.MODULOS
 {
@@ -26,8 +27,43 @@ namespace Sistema_Ventas_MrTec.MODULOS
         public Login()
         {
             InitializeComponent();
+
             
+            //string proc = "prueba1";
+            //string[] v1 = { "@nombP", "@appPrueba", "@fecha" };
+            //string[] dat = { "nombre1", Int16.Parse("1").ToString(), DateTime.Now.ToString() };
+            //ejecutar_Procedimientos_Almacenados(proc, v1.Length, v1, dat);
         }
+        //private void ejecutar_Procedimientos_Almacenados(string proc, int cantV, string[] Valores, string[] datos,int tipCMD)
+        //{
+        //    try
+        //    {
+
+        //        SqlConnection conn = new SqlConnection();
+        //        conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
+        //        conn.Open();
+        //        SqlCommand cmd = new SqlCommand();
+        //        cmd = new SqlCommand(proc, conn);
+        //        cmd.CommandType = CommandType.StoredProcedure;
+
+        //        for (int i = 0; i < cantV; i++)
+        //        {
+        //            cmd.Parameters.AddWithValue(Valores.GetValue(i).ToString(), datos.GetValue(i).ToString());
+        //        }
+        //        if (tipCMD == 0)
+        //        {
+        //            cmd.ExecuteNonQuery();
+        //        }else if (tipCMD == 1)
+        //        {
+        //            cmd.ExecuteScalar();
+        //        }
+        //        conn.Close();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //}
         private void Login_Load(object sender, EventArgs e)
         {
 
@@ -42,7 +78,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
         public void dibujarUsuario()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            //conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
             conn.Open();
             SqlCommand cmd = new SqlCommand();
             cmd = new SqlCommand("SELECT * from USUARIO2 where Estado='ACTIVO'", conn);
@@ -115,18 +151,22 @@ namespace Sistema_Ventas_MrTec.MODULOS
 
         private void Listar_aperturas_de_cierre_de_detalle_de_cierre_de_caja()
         {
+            //string proc = "mostrar_movimientos_de_caja_por_Serial";
+            //string[] v1 = { "@Serial" };
+            //string[] dat = {lblSerialPc.Text};
+            //ejecutar_Procedimientos_Almacenados(proc, v1.Length, v1, dat,0);
             try
             {
                 DataTable dt1 = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_movimientos_de_caja_por_Serial", con);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
                 da.SelectCommand.Parameters.AddWithValue("@Serial", lblSerialPc.Text);
-                
+
                 da.Fill(dt1);
                 data_Listado_CierreCaja.DataSource = dt1;
                 con.Close();
@@ -137,20 +177,16 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 MessageBox.Show(ex.Message);
 
             }
-
-
         }
         private void MOSTRAR_PERMISOS()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
 
             SqlCommand com = new SqlCommand("mostrar_permisos_por_usuario_ROL_UNICO", con);
             com.CommandType = CommandType.StoredProcedure;
             com.Parameters.AddWithValue("@Login", txtlogin.Text);
             string importe;
-
-
             try
             {
                 con.Open();
@@ -163,9 +199,6 @@ namespace Sistema_Ventas_MrTec.MODULOS
             {
                 MessageBox.Show(ex.Message);
             }
-
-
-
         }
 
         private void contar_aperturas_de_detalles_cierre_de_caja()
@@ -192,7 +225,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             try
             {
                 SqlConnection conn = new SqlConnection();
-                conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                //conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 conn.Open();
 
 
@@ -317,7 +350,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt1 = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_movimientos_de_caja_por_Serial_y_Usuario", con);
@@ -357,7 +390,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 da = new SqlDataAdapter("validar_usuario", con);
@@ -384,7 +417,6 @@ namespace Sistema_Ventas_MrTec.MODULOS
 
         }
 
-
         private void mostrar_correos()
         {
             try
@@ -392,7 +424,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 da = new SqlDataAdapter("select Correo from Usuario2 where Estado='ACTIVO'", con);
@@ -435,18 +467,14 @@ namespace Sistema_Ventas_MrTec.MODULOS
         private void mostrar_correo_por_correo()
         {
             try
-            {
-                //string resultado;
+            {                
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
-
-
+                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 SqlCommand da = new SqlCommand("buscar_usuario_por_correo", con);
                 da.CommandType = CommandType.StoredProcedure;
                 da.Parameters.AddWithValue("@correo", txtcorreo.Text);
                 con.Open();
                 lblresultadoPass.Text = Convert.ToString(da.ExecuteScalar());
-                //lblresultadoUser.Text = Convert.ToString(da.ExecuteScalar());
                 con.Close();
             }
             catch (Exception ex)
@@ -461,7 +489,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             {
                 //string resultado;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
 
 
                 SqlCommand da = new SqlCommand("buscar_usuario1_por_correo", con);
@@ -626,7 +654,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt1= new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_cajas_por_Serial_de_DiscoDuro", con);
@@ -727,6 +755,5 @@ namespace Sistema_Ventas_MrTec.MODULOS
             panel_Inicio_de_Sesion.Visible = false;
             Panel_seleccionar_Cuenta.Visible = true;
         }
-    }
-    
+    }    
 }

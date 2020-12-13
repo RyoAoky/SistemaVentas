@@ -51,6 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion\ConexionMaestra.cs" />
+    <Compile Include="Conexion\Desencrytacion.cs" />
+    <Compile Include="Conexion\Encryptacion.cs" />
     <Compile Include="Conexion\Tamaño_automatico_de_datatables.cs" />
     <Compile Include="MODULOS\Caja\Apertura_de_Caja.cs">
       <SubType>Form</SubType>
@@ -69,6 +71,12 @@
     </Compile>
     <Compile Include="MODULOS\Login\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODULOS\Panel_de_Administracion_del_Software\Conexion_Manual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Panel_de_Administracion_del_Software\Conexion_Manual.Designer.cs">
+      <DependentUpon>Conexion_Manual.cs</DependentUpon>
     </Compile>
     <Compile Include="MODULOS\Usuarios_y_Permisos\Usuarios.cs">
       <SubType>Form</SubType>
@@ -92,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MODULOS\Login\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MODULOS\Panel_de_Administracion_del_Software\Conexion_Manual.resx">
+      <DependentUpon>Conexion_Manual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MODULOS\Usuarios_y_Permisos\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>

@@ -151,7 +151,7 @@ namespace Sistema_Ventas_MrTec
                 try
                 {
                     SqlConnection conn = new SqlConnection();
-                    conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                    //conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
                     conn.Open();
 
 
@@ -217,7 +217,7 @@ namespace Sistema_Ventas_MrTec
 
 
                                     SqlConnection con = new SqlConnection();
-                                    con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                                    //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                                     con.Open();
                                     SqlCommand cmd = new SqlCommand();
                                     cmd = new SqlCommand("insertar_usuario", con);
@@ -272,7 +272,7 @@ namespace Sistema_Ventas_MrTec
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 //SqlCommand cmd = new SqlCommand();
@@ -442,7 +442,7 @@ namespace Sistema_Ventas_MrTec
                                 try
                                 {
                                     SqlConnection con = new SqlConnection();
-                                    con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                                    //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                                     con.Open();
                                     cmd = new SqlCommand("eliminar_usuario", con);
                                     cmd.CommandType = CommandType.StoredProcedure;
@@ -501,7 +501,7 @@ namespace Sistema_Ventas_MrTec
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 da = new SqlDataAdapter("buscar_usuario", con);
