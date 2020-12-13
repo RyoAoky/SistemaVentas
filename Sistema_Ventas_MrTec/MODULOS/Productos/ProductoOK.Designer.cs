@@ -429,6 +429,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox2.TabIndex = 359;
             this.PictureBox2.TabStop = false;
+            this.PictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // ToolStripMenuItem5
             // 

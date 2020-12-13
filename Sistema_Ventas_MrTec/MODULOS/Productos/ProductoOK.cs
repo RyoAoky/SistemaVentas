@@ -15,5 +15,10 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
         {
             InitializeComponent();
         }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
