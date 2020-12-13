@@ -27,8 +27,8 @@ namespace Sistema_Ventas_MrTec.MODULOS
         public Login()
         {
             InitializeComponent();
-
             
+
             //string proc = "prueba1";
             //string[] v1 = { "@nombP", "@appPrueba", "@fecha" };
             //string[] dat = { "nombre1", Int16.Parse("1").ToString(), DateTime.Now.ToString() };
@@ -66,9 +66,9 @@ namespace Sistema_Ventas_MrTec.MODULOS
         //}
         private void Login_Load(object sender, EventArgs e)
         {
-
+            
             dibujarUsuario();
-            //mostrar_correos();
+            mostrar_correos();
             panel_Inicio_de_Sesion.Visible = false;
             panel_Restaurar_Contraseña.Visible = false;
             progressBar1.Visible = false;
@@ -78,7 +78,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
         public void dibujarUsuario()
         {
             SqlConnection conn = new SqlConnection();
-            //conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
             conn.Open();
             SqlCommand cmd = new SqlCommand();
             cmd = new SqlCommand("SELECT * from USUARIO2 where Estado='ACTIVO'", conn);
@@ -160,7 +160,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt1 = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_movimientos_de_caja_por_Serial", con);
@@ -181,7 +181,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
         private void MOSTRAR_PERMISOS()
         {
             SqlConnection con = new SqlConnection();
-            //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            con.ConnectionString = Conexion.ConexionMaestra.Conexion;
 
             SqlCommand com = new SqlCommand("mostrar_permisos_por_usuario_ROL_UNICO", con);
             com.CommandType = CommandType.StoredProcedure;
@@ -225,7 +225,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             try
             {
                 SqlConnection conn = new SqlConnection();
-                //conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 conn.Open();
 
 
@@ -350,7 +350,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt1 = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_movimientos_de_caja_por_Serial_y_Usuario", con);
@@ -390,7 +390,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 da = new SqlDataAdapter("validar_usuario", con);
@@ -424,7 +424,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 da = new SqlDataAdapter("select Correo from Usuario2 where Estado='ACTIVO'", con);
@@ -469,7 +469,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             try
             {                
                 SqlConnection con = new SqlConnection();
-                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 SqlCommand da = new SqlCommand("buscar_usuario_por_correo", con);
                 da.CommandType = CommandType.StoredProcedure;
                 da.Parameters.AddWithValue("@correo", txtcorreo.Text);
@@ -489,7 +489,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             {
                 //string resultado;
                 SqlConnection con = new SqlConnection();
-                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
 
 
                 SqlCommand da = new SqlCommand("buscar_usuario1_por_correo", con);
@@ -654,7 +654,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt1= new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_cajas_por_Serial_de_DiscoDuro", con);

@@ -44,7 +44,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
 
 
                 SqlConnection con = new SqlConnection();
-                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd = new SqlCommand("cerrar_caja", con);
@@ -73,7 +73,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_cajas_por_Serial_de_DiscoDuro", con);

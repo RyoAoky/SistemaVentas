@@ -78,6 +78,12 @@
     <Compile Include="MODULOS\Panel_de_Administracion_del_Software\Conexion_Manual.Designer.cs">
       <DependentUpon>Conexion_Manual.cs</DependentUpon>
     </Compile>
+    <Compile Include="MODULOS\Productos\ProductoOK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Productos\ProductoOK.Designer.cs">
+      <DependentUpon>ProductoOK.cs</DependentUpon>
+    </Compile>
     <Compile Include="MODULOS\Usuarios_y_Permisos\Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MODULOS\Panel_de_Administracion_del_Software\Conexion_Manual.resx">
       <DependentUpon>Conexion_Manual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MODULOS\Productos\ProductoOK.resx">
+      <DependentUpon>ProductoOK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MODULOS\Usuarios_y_Permisos\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>

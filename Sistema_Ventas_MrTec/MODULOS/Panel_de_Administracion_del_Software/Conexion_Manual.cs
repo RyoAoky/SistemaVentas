@@ -66,7 +66,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Panel_de_Administracion_del_Software
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_usuario", con);

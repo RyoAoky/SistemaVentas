@@ -13,7 +13,7 @@ namespace Sistema_Ventas_MrTec.Conexion
         //public static string Conexion = "Provider=SQLOLEDB;Data Source=SQL5097.site4now.net;Initial Catalog=;User Id=DB_A699E9_mrtec_admin;Password=admin1234";
         //SqlConnection conexion = new SqlConnection(Conexion1);
 
-        public static string conexion = Convert.ToString(Conexion.Desencrytacion.checkServer());
+        public static string Conexion = Convert.ToString(Sistema_Ventas_MrTec.Conexion.Desencrytacion.checkServer());
 
         //public static string Conexion = "Data source=DESKTOP-M0SCQGB;Initial Catalog=Sis_Ventas_MrTec;Integrated Security= true";
 
