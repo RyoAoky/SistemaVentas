@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.IO;
-using System.Net.Mail;
-
-using System.Net;
-using System.Management;
-using System.Xml;
-using Sistema_Ventas_MrTec.MODULOS.Caja;
+﻿using Sistema_Ventas_MrTec.MODULOS.Caja;
 using Sistema_Ventas_MrTec.MODULOS.Ventas_Menu_Principal;
-using System.Deployment;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
+using System.Management;
+using System.Net;
+using System.Net.Mail;
+using System.Windows.Forms;
 
 namespace Sistema_Ventas_MrTec.MODULOS
 {
@@ -24,10 +17,13 @@ namespace Sistema_Ventas_MrTec.MODULOS
         private int contador;
         private int contador_Cajas;
         private int contador_mostrar_movimientos_de_caja_por_Serial_y_Usuario;
+        public static String idusuariovariable;
+        public static String idcajavariable;
+
         public Login()
         {
             InitializeComponent();
-            
+
 
             //string proc = "prueba1";
             //string[] v1 = { "@nombP", "@appPrueba", "@fecha" };
@@ -66,9 +62,10 @@ namespace Sistema_Ventas_MrTec.MODULOS
         //}
         private void Login_Load(object sender, EventArgs e)
         {
-            
+            //mostrar_movimientos_de_caja_por_Serial_y_Usuario();
             dibujarUsuario();
-            mostrar_correos();
+            cargar_usuario();
+            //mostrar_correos();
             panel_Inicio_de_Sesion.Visible = false;
             panel_Restaurar_Contraseña.Visible = false;
             progressBar1.Visible = false;
@@ -215,15 +212,16 @@ namespace Sistema_Ventas_MrTec.MODULOS
             }
             else
             {
-                btn_iniciarSesion.PerformClick();                
+                btn_iniciarSesion.PerformClick();
             }
-            
+
         }
 
         private void aperturar_detalle_de_cierre_de_caja()
         {
             try
             {
+                cargar_usuario();
                 SqlConnection conn = new SqlConnection();
                 conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 conn.Open();
@@ -247,13 +245,13 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 cmd.Parameters.AddWithValue("@totalreal", "0.00");
                 cmd.Parameters.AddWithValue("@estado", "CAJA APERTURADA");
                 cmd.Parameters.AddWithValue("@diferencia", "0.00");
-                
+
                 cmd.Parameters.AddWithValue("@id_caja", txtidcaja.Text);
 
 
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                
+
             }
             catch (Exception ex)
             {
@@ -262,14 +260,15 @@ namespace Sistema_Ventas_MrTec.MODULOS
         }
         private void Iniciar_Sesion_OK()
         {
-            
+
             cargar_usuario();
             contar();
-            
+
             try
             {
                 IDUSUARIO.Text = dataListado.SelectedCells[1].Value.ToString();
                 txtnombre.Text = dataListado.SelectedCells[2].Value.ToString();
+                idusuariovariable = IDUSUARIO.Text;
             }
             catch
             {
@@ -281,7 +280,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 contar_aperturas_de_detalles_cierre_de_caja();
 
 
-                string rol =lblRol.Text;
+                string rol = lblRol.Text;
                 if (contador_Cajas == 0 & lblRol.Text != "Solo Ventas (No está autorizado para manejar dinero)")
                 {
                     aperturar_detalle_de_cierre_de_caja();
@@ -299,27 +298,31 @@ namespace Sistema_Ventas_MrTec.MODULOS
                         {
                             lblusuario_queinicioCaja.Text = data_Listado_CierreCaja.SelectedCells[1].Value.ToString();
                             lblnombredeCajero.Text = data_Listado_CierreCaja.SelectedCells[2].Value.ToString();
+
                         }
-                        catch(Exception e)
+                        catch (Exception e)
                         {
                             MessageBox.Show(e.Message);
                         }
-                        if (contador_mostrar_movimientos_de_caja_por_Serial_y_Usuario == 0)
-                        {                            
-                            if(lblusuario_queinicioCaja.Text != "admin" & txtlogin.Text=="admin")
+                        if (contador_mostrar_movimientos_de_caja_por_Serial_y_Usuario != 0)
+                        {
+                            if (lblusuario_queinicioCaja.Text != "admin" & txtlogin.Text == "admin")
                             {
                                 MessageBox.Show("Continuaras Turno de *" + lblnombredeCajero.Text + " Todos los Registros seran con ese Usuario", "Caja Iniciada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 lblpermisodeCaja.Text = "Correcto";
-                                
-                            }else
+
+                            }
+                            else
                             if (lblusuario_queinicioCaja.Text == "admin" & txtlogin.Text == "admin")
                             {
                                 lblpermisodeCaja.Text = "Correcto";
-                            }else if (lblusuario_queinicioCaja.Text != txtlogin.Text)
+                            }
+                            else if (lblusuario_queinicioCaja.Text != txtlogin.Text)
                             {
-                                MessageBox.Show("Para poder continuar con el turno de " + lblnombredeCajero.Text + ", debes inciar sesion con este usuario " + lblusuario_queinicioCaja.Text +" ó con el usuario Admin", "Iniciar Sesion",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                                MessageBox.Show("Para poder continuar con el turno de " + lblnombredeCajero.Text + ", debes inciar sesion con este usuario " + lblusuario_queinicioCaja.Text + " ó con el usuario Admin", "Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 lblpermisodeCaja.Text = "vacio";
-                            }else if(lblusuario_queinicioCaja.Text == txtlogin.Text)
+                            }
+                            else if (lblusuario_queinicioCaja.Text == txtlogin.Text)
                             {
                                 lblpermisodeCaja.Text = "Correcto";
                             }
@@ -347,7 +350,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
         {
             try
             {
-                DataTable dt1 = new DataTable();
+                DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = Conexion.ConexionMaestra.Conexion;
@@ -358,8 +361,8 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 da.SelectCommand.Parameters.AddWithValue("@Serial", lblSerialPc.Text);
                 da.SelectCommand.Parameters.AddWithValue("@idUsuario", IDUSUARIO.Text);
 
-                da.Fill(dt1);
-                dataListado_movimiento_validar.DataSource = dt1;
+                da.Fill(dt);
+                dataListado_movimiento_validar.DataSource = dt;
                 con.Close();
 
             }
@@ -400,7 +403,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 da.Fill(dt);
                 dataListado.DataSource = dt;
                 con.Close();
-                
+
             }
             catch (Exception ex)
             {
@@ -446,7 +449,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            panel_Restaurar_Contraseña.Visible = true;            
+            panel_Restaurar_Contraseña.Visible = true;
             Panel_seleccionar_Cuenta.Visible = false;
             mostrar_correos();
         }
@@ -461,13 +464,13 @@ namespace Sistema_Ventas_MrTec.MODULOS
         {
             panel_Restaurar_Contraseña.Visible = false;
             Panel_seleccionar_Cuenta.Visible = true;
-            
+
         }
 
         private void mostrar_correo_por_correo()
         {
             try
-            {                
+            {
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 SqlCommand da = new SqlCommand("buscar_usuario_por_correo", con);
@@ -512,7 +515,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             {
                 MailMessage correos = new MailMessage();
                 SmtpClient envios = new SmtpClient();
-                
+
                 correos.To.Clear();
                 correos.Body = "";
                 correos.Subject = "";
@@ -535,7 +538,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 panel_Restaurar_Contraseña.Visible = false;
 
             }
-            catch 
+            catch
             {
                 MessageBox.Show("ERROR, revisa tu correo Electronico", "Restauracion de contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -548,15 +551,15 @@ namespace Sistema_Ventas_MrTec.MODULOS
             mostrar_usuario_por_correo();
             mostrar_correo_por_correo();
             richTextBox1.Text = richTextBox1.Text.Replace("@pass", lblresultadoPass.Text);
-            richTextBox1.Text = richTextBox1.Text.Replace("@user", lblresultadoUser.Text);            
+            richTextBox1.Text = richTextBox1.Text.Replace("@user", lblresultadoUser.Text);
             enviarCorreo("pruebas_app@mistertec.net.pe", "Palomares123", richTextBox1.Text, "Recuperacion de Contraseña", txtcorreo.Text, "");
-            
+
             Panel_seleccionar_Cuenta.Visible = true;
 
         }
 
         private void btn1_Click(object sender, EventArgs e)
-        {            
+        {
             txtpaswwor.Text = txtpaswwor.Text + "1";
         }
 
@@ -651,7 +654,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
         {
             try
             {
-                DataTable dt1= new DataTable();
+                DataTable dt1 = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = Conexion.ConexionMaestra.Conexion;
@@ -705,7 +708,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
 
         private void btn_iniciarSesion_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Contraseña incorrectar, intente nuevamente","Inicio de Sesion",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            MessageBox.Show("Contraseña incorrectar, intente nuevamente", "Inicio de Sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             txtpaswwor.Clear();
         }
 
@@ -713,7 +716,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
         {
             if (progressBar1.Value < 100)
             {
-                panel5.Visible = false;                
+                panel5.Visible = false;
                 panel_Inicio_de_Sesion.Visible = false;
                 pictureBox3.Visible = true;
                 BackColor = Color.FromArgb(26, 26, 26);
@@ -755,5 +758,5 @@ namespace Sistema_Ventas_MrTec.MODULOS
             panel_Inicio_de_Sesion.Visible = false;
             Panel_seleccionar_Cuenta.Visible = true;
         }
-    }    
+    }
 }

@@ -46,16 +46,18 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
         {
             try
             {
-                DataTable dt1 = new DataTable();
-                SqlDataAdapter da;
+                
+                
                 SqlConnection con = new SqlConnection();
                 con.ConnectionString = Conexion.ConexionMaestra.Conexion;
                 con.Open();
-
-                da = new SqlDataAdapter("editar_dinero_caja_principal", con);
-                da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.AddWithValue("@idCaja", txtidcaja.Text);
-                da.SelectCommand.Parameters.AddWithValue("@saldo", txtmonto.Text);
+                SqlCommand da = new SqlCommand();
+                da = new SqlCommand("editar_dinero_caja_principal", con);
+                da.CommandType = CommandType.StoredProcedure;
+                da.Parameters.AddWithValue("@idCaja", txtidcaja.Text);
+                da.Parameters.AddWithValue("@saldo", txtmonto.Text);
+                da.ExecuteNonQuery();
+                con.Close();
 
                 this.Hide();
                 Ventas_Menu_Principal.Ventas_Menu_Principal_OK frm = new Ventas_Menu_Principal.Ventas_Menu_Principal_OK();

@@ -25,6 +25,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             BtnGuardarCambios.Visible = false;
             BtnCancelar.Visible = false;
             btnNuevoGrupo.Visible = true;
+            mostrar_grupos();
+            txtgrupo.Clear();
         }
         
         private void ProductoOK_Load(object sender, EventArgs e)
@@ -76,7 +78,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                 con.Close();
                 mostrar_grupos();
                 lblIdGrupo.Text = datalistadoGrupos.SelectedCells[2].Value.ToString();
-                txtgrupo.Text = datalistadoGrupos.SelectedCells[2].Value.ToString();
+                txtgrupo.Text = datalistadoGrupos.SelectedCells[3].Value.ToString();
 
                 PanelGRUPOSSELECT.Visible = false;
                 btnGuardar_grupo.Visible = false;
@@ -118,6 +120,88 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             btnNuevoGrupo.Visible = true;
             txtgrupo.Clear();
             mostrar_grupos();
+        }
+
+        private void TGUARDAR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TGUARDARCAMBIOS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void insertar_productos()
+        {
+            if (txtpreciomayoreo.Text == "0" | txtpreciomayoreo.Text == "") txtapartirde.Text = "0";
+
+            try
+            {
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd = new SqlCommand("insertar_Producto", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Descripcion", txtdescripcion.Text);
+                cmd.Parameters.AddWithValue("@Imagen", ".");
+                cmd.Parameters.AddWithValue("@Precio_de_compra", txtcosto.Text);
+                cmd.Parameters.AddWithValue("@Precio_de_venta", TXTPRECIODEVENTA2.Text);
+                cmd.Parameters.AddWithValue("@Codigo", txtcodigodebarras.Text);
+                cmd.Parameters.AddWithValue("@A_partir_de", txtapartirde.Text);
+                cmd.Parameters.AddWithValue("@Impuesto", 0);
+                cmd.Parameters.AddWithValue("@Precio_mayoreo", txtpreciomayoreo.Text);
+                if (porunidad.Checked == true) txtse_vende_a.Text = "Unidad";
+                if (agranel.Checked == true) txtse_vende_a.Text = "Granel";
+
+                cmd.Parameters.AddWithValue("@Se_vende_a", txtse_vende_a.Text);
+                cmd.Parameters.AddWithValue("@Id_grupo", lblIdGrupo.Text);
+                if (PANELINVENTARIO.Visible == true)
+                {
+                    cmd.Parameters.AddWithValue("@Usa_inventarios", "SI");
+                    cmd.Parameters.AddWithValue("@Stock_minimo", txtstockminimo.Text);
+                    cmd.Parameters.AddWithValue("@Stock", txtstock2.Text);
+
+                    if (No_aplica_fecha.Checked == true)
+                    {
+                        cmd.Parameters.AddWithValue("@Fecha_de_vencimiento", "NO APLICA");
+                    }
+
+                    if (No_aplica_fecha.Checked == false)
+                    {
+                        cmd.Parameters.AddWithValue("@Fecha_de_vencimiento", txtfechaoka.Text);
+                    }
+
+
+                }
+                if (PANELINVENTARIO.Visible == false)
+                {
+                    cmd.Parameters.AddWithValue("@Usa_inventarios", "NO");
+                    cmd.Parameters.AddWithValue("@Stock_minimo", 0);
+                    cmd.Parameters.AddWithValue("@Fecha_de_vencimiento", "NO APLICA");
+                    cmd.Parameters.AddWithValue("@Stock", "Ilimitado");
+
+                }
+                cmd.Parameters.AddWithValue("@Fecha", DateTime.Today);
+                cmd.Parameters.AddWithValue("@Motivo", "Registro inicial de Producto");
+                cmd.Parameters.AddWithValue("@Cantidad ", txtstock2.Text);
+                cmd.Parameters.AddWithValue("@Id_usuario", MODULOS.Login.idusuariovariable);
+                cmd.Parameters.AddWithValue("@Tipo", "ENTRADA");
+                cmd.Parameters.AddWithValue("@Estado", "CONFIRMADO");
+                cmd.Parameters.AddWithValue("@Id_caja", MODULOS.Login.idcajavariable);
+
+                cmd.ExecuteNonQuery();
+
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

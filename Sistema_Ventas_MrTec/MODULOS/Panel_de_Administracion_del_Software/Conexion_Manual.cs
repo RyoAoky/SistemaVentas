@@ -70,10 +70,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Panel_de_Administracion_del_Software
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_usuario", con);
-
-
-
-
                 da.Fill(dt);
                 datalistado.DataSource = dt;
                 con.Close();
@@ -90,6 +86,16 @@ namespace Sistema_Ventas_MrTec.MODULOS.Panel_de_Administracion_del_Software
 
             Conexion.Tamaño_automatico_de_datatables.Multilinea(ref datalistado);
 
+        }
+
+        private void txtCnString_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
