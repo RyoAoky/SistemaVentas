@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Security.Cryptography;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Sistema_Ventas_MrTec.Conexion
 {
@@ -95,7 +96,9 @@ namespace Sistema_Ventas_MrTec.Conexion
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 return String.Concat(Bits);
+                
             }
         }
     }

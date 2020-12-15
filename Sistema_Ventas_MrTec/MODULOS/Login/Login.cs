@@ -70,6 +70,11 @@ namespace Sistema_Ventas_MrTec.MODULOS
             panel_Restaurar_Contraseña.Visible = false;
             progressBar1.Visible = false;
 
+            pictureBox3.Location = new Point((Width - pictureBox3.Width)/2,(Height-pictureBox3.Height)/2);
+            Panel_seleccionar_Cuenta.Location = new Point((Width - Panel_seleccionar_Cuenta.Width) / 2, (Height - Panel_seleccionar_Cuenta.Height) / 2);
+            panel_Restaurar_Contraseña.Location = new Point((Width - panel_Restaurar_Contraseña.Width) / 2, (Height - panel_Restaurar_Contraseña.Height) / 2);
+            panel_Inicio_de_Sesion.Location = new Point((Width - panel_Inicio_de_Sesion.Width) / 2, (Height - panel_Inicio_de_Sesion.Height) / 2);
+            
             timer1.Start();
         }
         public void dibujarUsuario()

@@ -54,6 +54,7 @@
     <Compile Include="Conexion\Desencrytacion.cs" />
     <Compile Include="Conexion\Encryptacion.cs" />
     <Compile Include="Conexion\Tamaño_automatico_de_datatables.cs" />
+    <Compile Include="Conexion\WinAutoComplete.cs" />
     <Compile Include="MODULOS\Caja\Apertura_de_Caja.cs">
       <SubType>Form</SubType>
     </Compile>

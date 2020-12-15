@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema_Ventas_MrTec.MODULOS.Productos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,9 +17,15 @@ namespace Sistema_Ventas_MrTec.MODULOS.Ventas_Menu_Principal
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnCerrar_turno_Click(object sender, EventArgs e)
         {
             Caja.Cierre_de_Caja frm = new Caja.Cierre_de_Caja();
+            frm.ShowDialog();
+        }
+
+        private void ToolStripButton22_Click(object sender, EventArgs e)
+        {
+            Productos.ProductoOK frm = new Productos.ProductoOK();
             frm.ShowDialog();
         }
     }

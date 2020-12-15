@@ -29,6 +29,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductoOK));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -210,6 +211,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.lblcantidad_productos = new System.Windows.Forms.Label();
             this.Label50 = new System.Windows.Forms.Label();
             this.Label7 = new System.Windows.Forms.Label();
+            this.Tmensajes = new System.Windows.Forms.ToolTip(this.components);
+            this.TimerCalucular_porcentaje_ganancia = new System.Windows.Forms.Timer(this.components);
+            this.TimerCalcular_precio_venta = new System.Windows.Forms.Timer(this.components);
             this.Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.Panel27.SuspendLayout();
@@ -515,6 +519,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.datalistado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datalistado.Size = new System.Drawing.Size(1904, 948);
             this.datalistado.TabIndex = 359;
+            this.datalistado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datalistado_CellClick);
             // 
             // Eliminar
             // 
@@ -580,9 +585,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             // 
             this.PanelGRUPOSSELECT.Controls.Add(this.datalistadoGrupos);
             this.PanelGRUPOSSELECT.Controls.Add(this.Panel33);
-            this.PanelGRUPOSSELECT.Location = new System.Drawing.Point(40, 261);
+            this.PanelGRUPOSSELECT.Location = new System.Drawing.Point(195, 257);
             this.PanelGRUPOSSELECT.Name = "PanelGRUPOSSELECT";
-            this.PanelGRUPOSSELECT.Size = new System.Drawing.Size(844, 271);
+            this.PanelGRUPOSSELECT.Size = new System.Drawing.Size(413, 152);
             this.PanelGRUPOSSELECT.TabIndex = 611;
             // 
             // datalistadoGrupos
@@ -606,7 +611,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.EditarG});
             this.datalistadoGrupos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datalistadoGrupos.EnableHeadersVisualStyles = false;
-            this.datalistadoGrupos.Location = new System.Drawing.Point(160, 0);
+            this.datalistadoGrupos.Location = new System.Drawing.Point(10, 0);
             this.datalistadoGrupos.Name = "datalistadoGrupos";
             this.datalistadoGrupos.ReadOnly = true;
             this.datalistadoGrupos.RowHeadersVisible = false;
@@ -619,8 +624,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.datalistadoGrupos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.datalistadoGrupos.RowTemplate.Height = 40;
             this.datalistadoGrupos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datalistadoGrupos.Size = new System.Drawing.Size(684, 271);
+            this.datalistadoGrupos.Size = new System.Drawing.Size(403, 152);
             this.datalistadoGrupos.TabIndex = 535;
+            this.datalistadoGrupos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datalistadoGrupos_CellContentClick);
             // 
             // EliminarG
             // 
@@ -644,7 +650,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.Panel33.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel33.Location = new System.Drawing.Point(0, 0);
             this.Panel33.Name = "Panel33";
-            this.Panel33.Size = new System.Drawing.Size(160, 271);
+            this.Panel33.Size = new System.Drawing.Size(10, 152);
             this.Panel33.TabIndex = 536;
             // 
             // Button2
@@ -678,7 +684,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.DATALISTADO_PRODUCTOS_OKA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DataGridViewCheckBoxColumn8});
             this.DATALISTADO_PRODUCTOS_OKA.EnableHeadersVisualStyles = false;
-            this.DATALISTADO_PRODUCTOS_OKA.Location = new System.Drawing.Point(347, 74);
+            this.DATALISTADO_PRODUCTOS_OKA.Location = new System.Drawing.Point(251, 65);
             this.DATALISTADO_PRODUCTOS_OKA.Name = "DATALISTADO_PRODUCTOS_OKA";
             this.DATALISTADO_PRODUCTOS_OKA.ReadOnly = true;
             this.DATALISTADO_PRODUCTOS_OKA.RowHeadersVisible = false;
@@ -687,9 +693,10 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.DATALISTADO_PRODUCTOS_OKA.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DATALISTADO_PRODUCTOS_OKA.RowTemplate.Height = 40;
             this.DATALISTADO_PRODUCTOS_OKA.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DATALISTADO_PRODUCTOS_OKA.Size = new System.Drawing.Size(440, 121);
+            this.DATALISTADO_PRODUCTOS_OKA.Size = new System.Drawing.Size(546, 121);
             this.DATALISTADO_PRODUCTOS_OKA.TabIndex = 494;
             this.DATALISTADO_PRODUCTOS_OKA.Visible = false;
+            this.DATALISTADO_PRODUCTOS_OKA.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DATALISTADO_PRODUCTOS_OKA_CellClick);
             // 
             // DataGridViewCheckBoxColumn8
             // 
@@ -705,6 +712,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.txtPorcentajeGanancia.Name = "txtPorcentajeGanancia";
             this.txtPorcentajeGanancia.Size = new System.Drawing.Size(149, 26);
             this.txtPorcentajeGanancia.TabIndex = 6;
+            this.txtPorcentajeGanancia.TextChanged += new System.EventHandler(this.txtPorcentajeGanancia_TextChanged);
             // 
             // txtgrupo
             // 
@@ -1687,7 +1695,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.Panel26.Controls.Add(this.lblIdProducto);
             this.Panel26.Controls.Add(this.datalistadoProductosNuevos);
             this.Panel26.Controls.Add(this.txtfecha_sistema);
-            this.Panel26.Location = new System.Drawing.Point(978, 450);
+            this.Panel26.Location = new System.Drawing.Point(1006, 18);
             this.Panel26.Name = "Panel26";
             this.Panel26.Size = new System.Drawing.Size(10, 10);
             this.Panel26.TabIndex = 605;
@@ -2149,6 +2157,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.txtdescripcion.Size = new System.Drawing.Size(546, 26);
             this.txtdescripcion.TabIndex = 2;
             this.txtdescripcion.Text = "0";
+            this.txtdescripcion.TextChanged += new System.EventHandler(this.txtdescripcion_TextChanged);
             // 
             // Label38
             // 
@@ -2187,6 +2196,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.btnGenerarCodigo.Size = new System.Drawing.Size(142, 41);
             this.btnGenerarCodigo.Text = "Generar codigo";
             this.btnGenerarCodigo.ToolTipText = "Guardar ";
+            this.btnGenerarCodigo.Click += new System.EventHandler(this.btnGenerarCodigo_Click);
             // 
             // ToolStripMenuItem22
             // 
@@ -2292,6 +2302,14 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.Label7.TabIndex = 0;
             this.Label7.Text = "Cant. de Productos: ";
             // 
+            // TimerCalucular_porcentaje_ganancia
+            // 
+            this.TimerCalucular_porcentaje_ganancia.Tick += new System.EventHandler(this.TimerCalucular_porcentaje_ganancia_Tick);
+            // 
+            // TimerCalcular_precio_venta
+            // 
+            this.TimerCalcular_precio_venta.Tick += new System.EventHandler(this.TimerCalcular_precio_venta_Tick);
+            // 
             // ProductoOK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2301,7 +2319,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.Controls.Add(this.PANELREGISTRO);
             this.Controls.Add(this.datalistado);
             this.Controls.Add(this.Panel3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProductoOK";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ProductoOK_Load);
             this.Panel3.ResumeLayout(false);
@@ -2548,5 +2568,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
         internal System.Windows.Forms.Label lblcantidad_productos;
         internal System.Windows.Forms.Label Label50;
         internal System.Windows.Forms.Label Label7;
+        internal System.Windows.Forms.ToolTip Tmensajes;
+        internal System.Windows.Forms.Timer TimerCalucular_porcentaje_ganancia;
+        internal System.Windows.Forms.Timer TimerCalcular_precio_venta;
     }
 }

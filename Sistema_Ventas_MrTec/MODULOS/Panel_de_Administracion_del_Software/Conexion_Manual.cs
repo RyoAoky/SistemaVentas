@@ -50,7 +50,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Panel_de_Administracion_del_Software
             catch (System.Security.Cryptography.CryptographicException ex)
             {
 
-
+                MessageBox.Show(ex.Message);
             }
         }
         private void btnSave_Click(object sender, EventArgs e)
@@ -79,8 +79,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Panel_de_Administracion_del_Software
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Sin conexion a la Base de datos", "Conexion fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show("Sin conexion a la Base de datos \n" + ex.Message, "Conexion fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
