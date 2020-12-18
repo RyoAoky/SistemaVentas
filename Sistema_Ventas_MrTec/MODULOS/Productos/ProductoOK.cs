@@ -17,10 +17,20 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
         public ProductoOK()
         {
             InitializeComponent();
+            
         }
         private void ProductoOK_Load(object sender, EventArgs e)
         {
+            System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("es-PE");
+            System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.CurrencyDecimalSeparator = ".";
+            System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.CurrencyGroupSeparator = ",";
+            System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator = ".";
+            System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberGroupSeparator = ",";
+
             PANELREGISTRO.Visible = false;
+            txtbusca.Text = "Buscar...";
+            //sumar_costo_de_inventario_CONTAR_PRODUCTOS();
+            
         }
         private void PictureBox2_Click(object sender, EventArgs e)
         {
@@ -112,7 +122,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                 datalistadoGrupos.DataSource = dt;
                 datalistadoGrupos.Columns[2].Visible = false;
                 datalistadoGrupos.Columns[3].Width = 500;
-                contarGrupo();
+                //contarGrupo();
                 
             }
             catch (Exception ex)
@@ -172,7 +182,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             if (txtcontadorGrupo == 0)
             {
                 PanelGRUPOSSELECT.Visible = false;
+                
             }
+
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
@@ -188,11 +200,88 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
 
         private void TGUARDAR_Click(object sender, EventArgs e)
         {
+            double txtpreciomayoreoV = Convert.ToDouble(txtpreciomayoreo.Text);
 
+            double txtapartirdeV = Convert.ToDouble(txtapartirde.Text);
+            double txtcostoV = Convert.ToDouble(txtcosto.Text);
+            double TXTPRECIODEVENTA2V = Convert.ToDouble(TXTPRECIODEVENTA2.Text);
+            if (txtpreciomayoreo.Text == "") txtpreciomayoreo.Text = "0";
+            if (txtapartirde.Text == "") txtapartirde.Text = "0";
+            //TXTPRECIODEVENTA2.Text = TXTPRECIODEVENTA2.Text.Replace(lblmoneda.Text + " ", "");
+            //TXTPRECIODEVENTA2.Text = System.String.Format(((decimal)TXTPRECIODEVENTA2.Text), "##0.00");
+            if ((txtpreciomayoreoV > 0 & Convert.ToDouble(txtapartirde.Text) > 0) | (txtpreciomayoreoV == 0 & txtapartirdeV == 0))
+            {
+                if (txtcostoV >= TXTPRECIODEVENTA2V)
+                {
+
+                    DialogResult result;
+                    result = MessageBox.Show("El precio de Venta es menor que el COSTO, Esto Te puede Generar Perdidas", "Producto con Perdidas", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.OK)
+                    {
+                        insertar_productos();
+                    }
+                    else
+                    {
+                        TXTPRECIODEVENTA2.Focus();
+                    }
+
+
+                }
+                else if (txtcostoV < TXTPRECIODEVENTA2V)
+                {
+                    insertar_productos();
+                }
+            }
+            else if (txtpreciomayoreoV != 0 | txtapartirdeV != 0)
+            {
+                MessageBox.Show("Estas configurando Precio mayoreo, debes completar los campos de Precio mayoreo y A partir de, si no deseas configurarlo dejalos en blanco", "Datos incompletos", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            }
         }
 
         private void TGUARDARCAMBIOS_Click(object sender, EventArgs e)
         {
+            double txtpreciomayoreoV = Convert.ToDouble(txtpreciomayoreo.Text);
+
+            double txtapartirdeV = Convert.ToDouble(txtapartirde.Text);
+            double txtcostoV = Convert.ToDouble(txtcosto.Text);
+            double TXTPRECIODEVENTA2V = Convert.ToDouble(TXTPRECIODEVENTA2.Text);
+            if (txtpreciomayoreo.Text == "") txtpreciomayoreo.Text = "0";
+            if (txtapartirde.Text == "") txtapartirde.Text = "0";
+            //TXTPRECIODEVENTA2.Text = TXTPRECIODEVENTA2.Text.Replace(lblmoneda.Text + " ", "");
+            //TXTPRECIODEVENTA2.Text = System.String.Format(((decimal)TXTPRECIODEVENTA2.Text), "##0.00");
+            if ((txtpreciomayoreoV > 0 & Convert.ToDouble(txtapartirde.Text) > 0) | (txtpreciomayoreoV == 0 & txtapartirdeV == 0))
+            {
+                if (txtcostoV >= TXTPRECIODEVENTA2V)
+                {
+
+                    DialogResult result;
+                    result = MessageBox.Show("El precio de Venta es menor que el COSTO, Esto Te puede Generar Perdidas", "Producto con Perdidas", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.OK)
+                    {
+                        editar_productos();
+                    }
+                    else
+                    {
+                        TXTPRECIODEVENTA2.Focus();
+                    }
+
+
+                }
+                else if (txtcostoV < TXTPRECIODEVENTA2V)
+                {
+                    editar_productos();
+                    PANELREGISTRO.Visible = false;
+                    datalistado.Visible = true;
+                }
+            }
+            else if (txtpreciomayoreoV != 0 | txtapartirdeV != 0)
+            {
+                MessageBox.Show("Estas configurando Precio mayoreo, debes completar los campos de Precio mayoreo y A partir de, si no deseas configurarlo dejalos en blanco", "Datos incompletos", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            }
 
         }
 
@@ -257,7 +346,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
 
                 cmd.ExecuteNonQuery();
 
-                cmd.ExecuteNonQuery();
+                
                 con.Close();
 
             }
@@ -266,6 +355,109 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void editar_productos()
+        {
+            if (txtpreciomayoreo.Text == "0" | txtpreciomayoreo.Text == "") txtapartirde.Text = "0";
+
+            try
+            {
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd = new SqlCommand("editar_Producto1", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Id_Producto1", txtid_productooka.Text);
+                cmd.Parameters.AddWithValue("@Descripcion", txtdescripcion.Text);
+                cmd.Parameters.AddWithValue("@Imagen", ".");
+
+                cmd.Parameters.AddWithValue("@Precio_de_compra", txtcosto.Text);
+                cmd.Parameters.AddWithValue("@Precio_de_venta", TXTPRECIODEVENTA2.Text);
+                cmd.Parameters.AddWithValue("@Codigo", txtcodigodebarras.Text);
+                cmd.Parameters.AddWithValue("@A_partir_de", txtapartirde.Text);
+                cmd.Parameters.AddWithValue("@Impuesto", 0);
+                cmd.Parameters.AddWithValue("@Precio_mayoreo", txtpreciomayoreo.Text);
+                if (porunidad.Checked == true) txtse_vende_a.Text = "Unidad";
+                if (agranel.Checked == true) txtse_vende_a.Text = "Granel";
+
+                cmd.Parameters.AddWithValue("@Se_vende_a", txtse_vende_a.Text);
+                cmd.Parameters.AddWithValue("@Id_grupo", lblIdGrupo.Text);
+                if (PANELINVENTARIO.Visible == true)
+                {
+                    cmd.Parameters.AddWithValue("@Usa_inventarios", "SI");
+                    cmd.Parameters.AddWithValue("@Stock_minimo", txtstockminimo.Text);
+                    cmd.Parameters.AddWithValue("@Stock", txtstock2.Text);
+
+                    if (No_aplica_fecha.Checked == true)
+                    {
+                        cmd.Parameters.AddWithValue("@Fecha_de_vencimiento", "NO APLICA");
+                    }
+
+                    if (No_aplica_fecha.Checked == false)
+                    {
+                        cmd.Parameters.AddWithValue("@Fecha_de_vencimiento", txtfechaoka.Text);
+                    }
+
+
+                }
+                if (PANELINVENTARIO.Visible == false)
+                {
+                    cmd.Parameters.AddWithValue("@Usa_inventarios", "NO");
+                    cmd.Parameters.AddWithValue("@Stock_minimo", 0);
+                    cmd.Parameters.AddWithValue("@Fecha_de_vencimiento", "NO APLICA");
+                    cmd.Parameters.AddWithValue("@Stock", "Ilimitado");
+
+                }
+
+                cmd.ExecuteNonQuery();
+
+
+                con.Close();
+                PANELREGISTRO.Visible = false;
+                txtbusca.Text = txtdescripcion.Text;
+                buscar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void buscar()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da;
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.Open();
+
+                da = new SqlDataAdapter("buscar_producto_por_descripcion", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@letra", txtbusca.Text);
+                da.Fill(dt);
+                datalistado.DataSource = dt;
+                con.Close();
+
+                datalistado.Columns[2].Visible = false;
+                datalistado.Columns[7].Visible = false;
+                datalistado.Columns[10].Visible = false;
+                datalistado.Columns[15].Visible = false;
+                datalistado.Columns[16].Visible = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+
+            Conexion.Tamaño_automatico_de_datatables.Multilinea(ref datalistado);
+            //sumar_costo_de_inventario_CONTAR_PRODUCTOS();
         }
 
         private void datalistadoGrupos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -344,6 +536,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
         private void Generar_codigo_de_barras_automatico()
         {
             Double resultado;
+            DateTime d = txtfechaoka.Value;
+            string fecha = d.Year.ToString();
+            
             string queryMoneda;
             queryMoneda = "SELECT max(Id_Producto1) FROM Producto1";
             SqlConnection con = new SqlConnection();
@@ -351,8 +546,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             SqlCommand conMoneda = new SqlCommand(queryMoneda, con);
             try
             {
+                
                 con.Open();
-                resultado = Convert.ToDouble(conMoneda.ExecuteScalar()) + 1;
+                resultado = Convert.ToDouble(conMoneda.ExecuteScalar()) +1;
                 con.Close();
             }catch(Exception ex)
             {
@@ -365,7 +561,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             Palabra = Cadena.Split(Convert.ToChar(espacio));
             try
             {
-                txtcodigodebarras.Text = resultado + Palabra[0].Substring(0,2) + "MRTEC";
+                txtcodigodebarras.Text =  Palabra[0].Substring(0,2) + resultado + fecha.Substring((fecha.Length-2),2)+ "MRTEC";
             }
             catch(Exception ex)
             {
@@ -461,6 +657,10 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
 
             TimerCalcular_precio_venta.Start();
             TimerCalucular_porcentaje_ganancia.Stop();
+            if (txtPorcentajeGanancia.Text == "" || txtPorcentajeGanancia.TextLength == 0 || txtPorcentajeGanancia.Text == null || txtPorcentajeGanancia.Text == " ")
+            {
+                TXTPRECIODEVENTA2.Text="0";
+            }
         }
 
         private void TimerCalucular_porcentaje_ganancia_Tick(object sender, EventArgs e)
@@ -495,7 +695,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                 double totalVentavariadouble;
                 double txtcostov = Convert.ToDouble(txtcosto.Text);
                 double txtporcentajeGananciav = Convert.ToDouble(txtPorcentajeGanancia.Text);
-                totalVentavariadouble = txtcostov + ((txtcostov + txtporcentajeGananciav) / 100);
+                totalVentavariadouble = txtcostov + ((txtporcentajeGananciav /100) *txtcostov);
                 if (totalVentavariadouble > 0 & txtPorcentajeGanancia.Focused == true)
                 {
                     this.TXTPRECIODEVENTA2.Text = Convert.ToString(totalVentavariadouble);
@@ -513,6 +713,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
 
         private void datalistado_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
+
             if (e.ColumnIndex == this.datalistado.Columns["Eliminar"].Index)
             {
                 DialogResult result;
@@ -548,7 +750,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                                 MessageBox.Show(ex.Message);
                             }
                         }
-                        //buscar();
+                        buscar();
                     }
                     catch (Exception ex)
                     {
@@ -559,10 +761,11 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             if (e.ColumnIndex == this.datalistado.Columns["Editar"].Index)
             {
                 proceso_para_obtener_datos_de_productos();
+                datalistado.Visible = false;
             }
         }
 
-        private void proceso_para_obtener_datos_de_productos()
+        internal void proceso_para_obtener_datos_de_productos()
         {
             try
             {
@@ -590,6 +793,118 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             {
                 MessageBox.Show(ex.Message);
             }
+            try
+            {
+
+                txtidproducto.Text = datalistado.SelectedCells[2].Value.ToString();
+                txtcodigodebarras.Text = datalistado.SelectedCells[3].Value.ToString();
+                txtgrupo.Text = datalistado.SelectedCells[4].Value.ToString();
+
+                txtdescripcion.Text = datalistado.SelectedCells[5].Value.ToString();
+                txtnumeroigv.Text = datalistado.SelectedCells[6].Value.ToString();
+                lblIdGrupo.Text = datalistado.SelectedCells[15].Value.ToString();
+
+
+                LBL_ESSERVICIO.Text = datalistado.SelectedCells[7].Value.ToString();
+
+
+
+                txtcosto.Text = datalistado.SelectedCells[8].Value.ToString();
+                txtpreciomayoreo.Text = datalistado.SelectedCells[9].Value.ToString();
+                LBLSEVENDEPOR.Text = datalistado.SelectedCells[10].Value.ToString();
+                if (LBLSEVENDEPOR.Text == "Unidad")
+                {
+                    porunidad.Checked = true;
+
+                }
+                if (LBLSEVENDEPOR.Text == "Granel")
+                {
+                    agranel.Checked = true;
+                }
+                txtstockminimo.Text = datalistado.SelectedCells[11].Value.ToString();
+                lblfechasvenci.Text = datalistado.SelectedCells[12].Value.ToString();
+                if (lblfechasvenci.Text == "NO APLICA")
+                {
+                    No_aplica_fecha.Checked = true;
+                }
+                if (lblfechasvenci.Text != "NO APLICA")
+                {
+                    No_aplica_fecha.Checked = false;
+                }
+                txtstock2.Text = datalistado.SelectedCells[13].Value.ToString();
+                TXTPRECIODEVENTA2.Text = datalistado.SelectedCells[14].Value.ToString();
+                try
+                {
+
+                    double TotalVentaVariabledouble;
+                    double TXTPRECIODEVENTA2V = Convert.ToDouble(TXTPRECIODEVENTA2.Text);
+                    double txtcostov = Convert.ToDouble(txtcosto.Text);
+
+                    TotalVentaVariabledouble = ((TXTPRECIODEVENTA2V - txtcostov) / (txtcostov)) * 100;
+
+                    if (TotalVentaVariabledouble > 0)
+                    {
+                        this.txtPorcentajeGanancia.Text = Convert.ToString(TotalVentaVariabledouble);
+                    }
+                    else
+                    {
+                        //Me.txtPorcentajeGanancia.Text = 0
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+
+                }
+                if (LBL_ESSERVICIO.Text == "SI")
+                {
+
+                    PANELINVENTARIO.Visible = true;
+                    PANELINVENTARIO.Visible = true;
+                    txtstock2.ReadOnly = true;
+                    CheckInventarios.Checked = true;
+
+                }
+                if (LBL_ESSERVICIO.Text == "NO")
+                {
+                    CheckInventarios.Checked = false;
+
+                    PANELINVENTARIO.Visible = false;
+                    PANELINVENTARIO.Visible = false;
+                    txtstock2.ReadOnly = true;
+                    txtstock2.Text = "0";
+                    txtstockminimo.Text = "0";
+                    No_aplica_fecha.Checked = true;
+                    txtstock2.ReadOnly = false;
+                }
+                txtapartirde.Text = datalistado.SelectedCells[16].Value.ToString();
+
+
+                PanelGRUPOSSELECT.Visible = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void TXTPRECIODEVENTA2_TextChanged(object sender, EventArgs e)
+        {
+            if(txtPorcentajeGanancia.Text == "" || txtPorcentajeGanancia.TextLength==0 || txtPorcentajeGanancia.Text==null || txtPorcentajeGanancia.Text==" ")
+            {
+                TimerCalucular_porcentaje_ganancia.Start();
+            }
+            if(TXTPRECIODEVENTA2.Text==null || TXTPRECIODEVENTA2.TextLength==0 || TXTPRECIODEVENTA2.Text==""|| TXTPRECIODEVENTA2.Text==" ")
+            {
+                txtPorcentajeGanancia.Clear();
+            }
+        }
+
+        private void txtbusca_TextChanged(object sender, EventArgs e)
+        {
+            buscar();
         }
     }
 }

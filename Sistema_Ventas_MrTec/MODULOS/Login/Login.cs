@@ -274,6 +274,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 IDUSUARIO.Text = dataListado.SelectedCells[1].Value.ToString();
                 txtnombre.Text = dataListado.SelectedCells[2].Value.ToString();
                 idusuariovariable = IDUSUARIO.Text;
+                
             }
             catch
             {
@@ -698,6 +699,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                     {
                         txtidcaja.Text = dataListado_Caja.SelectedCells[1].Value.ToString();
                         lblcaja.Text = dataListado_Caja.SelectedCells[2].Value.ToString();
+                        idcajavariable = txtidcaja.Text;
                     }
                     catch (Exception ex)
                     {

@@ -83,6 +83,16 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.BtnCancelar = new System.Windows.Forms.ToolStripMenuItem();
             this.btnNuevoGrupo = new System.Windows.Forms.ToolStripMenuItem();
             this.PictureBox3 = new System.Windows.Forms.PictureBox();
+            this.Panel28 = new System.Windows.Forms.Panel();
+            this.TGUARDAR = new System.Windows.Forms.PictureBox();
+            this.TGUARDARCAMBIOS = new System.Windows.Forms.PictureBox();
+            this.ProgressApagado = new System.Windows.Forms.ProgressBar();
+            this.ProgressEncendido = new System.Windows.Forms.ProgressBar();
+            this.Panel26 = new System.Windows.Forms.Panel();
+            this.lblIdProducto = new System.Windows.Forms.Label();
+            this.datalistadoProductosNuevos = new System.Windows.Forms.DataGridView();
+            this.DataGridViewCheckBoxColumn10 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.txtfecha_sistema = new System.Windows.Forms.DateTimePicker();
             this.PanelIMPUESTOS = new System.Windows.Forms.Panel();
             this.Panel18 = new System.Windows.Forms.Panel();
             this.Panel20 = new System.Windows.Forms.Panel();
@@ -150,16 +160,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.btnagregaryguardar = new System.Windows.Forms.Button();
             this.btnagregar = new System.Windows.Forms.Button();
             this.lblIdGrupo = new System.Windows.Forms.Label();
-            this.Panel28 = new System.Windows.Forms.Panel();
-            this.TGUARDAR = new System.Windows.Forms.PictureBox();
-            this.TGUARDARCAMBIOS = new System.Windows.Forms.PictureBox();
-            this.ProgressApagado = new System.Windows.Forms.ProgressBar();
-            this.ProgressEncendido = new System.Windows.Forms.ProgressBar();
-            this.Panel26 = new System.Windows.Forms.Panel();
-            this.lblIdProducto = new System.Windows.Forms.Label();
-            this.datalistadoProductosNuevos = new System.Windows.Forms.DataGridView();
-            this.DataGridViewCheckBoxColumn10 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.txtfecha_sistema = new System.Windows.Forms.DateTimePicker();
             this.Panel25 = new System.Windows.Forms.Panel();
             this.CheckInventarios = new System.Windows.Forms.CheckBox();
             this.Label42 = new System.Windows.Forms.Label();
@@ -230,6 +230,11 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.PanelGrupo.SuspendLayout();
             this.MenuStrip9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
+            this.Panel28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TGUARDAR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TGUARDARCAMBIOS)).BeginInit();
+            this.Panel26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoProductosNuevos)).BeginInit();
             this.PanelIMPUESTOS.SuspendLayout();
             this.Panel18.SuspendLayout();
             this.Panel6.SuspendLayout();
@@ -246,11 +251,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.Panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtund)).BeginInit();
             this.MenuStrip13.SuspendLayout();
-            this.Panel28.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TGUARDAR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TGUARDARCAMBIOS)).BeginInit();
-            this.Panel26.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datalistadoProductosNuevos)).BeginInit();
             this.Panel25.SuspendLayout();
             this.Panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadooperacionesagregadas)).BeginInit();
@@ -325,6 +325,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.txtbusca.Name = "txtbusca";
             this.txtbusca.Size = new System.Drawing.Size(272, 22);
             this.txtbusca.TabIndex = 2;
+            this.txtbusca.TextChanged += new System.EventHandler(this.txtbusca_TextChanged);
             // 
             // MenuStrip1
             // 
@@ -549,7 +550,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.PANELREGISTRO.Controls.Add(this.PanelGrupo);
             this.PANELREGISTRO.Controls.Add(this.MenuStrip9);
             this.PANELREGISTRO.Controls.Add(this.PictureBox3);
-            this.PANELREGISTRO.Controls.Add(this.PanelIMPUESTOS);
             this.PANELREGISTRO.Controls.Add(this.Panel28);
             this.PANELREGISTRO.Controls.Add(this.Panel26);
             this.PANELREGISTRO.Controls.Add(this.Panel25);
@@ -576,7 +576,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.PANELREGISTRO.Controls.Add(this.MenuStrip14);
             this.PANELREGISTRO.Controls.Add(this.Panel30);
             this.PANELREGISTRO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.PANELREGISTRO.Location = new System.Drawing.Point(11, 102);
+            this.PANELREGISTRO.Location = new System.Drawing.Point(47, 141);
             this.PANELREGISTRO.Name = "PANELREGISTRO";
             this.PANELREGISTRO.Size = new System.Drawing.Size(1237, 577);
             this.PANELREGISTRO.TabIndex = 360;
@@ -872,14 +872,131 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.PictureBox3.TabIndex = 608;
             this.PictureBox3.TabStop = false;
             // 
+            // Panel28
+            // 
+            this.Panel28.Controls.Add(this.TGUARDAR);
+            this.Panel28.Controls.Add(this.TGUARDARCAMBIOS);
+            this.Panel28.Controls.Add(this.ProgressApagado);
+            this.Panel28.Controls.Add(this.ProgressEncendido);
+            this.Panel28.Location = new System.Drawing.Point(44, 455);
+            this.Panel28.Name = "Panel28";
+            this.Panel28.Size = new System.Drawing.Size(628, 85);
+            this.Panel28.TabIndex = 606;
+            // 
+            // TGUARDAR
+            // 
+            this.TGUARDAR.Image = ((System.Drawing.Image)(resources.GetObject("TGUARDAR.Image")));
+            this.TGUARDAR.Location = new System.Drawing.Point(217, 5);
+            this.TGUARDAR.Name = "TGUARDAR";
+            this.TGUARDAR.Size = new System.Drawing.Size(188, 80);
+            this.TGUARDAR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.TGUARDAR.TabIndex = 540;
+            this.TGUARDAR.TabStop = false;
+            this.TGUARDAR.Click += new System.EventHandler(this.TGUARDAR_Click);
+            // 
+            // TGUARDARCAMBIOS
+            // 
+            this.TGUARDARCAMBIOS.Image = ((System.Drawing.Image)(resources.GetObject("TGUARDARCAMBIOS.Image")));
+            this.TGUARDARCAMBIOS.Location = new System.Drawing.Point(163, 5);
+            this.TGUARDARCAMBIOS.Name = "TGUARDARCAMBIOS";
+            this.TGUARDARCAMBIOS.Size = new System.Drawing.Size(242, 80);
+            this.TGUARDARCAMBIOS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.TGUARDARCAMBIOS.TabIndex = 540;
+            this.TGUARDARCAMBIOS.TabStop = false;
+            this.TGUARDARCAMBIOS.Click += new System.EventHandler(this.TGUARDARCAMBIOS_Click);
+            // 
+            // ProgressApagado
+            // 
+            this.ProgressApagado.Location = new System.Drawing.Point(185, 74);
+            this.ProgressApagado.Maximum = 180;
+            this.ProgressApagado.Name = "ProgressApagado";
+            this.ProgressApagado.Size = new System.Drawing.Size(34, 10);
+            this.ProgressApagado.TabIndex = 602;
+            // 
+            // ProgressEncendido
+            // 
+            this.ProgressEncendido.Location = new System.Drawing.Point(261, 35);
+            this.ProgressEncendido.Maximum = 180;
+            this.ProgressEncendido.Name = "ProgressEncendido";
+            this.ProgressEncendido.Size = new System.Drawing.Size(22, 10);
+            this.ProgressEncendido.TabIndex = 603;
+            // 
+            // Panel26
+            // 
+            this.Panel26.Controls.Add(this.lblIdProducto);
+            this.Panel26.Controls.Add(this.datalistadoProductosNuevos);
+            this.Panel26.Controls.Add(this.txtfecha_sistema);
+            this.Panel26.Controls.Add(this.PanelIMPUESTOS);
+            this.Panel26.Location = new System.Drawing.Point(1006, 18);
+            this.Panel26.Name = "Panel26";
+            this.Panel26.Size = new System.Drawing.Size(24, 17);
+            this.Panel26.TabIndex = 605;
+            // 
+            // lblIdProducto
+            // 
+            this.lblIdProducto.AutoSize = true;
+            this.lblIdProducto.Location = new System.Drawing.Point(145, 101);
+            this.lblIdProducto.Name = "lblIdProducto";
+            this.lblIdProducto.Size = new System.Drawing.Size(57, 20);
+            this.lblIdProducto.TabIndex = 606;
+            this.lblIdProducto.Text = "Label7";
+            // 
+            // datalistadoProductosNuevos
+            // 
+            this.datalistadoProductosNuevos.AllowUserToAddRows = false;
+            this.datalistadoProductosNuevos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.datalistadoProductosNuevos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.datalistadoProductosNuevos.BackgroundColor = System.Drawing.Color.White;
+            this.datalistadoProductosNuevos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datalistadoProductosNuevos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.datalistadoProductosNuevos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.datalistadoProductosNuevos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistadoProductosNuevos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridViewCheckBoxColumn10});
+            this.datalistadoProductosNuevos.EnableHeadersVisualStyles = false;
+            this.datalistadoProductosNuevos.Location = new System.Drawing.Point(113, 134);
+            this.datalistadoProductosNuevos.Name = "datalistadoProductosNuevos";
+            this.datalistadoProductosNuevos.ReadOnly = true;
+            this.datalistadoProductosNuevos.RowHeadersVisible = false;
+            this.datalistadoProductosNuevos.RowHeadersWidth = 9;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gainsboro;
+            this.datalistadoProductosNuevos.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.datalistadoProductosNuevos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.datalistadoProductosNuevos.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.datalistadoProductosNuevos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
+            this.datalistadoProductosNuevos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.datalistadoProductosNuevos.RowTemplate.Height = 32;
+            this.datalistadoProductosNuevos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datalistadoProductosNuevos.Size = new System.Drawing.Size(142, 45);
+            this.datalistadoProductosNuevos.TabIndex = 605;
+            // 
+            // DataGridViewCheckBoxColumn10
+            // 
+            this.DataGridViewCheckBoxColumn10.DataPropertyName = "Marcar";
+            this.DataGridViewCheckBoxColumn10.HeaderText = "Marcar";
+            this.DataGridViewCheckBoxColumn10.Name = "DataGridViewCheckBoxColumn10";
+            this.DataGridViewCheckBoxColumn10.ReadOnly = true;
+            // 
+            // txtfecha_sistema
+            // 
+            this.txtfecha_sistema.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtfecha_sistema.Location = new System.Drawing.Point(149, 68);
+            this.txtfecha_sistema.Name = "txtfecha_sistema";
+            this.txtfecha_sistema.Size = new System.Drawing.Size(124, 26);
+            this.txtfecha_sistema.TabIndex = 604;
+            // 
             // PanelIMPUESTOS
             // 
             this.PanelIMPUESTOS.Controls.Add(this.Panel18);
             this.PanelIMPUESTOS.Controls.Add(this.Panel6);
             this.PanelIMPUESTOS.Controls.Add(this.lblIdGrupo);
-            this.PanelIMPUESTOS.Location = new System.Drawing.Point(965, 18);
+            this.PanelIMPUESTOS.Location = new System.Drawing.Point(27, 24);
             this.PanelIMPUESTOS.Name = "PanelIMPUESTOS";
-            this.PanelIMPUESTOS.Size = new System.Drawing.Size(10, 10);
+            this.PanelIMPUESTOS.Size = new System.Drawing.Size(69, 58);
             this.PanelIMPUESTOS.TabIndex = 607;
             // 
             // Panel18
@@ -1641,122 +1758,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.lblIdGrupo.TabIndex = 340;
             this.lblIdGrupo.Text = "Grupo:";
             // 
-            // Panel28
-            // 
-            this.Panel28.Controls.Add(this.TGUARDAR);
-            this.Panel28.Controls.Add(this.TGUARDARCAMBIOS);
-            this.Panel28.Controls.Add(this.ProgressApagado);
-            this.Panel28.Controls.Add(this.ProgressEncendido);
-            this.Panel28.Location = new System.Drawing.Point(44, 455);
-            this.Panel28.Name = "Panel28";
-            this.Panel28.Size = new System.Drawing.Size(628, 85);
-            this.Panel28.TabIndex = 606;
-            // 
-            // TGUARDAR
-            // 
-            this.TGUARDAR.Image = ((System.Drawing.Image)(resources.GetObject("TGUARDAR.Image")));
-            this.TGUARDAR.Location = new System.Drawing.Point(217, 5);
-            this.TGUARDAR.Name = "TGUARDAR";
-            this.TGUARDAR.Size = new System.Drawing.Size(188, 80);
-            this.TGUARDAR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.TGUARDAR.TabIndex = 540;
-            this.TGUARDAR.TabStop = false;
-            this.TGUARDAR.Click += new System.EventHandler(this.TGUARDAR_Click);
-            // 
-            // TGUARDARCAMBIOS
-            // 
-            this.TGUARDARCAMBIOS.Image = ((System.Drawing.Image)(resources.GetObject("TGUARDARCAMBIOS.Image")));
-            this.TGUARDARCAMBIOS.Location = new System.Drawing.Point(163, 5);
-            this.TGUARDARCAMBIOS.Name = "TGUARDARCAMBIOS";
-            this.TGUARDARCAMBIOS.Size = new System.Drawing.Size(242, 80);
-            this.TGUARDARCAMBIOS.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.TGUARDARCAMBIOS.TabIndex = 540;
-            this.TGUARDARCAMBIOS.TabStop = false;
-            this.TGUARDARCAMBIOS.Click += new System.EventHandler(this.TGUARDARCAMBIOS_Click);
-            // 
-            // ProgressApagado
-            // 
-            this.ProgressApagado.Location = new System.Drawing.Point(185, 74);
-            this.ProgressApagado.Maximum = 180;
-            this.ProgressApagado.Name = "ProgressApagado";
-            this.ProgressApagado.Size = new System.Drawing.Size(34, 10);
-            this.ProgressApagado.TabIndex = 602;
-            // 
-            // ProgressEncendido
-            // 
-            this.ProgressEncendido.Location = new System.Drawing.Point(261, 35);
-            this.ProgressEncendido.Maximum = 180;
-            this.ProgressEncendido.Name = "ProgressEncendido";
-            this.ProgressEncendido.Size = new System.Drawing.Size(22, 10);
-            this.ProgressEncendido.TabIndex = 603;
-            // 
-            // Panel26
-            // 
-            this.Panel26.Controls.Add(this.lblIdProducto);
-            this.Panel26.Controls.Add(this.datalistadoProductosNuevos);
-            this.Panel26.Controls.Add(this.txtfecha_sistema);
-            this.Panel26.Location = new System.Drawing.Point(1006, 18);
-            this.Panel26.Name = "Panel26";
-            this.Panel26.Size = new System.Drawing.Size(10, 10);
-            this.Panel26.TabIndex = 605;
-            // 
-            // lblIdProducto
-            // 
-            this.lblIdProducto.AutoSize = true;
-            this.lblIdProducto.Location = new System.Drawing.Point(17, 62);
-            this.lblIdProducto.Name = "lblIdProducto";
-            this.lblIdProducto.Size = new System.Drawing.Size(57, 20);
-            this.lblIdProducto.TabIndex = 606;
-            this.lblIdProducto.Text = "Label7";
-            // 
-            // datalistadoProductosNuevos
-            // 
-            this.datalistadoProductosNuevos.AllowUserToAddRows = false;
-            this.datalistadoProductosNuevos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.datalistadoProductosNuevos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.datalistadoProductosNuevos.BackgroundColor = System.Drawing.Color.White;
-            this.datalistadoProductosNuevos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.datalistadoProductosNuevos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.datalistadoProductosNuevos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.datalistadoProductosNuevos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datalistadoProductosNuevos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DataGridViewCheckBoxColumn10});
-            this.datalistadoProductosNuevos.EnableHeadersVisualStyles = false;
-            this.datalistadoProductosNuevos.Location = new System.Drawing.Point(21, 87);
-            this.datalistadoProductosNuevos.Name = "datalistadoProductosNuevos";
-            this.datalistadoProductosNuevos.ReadOnly = true;
-            this.datalistadoProductosNuevos.RowHeadersVisible = false;
-            this.datalistadoProductosNuevos.RowHeadersWidth = 9;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gainsboro;
-            this.datalistadoProductosNuevos.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.datalistadoProductosNuevos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
-            this.datalistadoProductosNuevos.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.datalistadoProductosNuevos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
-            this.datalistadoProductosNuevos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.datalistadoProductosNuevos.RowTemplate.Height = 32;
-            this.datalistadoProductosNuevos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datalistadoProductosNuevos.Size = new System.Drawing.Size(459, 96);
-            this.datalistadoProductosNuevos.TabIndex = 605;
-            // 
-            // DataGridViewCheckBoxColumn10
-            // 
-            this.DataGridViewCheckBoxColumn10.DataPropertyName = "Marcar";
-            this.DataGridViewCheckBoxColumn10.HeaderText = "Marcar";
-            this.DataGridViewCheckBoxColumn10.Name = "DataGridViewCheckBoxColumn10";
-            this.DataGridViewCheckBoxColumn10.ReadOnly = true;
-            // 
-            // txtfecha_sistema
-            // 
-            this.txtfecha_sistema.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtfecha_sistema.Location = new System.Drawing.Point(21, 29);
-            this.txtfecha_sistema.Name = "txtfecha_sistema";
-            this.txtfecha_sistema.Size = new System.Drawing.Size(124, 26);
-            this.txtfecha_sistema.TabIndex = 604;
-            // 
             // Panel25
             // 
             this.Panel25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
@@ -1928,6 +1929,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.txtfechaoka.Name = "txtfechaoka";
             this.txtfechaoka.Size = new System.Drawing.Size(149, 26);
             this.txtfechaoka.TabIndex = 13;
+            this.txtfechaoka.Value = new System.DateTime(2020, 12, 16, 17, 44, 46, 0);
             // 
             // Label8
             // 
@@ -2109,6 +2111,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.TXTPRECIODEVENTA2.Size = new System.Drawing.Size(114, 26);
             this.TXTPRECIODEVENTA2.TabIndex = 7;
             this.TXTPRECIODEVENTA2.Text = "0";
+            this.TXTPRECIODEVENTA2.TextChanged += new System.EventHandler(this.TXTPRECIODEVENTA2_TextChanged);
             // 
             // Label27
             // 
@@ -2323,7 +2326,13 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.Name = "ProductoOK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            
+            
             this.Load += new System.EventHandler(this.ProductoOK_Load);
+
+
+
+
             this.Panel3.ResumeLayout(false);
             this.Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
@@ -2346,6 +2355,12 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.MenuStrip9.ResumeLayout(false);
             this.MenuStrip9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
+            this.Panel28.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TGUARDAR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TGUARDARCAMBIOS)).EndInit();
+            this.Panel26.ResumeLayout(false);
+            this.Panel26.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoProductosNuevos)).EndInit();
             this.PanelIMPUESTOS.ResumeLayout(false);
             this.PanelIMPUESTOS.PerformLayout();
             this.Panel18.ResumeLayout(false);
@@ -2372,12 +2387,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             ((System.ComponentModel.ISupportInitialize)(this.dtund)).EndInit();
             this.MenuStrip13.ResumeLayout(false);
             this.MenuStrip13.PerformLayout();
-            this.Panel28.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TGUARDAR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TGUARDARCAMBIOS)).EndInit();
-            this.Panel26.ResumeLayout(false);
-            this.Panel26.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datalistadoProductosNuevos)).EndInit();
             this.Panel25.ResumeLayout(false);
             this.Panel25.PerformLayout();
             this.Panel23.ResumeLayout(false);
