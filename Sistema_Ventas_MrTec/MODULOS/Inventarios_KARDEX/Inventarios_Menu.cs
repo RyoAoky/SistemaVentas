@@ -20,6 +20,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
         private void Inventarios_Menu_Load(object sender, EventArgs e)
         {
             buscar_usuario();
+            
         }
 
         private void txtbuscarMovimiento_TextChanged(object sender, EventArgs e)
@@ -78,6 +79,37 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
         }
 
+        private void MOSTRAR_Inventario_bajo_minimo()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da;
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.Open();
+
+                da = new SqlDataAdapter("MOSTRAR_Inventarios_bajo_minimo", con);
+                
+                da.Fill(dt);
+                datalistadoInventarioBAJO.DataSource = dt;
+                con.Close();
+
+                datalistadoInventarioBAJO.Columns[0].Visible = false;
+                datalistadoInventarioBAJO.Columns[4].Visible = false;
+                datalistadoInventarioBAJO.Columns[7].Visible = false;
+                datalistadoInventarioBAJO.Columns[8].Visible = false;
+                datalistadoInventarioBAJO.Columns[9].Visible = false;
+                
+
+                Conexion.Tamaño_automatico_de_datatables.Multilinea(ref datalistadoInventarioBAJO);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void DATALISTADO_PRODUCTOS_Movimientos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtbuscarMovimiento.Text = DATALISTADO_PRODUCTOS_Movimientos.SelectedCells[2].Value.ToString();
@@ -298,6 +330,242 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
                 buscar_movimientos_por_filtro();
                 buscar_movimientos_por_filtro_acumulado();
             }
+        }
+
+        private void TNOTAS_Click(object sender, EventArgs e)
+        {
+            MOSTRAR_Inventario_bajo_minimo();
+        }
+
+        private void txtbuscar_inventarios_TextChanged(object sender, EventArgs e)
+        {
+            if(txtbuscar_inventarios.Text != "Buscar...")
+            {
+                mostrar_inventarios_todos();
+            }
+        }
+        private void mostrar_inventarios_todos()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da;
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.Open();
+
+                da = new SqlDataAdapter("mostrar_inventarios_todos", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@letra", txtbuscar_inventarios.Text);
+                da.Fill(dt);
+                datalistadoInventariosReport.DataSource = dt;
+                con.Close();
+
+
+                datalistadoInventariosReport.Columns[0].Visible = false;
+                datalistadoInventariosReport.Columns[9].Visible = false;
+                datalistadoInventariosReport.Columns[10].Visible = false;
+
+                Conexion.Tamaño_automatico_de_datatables.Multilinea(ref DatalistadoMovimientos);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        internal void sumar_costo_de_inventario_CONTAR_PRODUCTOS()
+        {
+
+            string resultado;
+            string queryMoneda;
+            queryMoneda = "SELECT Moneda  FROM EMPRESA";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            SqlCommand comMoneda = new SqlCommand(queryMoneda, con);
+            try
+            {
+                con.Open();
+                resultado = Convert.ToString(comMoneda.ExecuteScalar()); //asignamos el valor del importe
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                resultado = "";
+            }
+
+            string importe;
+            string query;
+            query = "SELECT      CONVERT(NUMERIC(18,2),sum(Producto1.Precio_de_compra * Stock )) as suma FROM  Producto1 where  Usa_inventarios ='SI'";
+
+            SqlCommand com = new SqlCommand(query, con);
+            try
+            {
+                con.Open();
+                importe = Convert.ToString(com.ExecuteScalar()); //asignamos el valor del importe
+                con.Close();
+                lblcostoInventario.Text = resultado + " " + importe;
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                MessageBox.Show(ex.Message);
+
+                lblcostoInventario.Text = resultado + " " + 0;
+            }
+
+            string conteoresultado;
+            string querycontar;
+            querycontar = "select count(Id_Producto1 ) from Producto1 ";
+            SqlCommand comcontar = new SqlCommand(querycontar, con);
+            try
+            {
+                con.Open();
+                conteoresultado = Convert.ToString(comcontar.ExecuteScalar()); //asignamos el valor del importe
+                con.Close();
+                lblcantidaddeProductosEnInventario.Text = conteoresultado;
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                MessageBox.Show(ex.Message);
+
+                conteoresultado = "";
+                lblcantidaddeProductosEnInventario.Text = "0";
+            }
+
+        }
+
+        private void TOTROSPAGOS_Click(object sender, EventArgs e)
+        {
+            sumar_costo_de_inventario_CONTAR_PRODUCTOS();
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            txtbuscar_inventarios.Clear();
+            mostrar_inventarios_todos();
+            sumar_costo_de_inventario_CONTAR_PRODUCTOS();
+        }
+
+        private void txtBuscarVencimientos_TextChanged(object sender, EventArgs e)
+        {
+            if(txtBuscarVencimientos.Text != "Buscar producto/Codigo")
+            {                
+                buscar_productos_vencidos();
+                CheckPorVenceren30Dias.Checked = false;
+                CheckProductosVencidos.Checked = false;
+            }
+        }
+        private void buscar_productos_vencidos()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da;
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.Open();
+
+                da = new SqlDataAdapter("buscar_productos_vencidos", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@letra", txtBuscarVencimientos.Text);
+                da.Fill(dt);
+                datalistadoVencimientos.DataSource = dt;
+                con.Close();
+
+
+                datalistadoVencimientos.Columns[0].Visible = false;
+                datalistadoVencimientos.Columns[1].Visible = false;
+                datalistadoVencimientos.Columns[6].Visible = false;
+                datalistadoVencimientos.Columns[7].Visible = false;
+
+                Conexion.Tamaño_automatico_de_datatables.Multilinea(ref DatalistadoMovimientos);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void TVencimientos_Click(object sender, EventArgs e)
+        {
+            txtBuscarVencimientos.Focus();
+            buscar_productos_vencidos();
+        }
+
+        private void txtBuscarVencimientos_Click(object sender, EventArgs e)
+        {
+            txtBuscarVencimientos.SelectAll();
+        }
+
+        private void mostrar_productos_vencidos_en_menos_de_30_dias()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da;
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.Open();
+
+                da = new SqlDataAdapter("mostrar_productos_vencidos_en_menos_de_30_dias", con);
+               
+                da.Fill(dt);
+                datalistadoVencimientos.DataSource = dt;
+                con.Close();
+
+
+                datalistadoVencimientos.Columns[0].Visible = false;
+                datalistadoVencimientos.Columns[1].Visible = false;
+
+                Conexion.Tamaño_automatico_de_datatables.Multilinea(ref DatalistadoMovimientos);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void CheckPorVenceren30Dias_CheckedChanged(object sender, EventArgs e)
+        {
+            mostrar_productos_vencidos_en_menos_de_30_dias();
+            txtBuscarVencimientos.Text = "Buscar producto/Codigo";
+        }
+
+        private void mostrar_productos_vencidos()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da;
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.Open();
+
+                da = new SqlDataAdapter("mostrar_productos_vencidos", con);
+
+                da.Fill(dt);
+                datalistadoVencimientos.DataSource = dt;
+                con.Close();
+
+
+                datalistadoVencimientos.Columns[0].Visible = false;
+                datalistadoVencimientos.Columns[1].Visible = false;
+                Conexion.Tamaño_automatico_de_datatables.Multilinea(ref DatalistadoMovimientos);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void CheckProductosVencidos_CheckedChanged(object sender, EventArgs e)
+        {
+            mostrar_productos_vencidos();
+            txtBuscarVencimientos.Text = "Buscar producto/Codigo";
+            
         }
     }
 }

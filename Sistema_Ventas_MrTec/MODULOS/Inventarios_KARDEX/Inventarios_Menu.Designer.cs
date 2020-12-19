@@ -52,19 +52,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.TNOTAS = new System.Windows.Forms.ToolStripMenuItem();
             this.TOTROSPAGOS = new System.Windows.Forms.ToolStripMenuItem();
             this.TVencimientos = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.menuStrip8 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip7 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.MenuStrip5 = new System.Windows.Forms.MenuStrip();
-            this.ToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtbuscar_inventarios = new System.Windows.Forms.TextBox();
-            this.lblcostoInventario = new System.Windows.Forms.Label();
-            this.lblcantidaddeProductosEnInventario = new System.Windows.Forms.Label();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.Label3 = new System.Windows.Forms.Label();
             this.PanelMOVIMIENTOS = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.DatalistadoMovimientos = new System.Windows.Forms.DataGridView();
@@ -99,6 +86,42 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.ToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.txtbuscarMovimiento = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.PaneliNVENTARIObajo = new System.Windows.Forms.Panel();
+            this.datalistadoInventarioBAJO = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.menuStrip4 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Label6 = new System.Windows.Forms.Label();
+            this.PanelREPORTEInventario = new System.Windows.Forms.Panel();
+            this.datalistadoInventariosReport = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.menuStrip8 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip7 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.MenuStrip5 = new System.Windows.Forms.MenuStrip();
+            this.ToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtbuscar_inventarios = new System.Windows.Forms.TextBox();
+            this.lblcostoInventario = new System.Windows.Forms.Label();
+            this.lblcantidaddeProductosEnInventario = new System.Windows.Forms.Label();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.Label3 = new System.Windows.Forms.Label();
+            this.PanelVencimientos = new System.Windows.Forms.Panel();
+            this.datalistadoVencimientos = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.gtds = new System.Windows.Forms.GroupBox();
+            this.CheckProductosVencidos = new System.Windows.Forms.RadioButton();
+            this.CheckPorVenceren30Dias = new System.Windows.Forms.RadioButton();
+            this.menuStrip13 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip9 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtBuscarVencimientos = new System.Windows.Forms.TextBox();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.Panel3.SuspendLayout();
             this.Panel1.SuspendLayout();
             this.Panel9.SuspendLayout();
@@ -108,10 +131,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.MenuStrip3.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.menuStrip8.SuspendLayout();
-            this.menuStrip7.SuspendLayout();
-            this.MenuStrip5.SuspendLayout();
             this.PanelMOVIMIENTOS.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DatalistadoMovimientos)).BeginInit();
@@ -127,6 +146,22 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.MenuStrip2.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.MenuStrip6.SuspendLayout();
+            this.PaneliNVENTARIObajo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoInventarioBAJO)).BeginInit();
+            this.panel10.SuspendLayout();
+            this.menuStrip4.SuspendLayout();
+            this.PanelREPORTEInventario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoInventariosReport)).BeginInit();
+            this.panel11.SuspendLayout();
+            this.menuStrip8.SuspendLayout();
+            this.menuStrip7.SuspendLayout();
+            this.MenuStrip5.SuspendLayout();
+            this.PanelVencimientos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoVencimientos)).BeginInit();
+            this.panel14.SuspendLayout();
+            this.gtds.SuspendLayout();
+            this.menuStrip13.SuspendLayout();
+            this.menuStrip9.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel3
@@ -136,7 +171,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.Panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel3.Location = new System.Drawing.Point(0, 0);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(1758, 42);
+            this.Panel3.Size = new System.Drawing.Size(1904, 42);
             this.Panel3.TabIndex = 599;
             // 
             // Label7
@@ -164,7 +199,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel1.Location = new System.Drawing.Point(0, 42);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(1758, 59);
+            this.Panel1.Size = new System.Drawing.Size(1904, 59);
             this.Panel1.TabIndex = 600;
             // 
             // Panelv
@@ -181,7 +216,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.Panel9.Controls.Add(this.PictureBox3);
             this.Panel9.Controls.Add(this.PictureBox1);
             this.Panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Panel9.Location = new System.Drawing.Point(1447, 0);
+            this.Panel9.Location = new System.Drawing.Point(1593, 0);
             this.Panel9.Name = "Panel9";
             this.Panel9.Size = new System.Drawing.Size(151, 59);
             this.Panel9.TabIndex = 605;
@@ -234,7 +269,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.Panel6.Controls.Add(this.Label1);
             this.Panel6.Controls.Add(this.PictureBox2);
             this.Panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Panel6.Location = new System.Drawing.Point(1598, 0);
+            this.Panel6.Location = new System.Drawing.Point(1744, 0);
             this.Panel6.Name = "Panel6";
             this.Panel6.Size = new System.Drawing.Size(160, 59);
             this.Panel6.TabIndex = 604;
@@ -354,6 +389,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.TNOTAS.Size = new System.Drawing.Size(169, 54);
             this.TNOTAS.Text = "Inventarios Bajos";
             this.TNOTAS.ToolTipText = "Inventarios Bajos";
+            this.TNOTAS.Click += new System.EventHandler(this.TNOTAS_Click);
             // 
             // TOTROSPAGOS
             // 
@@ -365,6 +401,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.TOTROSPAGOS.Size = new System.Drawing.Size(188, 54);
             this.TOTROSPAGOS.Text = "Reporte Inventarios";
             this.TOTROSPAGOS.ToolTipText = "Reporte Inventarios";
+            this.TOTROSPAGOS.Click += new System.EventHandler(this.TOTROSPAGOS_Click);
             // 
             // TVencimientos
             // 
@@ -375,164 +412,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.TVencimientos.Size = new System.Drawing.Size(230, 54);
             this.TVencimientos.Text = "Vencimientos de Productos";
             this.TVencimientos.ToolTipText = "Vencimientos de Productos";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel11.Controls.Add(this.menuStrip8);
-            this.panel11.Controls.Add(this.menuStrip7);
-            this.panel11.Controls.Add(this.panel12);
-            this.panel11.Controls.Add(this.MenuStrip5);
-            this.panel11.Controls.Add(this.txtbuscar_inventarios);
-            this.panel11.Controls.Add(this.lblcostoInventario);
-            this.panel11.Controls.Add(this.lblcantidaddeProductosEnInventario);
-            this.panel11.Controls.Add(this.Label2);
-            this.panel11.Controls.Add(this.Label3);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel11.Location = new System.Drawing.Point(0, 620);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1758, 119);
-            this.panel11.TabIndex = 601;
-            // 
-            // menuStrip8
-            // 
-            this.menuStrip8.AutoSize = false;
-            this.menuStrip8.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip8.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip8.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem8});
-            this.menuStrip8.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.menuStrip8.Location = new System.Drawing.Point(618, 77);
-            this.menuStrip8.Name = "menuStrip8";
-            this.menuStrip8.ShowItemToolTips = true;
-            this.menuStrip8.Size = new System.Drawing.Size(107, 32);
-            this.menuStrip8.TabIndex = 611;
-            this.menuStrip8.Text = "menuStrip7";
-            // 
-            // toolStripMenuItem8
-            // 
-            this.toolStripMenuItem8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
-            this.toolStripMenuItem8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.toolStripMenuItem8.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem8.Image")));
-            this.toolStripMenuItem8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(96, 28);
-            this.toolStripMenuItem8.Text = "Imprimir";
-            // 
-            // menuStrip7
-            // 
-            this.menuStrip7.AutoSize = false;
-            this.menuStrip7.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip7.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem5});
-            this.menuStrip7.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.menuStrip7.Location = new System.Drawing.Point(465, 77);
-            this.menuStrip7.Name = "menuStrip7";
-            this.menuStrip7.ShowItemToolTips = true;
-            this.menuStrip7.Size = new System.Drawing.Size(153, 32);
-            this.menuStrip7.TabIndex = 611;
-            this.menuStrip7.Text = "menuStrip7";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
-            this.toolStripMenuItem5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.toolStripMenuItem5.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(117, 28);
-            this.toolStripMenuItem5.Text = "Mostrar TODO";
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
-            this.panel12.Location = new System.Drawing.Point(14, 105);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(388, 2);
-            this.panel12.TabIndex = 604;
-            // 
-            // MenuStrip5
-            // 
-            this.MenuStrip5.AutoSize = false;
-            this.MenuStrip5.BackColor = System.Drawing.Color.Transparent;
-            this.MenuStrip5.Dock = System.Windows.Forms.DockStyle.None;
-            this.MenuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripMenuItem6});
-            this.MenuStrip5.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.MenuStrip5.Location = new System.Drawing.Point(403, 77);
-            this.MenuStrip5.Name = "MenuStrip5";
-            this.MenuStrip5.ShowItemToolTips = true;
-            this.MenuStrip5.Size = new System.Drawing.Size(38, 31);
-            this.MenuStrip5.TabIndex = 602;
-            this.MenuStrip5.Text = "MenuStrip7";
-            // 
-            // ToolStripMenuItem6
-            // 
-            this.ToolStripMenuItem6.BackColor = System.Drawing.Color.Transparent;
-            this.ToolStripMenuItem6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.ToolStripMenuItem6.ForeColor = System.Drawing.Color.Black;
-            this.ToolStripMenuItem6.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem6.Image")));
-            this.ToolStripMenuItem6.Name = "ToolStripMenuItem6";
-            this.ToolStripMenuItem6.Size = new System.Drawing.Size(28, 27);
-            this.ToolStripMenuItem6.ToolTipText = "Quitar logo";
-            // 
-            // txtbuscar_inventarios
-            // 
-            this.txtbuscar_inventarios.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtbuscar_inventarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtbuscar_inventarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtbuscar_inventarios.ForeColor = System.Drawing.Color.Black;
-            this.txtbuscar_inventarios.Location = new System.Drawing.Point(14, 83);
-            this.txtbuscar_inventarios.Name = "txtbuscar_inventarios";
-            this.txtbuscar_inventarios.Size = new System.Drawing.Size(386, 19);
-            this.txtbuscar_inventarios.TabIndex = 603;
-            this.txtbuscar_inventarios.Text = "Buscar...";
-            // 
-            // lblcostoInventario
-            // 
-            this.lblcostoInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.lblcostoInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
-            this.lblcostoInventario.Location = new System.Drawing.Point(540, 35);
-            this.lblcostoInventario.Name = "lblcostoInventario";
-            this.lblcostoInventario.Size = new System.Drawing.Size(341, 24);
-            this.lblcostoInventario.TabIndex = 600;
-            this.lblcostoInventario.Text = "S/.45";
-            this.lblcostoInventario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblcantidaddeProductosEnInventario
-            // 
-            this.lblcantidaddeProductosEnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.lblcantidaddeProductosEnInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
-            this.lblcantidaddeProductosEnInventario.Location = new System.Drawing.Point(12, 35);
-            this.lblcantidaddeProductosEnInventario.Name = "lblcantidaddeProductosEnInventario";
-            this.lblcantidaddeProductosEnInventario.Size = new System.Drawing.Size(327, 24);
-            this.lblcantidaddeProductosEnInventario.TabIndex = 599;
-            this.lblcantidaddeProductosEnInventario.Text = "S/.45";
-            this.lblcantidaddeProductosEnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Label2
-            // 
-            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.Label2.ForeColor = System.Drawing.Color.Black;
-            this.Label2.Location = new System.Drawing.Point(557, 12);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(324, 17);
-            this.Label2.TabIndex = 598;
-            this.Label2.Text = "Costo del Inventario";
-            this.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Label3
-            // 
-            this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.Label3.ForeColor = System.Drawing.Color.Black;
-            this.Label3.Location = new System.Drawing.Point(13, 12);
-            this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(330, 23);
-            this.Label3.TabIndex = 597;
-            this.Label3.Text = "Cantidad de Productos en Inventario";
+            this.TVencimientos.Click += new System.EventHandler(this.TVencimientos_Click);
             // 
             // PanelMOVIMIENTOS
             // 
@@ -540,9 +420,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.PanelMOVIMIENTOS.Controls.Add(this.panel5);
             this.PanelMOVIMIENTOS.Controls.Add(this.panel7);
             this.PanelMOVIMIENTOS.Controls.Add(this.panel2);
-            this.PanelMOVIMIENTOS.Location = new System.Drawing.Point(0, 103);
+            this.PanelMOVIMIENTOS.Location = new System.Drawing.Point(1626, 639);
             this.PanelMOVIMIENTOS.Name = "PanelMOVIMIENTOS";
-            this.PanelMOVIMIENTOS.Size = new System.Drawing.Size(1204, 576);
+            this.PanelMOVIMIENTOS.Size = new System.Drawing.Size(238, 174);
             this.PanelMOVIMIENTOS.TabIndex = 602;
             // 
             // panel5
@@ -551,7 +431,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 122);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(707, 454);
+            this.panel5.Size = new System.Drawing.Size(0, 52);
             this.panel5.TabIndex = 2;
             // 
             // DatalistadoMovimientos
@@ -576,7 +456,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.DatalistadoMovimientos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DatalistadoMovimientos.RowTemplate.Height = 30;
             this.DatalistadoMovimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DatalistadoMovimientos.Size = new System.Drawing.Size(707, 454);
+            this.DatalistadoMovimientos.Size = new System.Drawing.Size(0, 52);
             this.DatalistadoMovimientos.TabIndex = 4;
             // 
             // Eli
@@ -593,9 +473,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.panel7.Controls.Add(this.DatalistadoMovimientosACUMULADO_PRODUCTO);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(707, 122);
+            this.panel7.Location = new System.Drawing.Point(-259, 122);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(497, 454);
+            this.panel7.Size = new System.Drawing.Size(497, 52);
             this.panel7.TabIndex = 3;
             this.panel7.Visible = false;
             // 
@@ -623,7 +503,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.DatalistadoMovimientosACUMULADO_PRODUCTO.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.DatalistadoMovimientosACUMULADO_PRODUCTO.RowTemplate.Height = 30;
             this.DatalistadoMovimientosACUMULADO_PRODUCTO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DatalistadoMovimientosACUMULADO_PRODUCTO.Size = new System.Drawing.Size(497, 370);
+            this.DatalistadoMovimientosACUMULADO_PRODUCTO.Size = new System.Drawing.Size(497, 0);
             this.DatalistadoMovimientosACUMULADO_PRODUCTO.TabIndex = 5;
             // 
             // dataGridViewImageColumn1
@@ -696,7 +576,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1204, 122);
+            this.panel2.Size = new System.Drawing.Size(238, 122);
             this.panel2.TabIndex = 1;
             // 
             // groupBox1
@@ -985,13 +865,475 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.panel4.Size = new System.Drawing.Size(388, 2);
             this.panel4.TabIndex = 612;
             // 
+            // PaneliNVENTARIObajo
+            // 
+            this.PaneliNVENTARIObajo.BackColor = System.Drawing.Color.White;
+            this.PaneliNVENTARIObajo.Controls.Add(this.datalistadoInventarioBAJO);
+            this.PaneliNVENTARIObajo.Controls.Add(this.panel10);
+            this.PaneliNVENTARIObajo.Location = new System.Drawing.Point(1582, 365);
+            this.PaneliNVENTARIObajo.Name = "PaneliNVENTARIObajo";
+            this.PaneliNVENTARIObajo.Size = new System.Drawing.Size(309, 250);
+            this.PaneliNVENTARIObajo.TabIndex = 603;
+            // 
+            // datalistadoInventarioBAJO
+            // 
+            this.datalistadoInventarioBAJO.AllowUserToAddRows = false;
+            this.datalistadoInventarioBAJO.AllowUserToResizeRows = false;
+            this.datalistadoInventarioBAJO.BackgroundColor = System.Drawing.Color.White;
+            this.datalistadoInventarioBAJO.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datalistadoInventarioBAJO.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.datalistadoInventarioBAJO.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.datalistadoInventarioBAJO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistadoInventarioBAJO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewImageColumn3});
+            this.datalistadoInventarioBAJO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datalistadoInventarioBAJO.EnableHeadersVisualStyles = false;
+            this.datalistadoInventarioBAJO.Location = new System.Drawing.Point(0, 77);
+            this.datalistadoInventarioBAJO.Name = "datalistadoInventarioBAJO";
+            this.datalistadoInventarioBAJO.ReadOnly = true;
+            this.datalistadoInventarioBAJO.RowHeadersVisible = false;
+            this.datalistadoInventarioBAJO.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datalistadoInventarioBAJO.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.datalistadoInventarioBAJO.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.datalistadoInventarioBAJO.RowTemplate.Height = 30;
+            this.datalistadoInventarioBAJO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datalistadoInventarioBAJO.Size = new System.Drawing.Size(309, 173);
+            this.datalistadoInventarioBAJO.TabIndex = 5;
+            // 
+            // dataGridViewImageColumn3
+            // 
+            this.dataGridViewImageColumn3.HeaderText = "";
+            this.dataGridViewImageColumn3.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn3.Image")));
+            this.dataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
+            this.dataGridViewImageColumn3.ReadOnly = true;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.Controls.Add(this.menuStrip4);
+            this.panel10.Controls.Add(this.Label6);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(309, 77);
+            this.panel10.TabIndex = 0;
+            // 
+            // menuStrip4
+            // 
+            this.menuStrip4.AutoSize = false;
+            this.menuStrip4.BackColor = System.Drawing.Color.White;
+            this.menuStrip4.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip4.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.menuStrip4.Location = new System.Drawing.Point(16, 19);
+            this.menuStrip4.Name = "menuStrip4";
+            this.menuStrip4.ShowItemToolTips = true;
+            this.menuStrip4.Size = new System.Drawing.Size(107, 32);
+            this.menuStrip4.TabIndex = 610;
+            this.menuStrip4.Text = "menuStrip4";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
+            this.toolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(96, 28);
+            this.toolStripMenuItem1.Text = "Imprimir";
+            // 
+            // Label6
+            // 
+            this.Label6.AutoSize = true;
+            this.Label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Label6.Location = new System.Drawing.Point(191, 31);
+            this.Label6.Name = "Label6";
+            this.Label6.Size = new System.Drawing.Size(735, 20);
+            this.Label6.TabIndex = 603;
+            this.Label6.Text = "Estos Productos Estan debajo del Minimo de STOCK, te Recomendamos que Gestiones t" +
+    "us Productos";
+            // 
+            // PanelREPORTEInventario
+            // 
+            this.PanelREPORTEInventario.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PanelREPORTEInventario.Controls.Add(this.datalistadoInventariosReport);
+            this.PanelREPORTEInventario.Controls.Add(this.panel11);
+            this.PanelREPORTEInventario.Location = new System.Drawing.Point(1213, 639);
+            this.PanelREPORTEInventario.Name = "PanelREPORTEInventario";
+            this.PanelREPORTEInventario.Size = new System.Drawing.Size(388, 195);
+            this.PanelREPORTEInventario.TabIndex = 604;
+            // 
+            // datalistadoInventariosReport
+            // 
+            this.datalistadoInventariosReport.AllowUserToAddRows = false;
+            this.datalistadoInventariosReport.AllowUserToResizeRows = false;
+            this.datalistadoInventariosReport.BackgroundColor = System.Drawing.Color.White;
+            this.datalistadoInventariosReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datalistadoInventariosReport.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.datalistadoInventariosReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.datalistadoInventariosReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistadoInventariosReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewImageColumn4});
+            this.datalistadoInventariosReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datalistadoInventariosReport.EnableHeadersVisualStyles = false;
+            this.datalistadoInventariosReport.Location = new System.Drawing.Point(0, 119);
+            this.datalistadoInventariosReport.Name = "datalistadoInventariosReport";
+            this.datalistadoInventariosReport.ReadOnly = true;
+            this.datalistadoInventariosReport.RowHeadersVisible = false;
+            this.datalistadoInventariosReport.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.datalistadoInventariosReport.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datalistadoInventariosReport.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
+            this.datalistadoInventariosReport.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.datalistadoInventariosReport.RowTemplate.Height = 30;
+            this.datalistadoInventariosReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datalistadoInventariosReport.Size = new System.Drawing.Size(388, 76);
+            this.datalistadoInventariosReport.TabIndex = 6;
+            // 
+            // dataGridViewImageColumn4
+            // 
+            this.dataGridViewImageColumn4.HeaderText = "";
+            this.dataGridViewImageColumn4.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn4.Image")));
+            this.dataGridViewImageColumn4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
+            this.dataGridViewImageColumn4.ReadOnly = true;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel11.Controls.Add(this.menuStrip8);
+            this.panel11.Controls.Add(this.menuStrip7);
+            this.panel11.Controls.Add(this.panel12);
+            this.panel11.Controls.Add(this.MenuStrip5);
+            this.panel11.Controls.Add(this.txtbuscar_inventarios);
+            this.panel11.Controls.Add(this.lblcostoInventario);
+            this.panel11.Controls.Add(this.lblcantidaddeProductosEnInventario);
+            this.panel11.Controls.Add(this.Label2);
+            this.panel11.Controls.Add(this.Label3);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(388, 119);
+            this.panel11.TabIndex = 0;
+            // 
+            // menuStrip8
+            // 
+            this.menuStrip8.AutoSize = false;
+            this.menuStrip8.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip8.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip8.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem8});
+            this.menuStrip8.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.menuStrip8.Location = new System.Drawing.Point(618, 77);
+            this.menuStrip8.Name = "menuStrip8";
+            this.menuStrip8.ShowItemToolTips = true;
+            this.menuStrip8.Size = new System.Drawing.Size(107, 32);
+            this.menuStrip8.TabIndex = 611;
+            this.menuStrip8.Text = "menuStrip7";
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
+            this.toolStripMenuItem8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.toolStripMenuItem8.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem8.Image")));
+            this.toolStripMenuItem8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(96, 28);
+            this.toolStripMenuItem8.Text = "Imprimir";
+            // 
+            // menuStrip7
+            // 
+            this.menuStrip7.AutoSize = false;
+            this.menuStrip7.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip7.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem5});
+            this.menuStrip7.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.menuStrip7.Location = new System.Drawing.Point(465, 77);
+            this.menuStrip7.Name = "menuStrip7";
+            this.menuStrip7.ShowItemToolTips = true;
+            this.menuStrip7.Size = new System.Drawing.Size(153, 32);
+            this.menuStrip7.TabIndex = 611;
+            this.menuStrip7.Text = "menuStrip7";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
+            this.toolStripMenuItem5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.toolStripMenuItem5.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(117, 28);
+            this.toolStripMenuItem5.Text = "Mostrar TODO";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
+            this.panel12.Location = new System.Drawing.Point(14, 105);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(388, 2);
+            this.panel12.TabIndex = 604;
+            // 
+            // MenuStrip5
+            // 
+            this.MenuStrip5.AutoSize = false;
+            this.MenuStrip5.BackColor = System.Drawing.Color.Transparent;
+            this.MenuStrip5.Dock = System.Windows.Forms.DockStyle.None;
+            this.MenuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItem6});
+            this.MenuStrip5.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.MenuStrip5.Location = new System.Drawing.Point(403, 77);
+            this.MenuStrip5.Name = "MenuStrip5";
+            this.MenuStrip5.ShowItemToolTips = true;
+            this.MenuStrip5.Size = new System.Drawing.Size(38, 31);
+            this.MenuStrip5.TabIndex = 602;
+            this.MenuStrip5.Text = "MenuStrip7";
+            // 
+            // ToolStripMenuItem6
+            // 
+            this.ToolStripMenuItem6.BackColor = System.Drawing.Color.Transparent;
+            this.ToolStripMenuItem6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.ToolStripMenuItem6.ForeColor = System.Drawing.Color.Black;
+            this.ToolStripMenuItem6.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem6.Image")));
+            this.ToolStripMenuItem6.Name = "ToolStripMenuItem6";
+            this.ToolStripMenuItem6.Size = new System.Drawing.Size(28, 27);
+            this.ToolStripMenuItem6.ToolTipText = "Quitar logo";
+            // 
+            // txtbuscar_inventarios
+            // 
+            this.txtbuscar_inventarios.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtbuscar_inventarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbuscar_inventarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtbuscar_inventarios.ForeColor = System.Drawing.Color.Black;
+            this.txtbuscar_inventarios.Location = new System.Drawing.Point(14, 83);
+            this.txtbuscar_inventarios.Name = "txtbuscar_inventarios";
+            this.txtbuscar_inventarios.Size = new System.Drawing.Size(386, 19);
+            this.txtbuscar_inventarios.TabIndex = 603;
+            this.txtbuscar_inventarios.Text = "Buscar...";
+            this.txtbuscar_inventarios.TextChanged += new System.EventHandler(this.txtbuscar_inventarios_TextChanged);
+            // 
+            // lblcostoInventario
+            // 
+            this.lblcostoInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.lblcostoInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
+            this.lblcostoInventario.Location = new System.Drawing.Point(540, 35);
+            this.lblcostoInventario.Name = "lblcostoInventario";
+            this.lblcostoInventario.Size = new System.Drawing.Size(341, 24);
+            this.lblcostoInventario.TabIndex = 600;
+            this.lblcostoInventario.Text = "S/.45";
+            this.lblcostoInventario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblcantidaddeProductosEnInventario
+            // 
+            this.lblcantidaddeProductosEnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.lblcantidaddeProductosEnInventario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
+            this.lblcantidaddeProductosEnInventario.Location = new System.Drawing.Point(12, 35);
+            this.lblcantidaddeProductosEnInventario.Name = "lblcantidaddeProductosEnInventario";
+            this.lblcantidaddeProductosEnInventario.Size = new System.Drawing.Size(327, 24);
+            this.lblcantidaddeProductosEnInventario.TabIndex = 599;
+            this.lblcantidaddeProductosEnInventario.Text = "S/.45";
+            this.lblcantidaddeProductosEnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Label2
+            // 
+            this.Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.Label2.ForeColor = System.Drawing.Color.Black;
+            this.Label2.Location = new System.Drawing.Point(557, 12);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(324, 17);
+            this.Label2.TabIndex = 598;
+            this.Label2.Text = "Costo del Inventario";
+            this.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Label3
+            // 
+            this.Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.Label3.ForeColor = System.Drawing.Color.Black;
+            this.Label3.Location = new System.Drawing.Point(13, 12);
+            this.Label3.Name = "Label3";
+            this.Label3.Size = new System.Drawing.Size(330, 23);
+            this.Label3.TabIndex = 597;
+            this.Label3.Text = "Cantidad de Productos en Inventario";
+            // 
+            // PanelVencimientos
+            // 
+            this.PanelVencimientos.BackColor = System.Drawing.Color.White;
+            this.PanelVencimientos.Controls.Add(this.datalistadoVencimientos);
+            this.PanelVencimientos.Controls.Add(this.panel14);
+            this.PanelVencimientos.Location = new System.Drawing.Point(1434, 146);
+            this.PanelVencimientos.Name = "PanelVencimientos";
+            this.PanelVencimientos.Size = new System.Drawing.Size(430, 197);
+            this.PanelVencimientos.TabIndex = 605;
+            // 
+            // datalistadoVencimientos
+            // 
+            this.datalistadoVencimientos.AllowUserToAddRows = false;
+            this.datalistadoVencimientos.AllowUserToResizeRows = false;
+            this.datalistadoVencimientos.BackgroundColor = System.Drawing.Color.White;
+            this.datalistadoVencimientos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datalistadoVencimientos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.datalistadoVencimientos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.datalistadoVencimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistadoVencimientos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewImageColumn5});
+            this.datalistadoVencimientos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.datalistadoVencimientos.EnableHeadersVisualStyles = false;
+            this.datalistadoVencimientos.Location = new System.Drawing.Point(0, 108);
+            this.datalistadoVencimientos.Name = "datalistadoVencimientos";
+            this.datalistadoVencimientos.ReadOnly = true;
+            this.datalistadoVencimientos.RowHeadersVisible = false;
+            this.datalistadoVencimientos.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datalistadoVencimientos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.datalistadoVencimientos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.datalistadoVencimientos.RowTemplate.Height = 30;
+            this.datalistadoVencimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datalistadoVencimientos.Size = new System.Drawing.Size(430, 89);
+            this.datalistadoVencimientos.TabIndex = 6;
+            // 
+            // dataGridViewImageColumn5
+            // 
+            this.dataGridViewImageColumn5.HeaderText = "";
+            this.dataGridViewImageColumn5.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn5.Image")));
+            this.dataGridViewImageColumn5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn5.Name = "dataGridViewImageColumn5";
+            this.dataGridViewImageColumn5.ReadOnly = true;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.gtds);
+            this.panel14.Controls.Add(this.menuStrip13);
+            this.panel14.Controls.Add(this.menuStrip9);
+            this.panel14.Controls.Add(this.txtBuscarVencimientos);
+            this.panel14.Controls.Add(this.panel15);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(430, 108);
+            this.panel14.TabIndex = 0;
+            // 
+            // gtds
+            // 
+            this.gtds.Controls.Add(this.CheckProductosVencidos);
+            this.gtds.Controls.Add(this.CheckPorVenceren30Dias);
+            this.gtds.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.gtds.Location = new System.Drawing.Point(437, 11);
+            this.gtds.Name = "gtds";
+            this.gtds.Size = new System.Drawing.Size(420, 83);
+            this.gtds.TabIndex = 619;
+            this.gtds.TabStop = false;
+            this.gtds.Text = "Filtros";
+            // 
+            // CheckProductosVencidos
+            // 
+            this.CheckProductosVencidos.AutoSize = true;
+            this.CheckProductosVencidos.Location = new System.Drawing.Point(18, 53);
+            this.CheckProductosVencidos.Name = "CheckProductosVencidos";
+            this.CheckProductosVencidos.Size = new System.Drawing.Size(253, 24);
+            this.CheckProductosVencidos.TabIndex = 0;
+            this.CheckProductosVencidos.TabStop = true;
+            this.CheckProductosVencidos.Text = "Productos Vencidos (Todos)";
+            this.CheckProductosVencidos.UseVisualStyleBackColor = true;
+            this.CheckProductosVencidos.CheckedChanged += new System.EventHandler(this.CheckProductosVencidos_CheckedChanged);
+            // 
+            // CheckPorVenceren30Dias
+            // 
+            this.CheckPorVenceren30Dias.AutoSize = true;
+            this.CheckPorVenceren30Dias.Location = new System.Drawing.Point(18, 20);
+            this.CheckPorVenceren30Dias.Name = "CheckPorVenceren30Dias";
+            this.CheckPorVenceren30Dias.Size = new System.Drawing.Size(287, 24);
+            this.CheckPorVenceren30Dias.TabIndex = 0;
+            this.CheckPorVenceren30Dias.TabStop = true;
+            this.CheckPorVenceren30Dias.Text = "Por Vencer en menos de 30 dias";
+            this.CheckPorVenceren30Dias.UseVisualStyleBackColor = true;
+            this.CheckPorVenceren30Dias.CheckedChanged += new System.EventHandler(this.CheckPorVenceren30Dias_CheckedChanged);
+            // 
+            // menuStrip13
+            // 
+            this.menuStrip13.AutoSize = false;
+            this.menuStrip13.BackColor = System.Drawing.Color.White;
+            this.menuStrip13.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip13.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem12});
+            this.menuStrip13.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.menuStrip13.Location = new System.Drawing.Point(865, 42);
+            this.menuStrip13.Name = "menuStrip13";
+            this.menuStrip13.ShowItemToolTips = true;
+            this.menuStrip13.Size = new System.Drawing.Size(107, 32);
+            this.menuStrip13.TabIndex = 618;
+            this.menuStrip13.Text = "menuStrip13";
+            // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.toolStripMenuItem12.ForeColor = System.Drawing.Color.Black;
+            this.toolStripMenuItem12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem12.Image")));
+            this.toolStripMenuItem12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(96, 28);
+            this.toolStripMenuItem12.Text = "Imprimir";
+            // 
+            // menuStrip9
+            // 
+            this.menuStrip9.AutoSize = false;
+            this.menuStrip9.BackColor = System.Drawing.Color.White;
+            this.menuStrip9.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem10});
+            this.menuStrip9.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.menuStrip9.Location = new System.Drawing.Point(7, 41);
+            this.menuStrip9.Name = "menuStrip9";
+            this.menuStrip9.ShowItemToolTips = true;
+            this.menuStrip9.Size = new System.Drawing.Size(38, 31);
+            this.menuStrip9.TabIndex = 614;
+            this.menuStrip9.Text = "MenuStrip7";
+            // 
+            // toolStripMenuItem10
+            // 
+            this.toolStripMenuItem10.BackColor = System.Drawing.Color.White;
+            this.toolStripMenuItem10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.toolStripMenuItem10.ForeColor = System.Drawing.Color.Black;
+            this.toolStripMenuItem10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem10.Image")));
+            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(28, 27);
+            this.toolStripMenuItem10.ToolTipText = "Quitar logo";
+            // 
+            // txtBuscarVencimientos
+            // 
+            this.txtBuscarVencimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtBuscarVencimientos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscarVencimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtBuscarVencimientos.Location = new System.Drawing.Point(48, 48);
+            this.txtBuscarVencimientos.Name = "txtBuscarVencimientos";
+            this.txtBuscarVencimientos.Size = new System.Drawing.Size(345, 19);
+            this.txtBuscarVencimientos.TabIndex = 615;
+            this.txtBuscarVencimientos.Text = "Buscar producto/Codigo";
+            this.txtBuscarVencimientos.Click += new System.EventHandler(this.txtBuscarVencimientos_Click);
+            this.txtBuscarVencimientos.TextChanged += new System.EventHandler(this.txtBuscarVencimientos_TextChanged);
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel15.Location = new System.Drawing.Point(7, 70);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(388, 2);
+            this.panel15.TabIndex = 616;
+            // 
             // Inventarios_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1758, 739);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.PanelVencimientos);
+            this.Controls.Add(this.PanelREPORTEInventario);
+            this.Controls.Add(this.PaneliNVENTARIObajo);
             this.Controls.Add(this.PanelMOVIMIENTOS);
-            this.Controls.Add(this.panel11);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.Panel3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1010,14 +1352,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.MenuStrip3.ResumeLayout(false);
             this.MenuStrip3.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.menuStrip8.ResumeLayout(false);
-            this.menuStrip8.PerformLayout();
-            this.menuStrip7.ResumeLayout(false);
-            this.menuStrip7.PerformLayout();
-            this.MenuStrip5.ResumeLayout(false);
-            this.MenuStrip5.PerformLayout();
             this.PanelMOVIMIENTOS.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DatalistadoMovimientos)).EndInit();
@@ -1041,6 +1375,32 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.MenuStrip1.PerformLayout();
             this.MenuStrip6.ResumeLayout(false);
             this.MenuStrip6.PerformLayout();
+            this.PaneliNVENTARIObajo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoInventarioBAJO)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.menuStrip4.ResumeLayout(false);
+            this.menuStrip4.PerformLayout();
+            this.PanelREPORTEInventario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoInventariosReport)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.menuStrip8.ResumeLayout(false);
+            this.menuStrip8.PerformLayout();
+            this.menuStrip7.ResumeLayout(false);
+            this.menuStrip7.PerformLayout();
+            this.MenuStrip5.ResumeLayout(false);
+            this.MenuStrip5.PerformLayout();
+            this.PanelVencimientos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoVencimientos)).EndInit();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.gtds.ResumeLayout(false);
+            this.gtds.PerformLayout();
+            this.menuStrip13.ResumeLayout(false);
+            this.menuStrip13.PerformLayout();
+            this.menuStrip9.ResumeLayout(false);
+            this.menuStrip9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1069,19 +1429,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
         internal System.Windows.Forms.ToolStripMenuItem TNOTAS;
         internal System.Windows.Forms.ToolStripMenuItem TOTROSPAGOS;
         internal System.Windows.Forms.ToolStripMenuItem TVencimientos;
-        private System.Windows.Forms.Panel panel11;
-        internal System.Windows.Forms.MenuStrip menuStrip8;
-        internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
-        internal System.Windows.Forms.MenuStrip menuStrip7;
-        internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        internal System.Windows.Forms.Panel panel12;
-        internal System.Windows.Forms.MenuStrip MenuStrip5;
-        internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem6;
-        internal System.Windows.Forms.TextBox txtbuscar_inventarios;
-        internal System.Windows.Forms.Label lblcostoInventario;
-        internal System.Windows.Forms.Label lblcantidaddeProductosEnInventario;
-        internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.Label Label3;
         private System.Windows.Forms.Panel PanelMOVIMIENTOS;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView DatalistadoMovimientos;
@@ -1116,5 +1463,41 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
         internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem4;
         internal System.Windows.Forms.TextBox txtbuscarMovimiento;
         internal System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel PaneliNVENTARIObajo;
+        private System.Windows.Forms.DataGridView datalistadoInventarioBAJO;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
+        private System.Windows.Forms.Panel panel10;
+        internal System.Windows.Forms.MenuStrip menuStrip4;
+        internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        internal System.Windows.Forms.Label Label6;
+        private System.Windows.Forms.Panel PanelREPORTEInventario;
+        private System.Windows.Forms.DataGridView datalistadoInventariosReport;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
+        private System.Windows.Forms.Panel panel11;
+        internal System.Windows.Forms.MenuStrip menuStrip8;
+        internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
+        internal System.Windows.Forms.MenuStrip menuStrip7;
+        internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        internal System.Windows.Forms.Panel panel12;
+        internal System.Windows.Forms.MenuStrip MenuStrip5;
+        internal System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem6;
+        internal System.Windows.Forms.TextBox txtbuscar_inventarios;
+        internal System.Windows.Forms.Label lblcostoInventario;
+        internal System.Windows.Forms.Label lblcantidaddeProductosEnInventario;
+        internal System.Windows.Forms.Label Label2;
+        internal System.Windows.Forms.Label Label3;
+        private System.Windows.Forms.Panel PanelVencimientos;
+        private System.Windows.Forms.DataGridView datalistadoVencimientos;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn5;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.GroupBox gtds;
+        private System.Windows.Forms.RadioButton CheckProductosVencidos;
+        private System.Windows.Forms.RadioButton CheckPorVenceren30Dias;
+        internal System.Windows.Forms.MenuStrip menuStrip13;
+        internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
+        internal System.Windows.Forms.MenuStrip menuStrip9;
+        internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
+        internal System.Windows.Forms.TextBox txtBuscarVencimientos;
+        internal System.Windows.Forms.Panel panel15;
     }
 }

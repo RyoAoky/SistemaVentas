@@ -27,9 +27,10 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator = ".";
             System.Threading.Thread.CurrentThread.CurrentCulture.NumberFormat.NumberGroupSeparator = ",";
 
+
             PANELREGISTRO.Visible = false;
             txtbusca.Text = "Buscar...";
-            //sumar_costo_de_inventario_CONTAR_PRODUCTOS();
+            sumar_costo_de_inventario_CONTAR_PRODUCTOS();
             
         }
         private void PictureBox2_Click(object sender, EventArgs e)
@@ -905,6 +906,70 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
         private void txtbusca_TextChanged(object sender, EventArgs e)
         {
             buscar();
+        }
+
+
+        internal void sumar_costo_de_inventario_CONTAR_PRODUCTOS()
+        {
+
+            string resultado;
+            string queryMoneda;
+            queryMoneda = "SELECT Moneda  FROM EMPRESA";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            SqlCommand comMoneda = new SqlCommand(queryMoneda, con);
+            try
+            {
+                con.Open();
+                resultado = Convert.ToString(comMoneda.ExecuteScalar()); //asignamos el valor del importe
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                resultado = "";
+            }
+
+            string importe;
+            string query;
+            query = "SELECT      CONVERT(NUMERIC(18,2),sum(Producto1.Precio_de_compra * Stock )) as suma FROM  Producto1 where  Usa_inventarios ='SI'";
+
+            SqlCommand com = new SqlCommand(query, con);
+            try
+            {
+                con.Open();
+                importe = Convert.ToString(com.ExecuteScalar()); //asignamos el valor del importe
+                con.Close();
+                lblcosto_inventario.Text = resultado + " " + importe;
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                MessageBox.Show(ex.Message);
+
+                lblcosto_inventario.Text = resultado + " " + 0;
+            }
+
+            string conteoresultado;
+            string querycontar;
+            querycontar = "select count(Id_Producto1 ) from Producto1 ";
+            SqlCommand comcontar = new SqlCommand(querycontar, con);
+            try
+            {
+                con.Open();
+                conteoresultado = Convert.ToString(comcontar.ExecuteScalar()); //asignamos el valor del importe
+                con.Close();
+                lblcantidad_productos.Text = conteoresultado;
+            }
+            catch (Exception ex)
+            {
+                con.Close();
+                MessageBox.Show(ex.Message);
+
+                conteoresultado = "";
+                lblcantidad_productos.Text = "0";
+            }
+
         }
     }
 }
