@@ -36,41 +36,27 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.Panelv = new System.Windows.Forms.Panel();
             this.Panel9 = new System.Windows.Forms.Panel();
             this.Label19 = new System.Windows.Forms.Label();
-            this.PictureBox3 = new System.Windows.Forms.PictureBox();
-            this.PictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelR = new System.Windows.Forms.Panel();
             this.Panel6 = new System.Windows.Forms.Panel();
-            this.PictureBox4 = new System.Windows.Forms.PictureBox();
             this.Label1 = new System.Windows.Forms.Label();
-            this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelI = new System.Windows.Forms.Panel();
             this.PanelM = new System.Windows.Forms.Panel();
             this.PanelK = new System.Windows.Forms.Panel();
             this.MenuStrip3 = new System.Windows.Forms.MenuStrip();
-            this.TKardex = new System.Windows.Forms.ToolStripMenuItem();
-            this.TMOVIMIENTOS = new System.Windows.Forms.ToolStripMenuItem();
-            this.TNOTAS = new System.Windows.Forms.ToolStripMenuItem();
-            this.TOTROSPAGOS = new System.Windows.Forms.ToolStripMenuItem();
             this.TVencimientos = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelMOVIMIENTOS = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.DatalistadoMovimientos = new System.Windows.Forms.DataGridView();
-            this.Eli = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel7 = new System.Windows.Forms.Panel();
             this.DatalistadoMovimientosACUMULADO_PRODUCTO = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.MenuStrip11 = new System.Windows.Forms.MenuStrip();
-            this.ToolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.Label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Label8 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
             this.MenuStrip10 = new System.Windows.Forms.MenuStrip();
-            this.ToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip15 = new System.Windows.Forms.MenuStrip();
-            this.tver = new System.Windows.Forms.ToolStripMenuItem();
             this.txtUSUARIOS = new System.Windows.Forms.ComboBox();
             this.txtTipoMovi = new System.Windows.Forms.ComboBox();
             this.txtfechaM = new System.Windows.Forms.DateTimePicker();
@@ -79,31 +65,23 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtIdusuario = new System.Windows.Forms.ComboBox();
             this.MenuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.ToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip6 = new System.Windows.Forms.MenuStrip();
-            this.ToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.txtbuscarMovimiento = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.PaneliNVENTARIObajo = new System.Windows.Forms.Panel();
             this.datalistadoInventarioBAJO = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel10 = new System.Windows.Forms.Panel();
             this.menuStrip4 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Label6 = new System.Windows.Forms.Label();
             this.PanelREPORTEInventario = new System.Windows.Forms.Panel();
             this.datalistadoInventariosReport = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel11 = new System.Windows.Forms.Panel();
             this.menuStrip8 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip7 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel12 = new System.Windows.Forms.Panel();
             this.MenuStrip5 = new System.Windows.Forms.MenuStrip();
-            this.ToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.txtbuscar_inventarios = new System.Windows.Forms.TextBox();
             this.lblcostoInventario = new System.Windows.Forms.Label();
             this.lblcantidaddeProductosEnInventario = new System.Windows.Forms.Label();
@@ -111,29 +89,58 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.Label3 = new System.Windows.Forms.Label();
             this.PanelVencimientos = new System.Windows.Forms.Panel();
             this.datalistadoVencimientos = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel14 = new System.Windows.Forms.Panel();
             this.gtds = new System.Windows.Forms.GroupBox();
             this.CheckProductosVencidos = new System.Windows.Forms.RadioButton();
             this.CheckPorVenceren30Dias = new System.Windows.Forms.RadioButton();
             this.menuStrip13 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip9 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.txtBuscarVencimientos = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.PanelKardex = new System.Windows.Forms.Panel();
+            this.datalistadoBusquedaKardex = new System.Windows.Forms.DataGridView();
+            this.DataGridViewCheckBoxColumn8 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.reportViewer1 = new Telerik.ReportViewer.WinForms.ReportViewer();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.menuStrip12 = new System.Windows.Forms.MenuStrip();
+            this.txtbuscarKardex_movimientos = new System.Windows.Forms.TextBox();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tver = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.PictureBox3 = new System.Windows.Forms.PictureBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PictureBox4 = new System.Windows.Forms.PictureBox();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
+            this.TKardex = new System.Windows.Forms.ToolStripMenuItem();
+            this.TMOVIMIENTOS = new System.Windows.Forms.ToolStripMenuItem();
+            this.TInventariosBajos = new System.Windows.Forms.ToolStripMenuItem();
+            this.TResporteInventarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn6 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn7 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Eli = new System.Windows.Forms.DataGridViewImageColumn();
+            this.DatalistadoMovimientos = new System.Windows.Forms.DataGridView();
             this.Panel3.SuspendLayout();
             this.Panel1.SuspendLayout();
             this.Panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.Panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.MenuStrip3.SuspendLayout();
             this.PanelMOVIMIENTOS.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DatalistadoMovimientos)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DatalistadoMovimientosACUMULADO_PRODUCTO)).BeginInit();
             this.panel8.SuspendLayout();
@@ -162,6 +169,16 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.gtds.SuspendLayout();
             this.menuStrip13.SuspendLayout();
             this.menuStrip9.SuspendLayout();
+            this.PanelKardex.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoBusquedaKardex)).BeginInit();
+            this.panel13.SuspendLayout();
+            this.menuStrip12.SuspendLayout();
+            this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatalistadoMovimientos)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel3
@@ -232,29 +249,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.Label19.TabIndex = 597;
             this.Label19.Text = "Entrada";
             // 
-            // PictureBox3
-            // 
-            this.PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
-            this.PictureBox3.Location = new System.Drawing.Point(92, 20);
-            this.PictureBox3.Name = "PictureBox3";
-            this.PictureBox3.Size = new System.Drawing.Size(27, 23);
-            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox3.TabIndex = 601;
-            this.PictureBox3.TabStop = false;
-            // 
-            // PictureBox1
-            // 
-            this.PictureBox1.BackColor = System.Drawing.Color.White;
-            this.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
-            this.PictureBox1.Location = new System.Drawing.Point(5, 4);
-            this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(142, 58);
-            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox1.TabIndex = 596;
-            this.PictureBox1.TabStop = false;
-            // 
             // PanelR
             // 
             this.PanelR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
@@ -274,17 +268,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.Panel6.Size = new System.Drawing.Size(160, 59);
             this.Panel6.TabIndex = 604;
             // 
-            // PictureBox4
-            // 
-            this.PictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox4.Image")));
-            this.PictureBox4.Location = new System.Drawing.Point(93, 20);
-            this.PictureBox4.Name = "PictureBox4";
-            this.PictureBox4.Size = new System.Drawing.Size(27, 23);
-            this.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox4.TabIndex = 601;
-            this.PictureBox4.TabStop = false;
-            // 
             // Label1
             // 
             this.Label1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -295,18 +278,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.Label1.Size = new System.Drawing.Size(77, 23);
             this.Label1.TabIndex = 597;
             this.Label1.Text = "Salida";
-            // 
-            // PictureBox2
-            // 
-            this.PictureBox2.BackColor = System.Drawing.Color.White;
-            this.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(4, 4);
-            this.PictureBox2.Name = "PictureBox2";
-            this.PictureBox2.Size = new System.Drawing.Size(152, 58);
-            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox2.TabIndex = 596;
-            this.PictureBox2.TabStop = false;
             // 
             // PanelI
             // 
@@ -343,8 +314,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.MenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TKardex,
             this.TMOVIMIENTOS,
-            this.TNOTAS,
-            this.TOTROSPAGOS,
+            this.TInventariosBajos,
+            this.TResporteInventarios,
             this.TVencimientos});
             this.MenuStrip3.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.MenuStrip3.Location = new System.Drawing.Point(0, 0);
@@ -354,54 +325,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.MenuStrip3.Size = new System.Drawing.Size(881, 58);
             this.MenuStrip3.TabIndex = 562;
             this.MenuStrip3.Text = "MenuStrip7";
-            // 
-            // TKardex
-            // 
-            this.TKardex.AutoSize = false;
-            this.TKardex.BackColor = System.Drawing.Color.White;
-            this.TKardex.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.TKardex.ForeColor = System.Drawing.Color.Black;
-            this.TKardex.Image = ((System.Drawing.Image)(resources.GetObject("TKardex.Image")));
-            this.TKardex.Name = "TKardex";
-            this.TKardex.Size = new System.Drawing.Size(94, 54);
-            this.TKardex.Text = "Kardex";
-            this.TKardex.ToolTipText = "Kardex";
-            // 
-            // TMOVIMIENTOS
-            // 
-            this.TMOVIMIENTOS.BackColor = System.Drawing.Color.White;
-            this.TMOVIMIENTOS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.TMOVIMIENTOS.ForeColor = System.Drawing.Color.Black;
-            this.TMOVIMIENTOS.Image = ((System.Drawing.Image)(resources.GetObject("TMOVIMIENTOS.Image")));
-            this.TMOVIMIENTOS.Name = "TMOVIMIENTOS";
-            this.TMOVIMIENTOS.Size = new System.Drawing.Size(139, 54);
-            this.TMOVIMIENTOS.Text = "Movimientos";
-            this.TMOVIMIENTOS.ToolTipText = "Movimientos";
-            // 
-            // TNOTAS
-            // 
-            this.TNOTAS.AutoSize = false;
-            this.TNOTAS.BackColor = System.Drawing.Color.White;
-            this.TNOTAS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.TNOTAS.ForeColor = System.Drawing.Color.Black;
-            this.TNOTAS.Image = ((System.Drawing.Image)(resources.GetObject("TNOTAS.Image")));
-            this.TNOTAS.Name = "TNOTAS";
-            this.TNOTAS.Size = new System.Drawing.Size(169, 54);
-            this.TNOTAS.Text = "Inventarios Bajos";
-            this.TNOTAS.ToolTipText = "Inventarios Bajos";
-            this.TNOTAS.Click += new System.EventHandler(this.TNOTAS_Click);
-            // 
-            // TOTROSPAGOS
-            // 
-            this.TOTROSPAGOS.BackColor = System.Drawing.Color.White;
-            this.TOTROSPAGOS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.TOTROSPAGOS.ForeColor = System.Drawing.Color.Black;
-            this.TOTROSPAGOS.Image = ((System.Drawing.Image)(resources.GetObject("TOTROSPAGOS.Image")));
-            this.TOTROSPAGOS.Name = "TOTROSPAGOS";
-            this.TOTROSPAGOS.Size = new System.Drawing.Size(188, 54);
-            this.TOTROSPAGOS.Text = "Reporte Inventarios";
-            this.TOTROSPAGOS.ToolTipText = "Reporte Inventarios";
-            this.TOTROSPAGOS.Click += new System.EventHandler(this.TOTROSPAGOS_Click);
             // 
             // TVencimientos
             // 
@@ -420,9 +343,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.PanelMOVIMIENTOS.Controls.Add(this.panel5);
             this.PanelMOVIMIENTOS.Controls.Add(this.panel7);
             this.PanelMOVIMIENTOS.Controls.Add(this.panel2);
-            this.PanelMOVIMIENTOS.Location = new System.Drawing.Point(1626, 639);
+            this.PanelMOVIMIENTOS.Location = new System.Drawing.Point(16, 130);
             this.PanelMOVIMIENTOS.Name = "PanelMOVIMIENTOS";
-            this.PanelMOVIMIENTOS.Size = new System.Drawing.Size(238, 174);
+            this.PanelMOVIMIENTOS.Size = new System.Drawing.Size(1293, 532);
             this.PanelMOVIMIENTOS.TabIndex = 602;
             // 
             // panel5
@@ -431,41 +354,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 122);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(0, 52);
+            this.panel5.Size = new System.Drawing.Size(796, 410);
             this.panel5.TabIndex = 2;
-            // 
-            // DatalistadoMovimientos
-            // 
-            this.DatalistadoMovimientos.AllowUserToAddRows = false;
-            this.DatalistadoMovimientos.AllowUserToResizeRows = false;
-            this.DatalistadoMovimientos.BackgroundColor = System.Drawing.Color.White;
-            this.DatalistadoMovimientos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DatalistadoMovimientos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.DatalistadoMovimientos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DatalistadoMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DatalistadoMovimientos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Eli});
-            this.DatalistadoMovimientos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DatalistadoMovimientos.EnableHeadersVisualStyles = false;
-            this.DatalistadoMovimientos.Location = new System.Drawing.Point(0, 0);
-            this.DatalistadoMovimientos.Name = "DatalistadoMovimientos";
-            this.DatalistadoMovimientos.ReadOnly = true;
-            this.DatalistadoMovimientos.RowHeadersVisible = false;
-            this.DatalistadoMovimientos.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatalistadoMovimientos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DatalistadoMovimientos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.DatalistadoMovimientos.RowTemplate.Height = 30;
-            this.DatalistadoMovimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DatalistadoMovimientos.Size = new System.Drawing.Size(0, 52);
-            this.DatalistadoMovimientos.TabIndex = 4;
-            // 
-            // Eli
-            // 
-            this.Eli.HeaderText = "";
-            this.Eli.Image = ((System.Drawing.Image)(resources.GetObject("Eli.Image")));
-            this.Eli.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Eli.Name = "Eli";
-            this.Eli.ReadOnly = true;
             // 
             // panel7
             // 
@@ -473,9 +363,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.panel7.Controls.Add(this.DatalistadoMovimientosACUMULADO_PRODUCTO);
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(-259, 122);
+            this.panel7.Location = new System.Drawing.Point(796, 122);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(497, 52);
+            this.panel7.Size = new System.Drawing.Size(497, 410);
             this.panel7.TabIndex = 3;
             this.panel7.Visible = false;
             // 
@@ -503,17 +393,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.DatalistadoMovimientosACUMULADO_PRODUCTO.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.DatalistadoMovimientosACUMULADO_PRODUCTO.RowTemplate.Height = 30;
             this.DatalistadoMovimientosACUMULADO_PRODUCTO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DatalistadoMovimientosACUMULADO_PRODUCTO.Size = new System.Drawing.Size(497, 0);
+            this.DatalistadoMovimientosACUMULADO_PRODUCTO.Size = new System.Drawing.Size(497, 326);
             this.DatalistadoMovimientosACUMULADO_PRODUCTO.TabIndex = 5;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Visible = false;
             // 
             // panel8
             // 
@@ -541,17 +422,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.MenuStrip11.TabIndex = 612;
             this.MenuStrip11.Text = "MenuStrip11";
             // 
-            // ToolStripMenuItem9
-            // 
-            this.ToolStripMenuItem9.BackColor = System.Drawing.Color.Transparent;
-            this.ToolStripMenuItem9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.ToolStripMenuItem9.ForeColor = System.Drawing.Color.White;
-            this.ToolStripMenuItem9.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem9.Image")));
-            this.ToolStripMenuItem9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ToolStripMenuItem9.Name = "ToolStripMenuItem9";
-            this.ToolStripMenuItem9.Size = new System.Drawing.Size(96, 31);
-            this.ToolStripMenuItem9.Text = "Imprimir";
-            // 
             // Label9
             // 
             this.Label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -565,9 +435,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel17);
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.DATALISTADO_PRODUCTOS_Movimientos);
-            this.panel2.Controls.Add(this.txtIdusuario);
             this.panel2.Controls.Add(this.MenuStrip2);
             this.panel2.Controls.Add(this.MenuStrip1);
             this.panel2.Controls.Add(this.MenuStrip6);
@@ -576,7 +446,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(238, 122);
+            this.panel2.Size = new System.Drawing.Size(1293, 122);
             this.panel2.TabIndex = 1;
             // 
             // groupBox1
@@ -590,9 +460,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.groupBox1.Controls.Add(this.txtfechaM);
             this.groupBox1.Controls.Add(this.Label4);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 8);
+            this.groupBox1.Location = new System.Drawing.Point(450, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(966, 108);
+            this.groupBox1.Size = new System.Drawing.Size(834, 108);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtro Activado";
@@ -628,23 +498,12 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.MenuStrip10.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripMenuItem7});
             this.MenuStrip10.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.MenuStrip10.Location = new System.Drawing.Point(736, 47);
+            this.MenuStrip10.Location = new System.Drawing.Point(728, 49);
             this.MenuStrip10.Name = "MenuStrip10";
             this.MenuStrip10.ShowItemToolTips = true;
-            this.MenuStrip10.Size = new System.Drawing.Size(122, 35);
+            this.MenuStrip10.Size = new System.Drawing.Size(105, 35);
             this.MenuStrip10.TabIndex = 614;
             this.MenuStrip10.Text = "MenuStrip10";
-            // 
-            // ToolStripMenuItem7
-            // 
-            this.ToolStripMenuItem7.BackColor = System.Drawing.Color.Transparent;
-            this.ToolStripMenuItem7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.ToolStripMenuItem7.ForeColor = System.Drawing.Color.Black;
-            this.ToolStripMenuItem7.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem7.Image")));
-            this.ToolStripMenuItem7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ToolStripMenuItem7.Name = "ToolStripMenuItem7";
-            this.ToolStripMenuItem7.Size = new System.Drawing.Size(96, 31);
-            this.ToolStripMenuItem7.Text = "Imprimir";
             // 
             // MenuStrip15
             // 
@@ -654,25 +513,12 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.MenuStrip15.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tver});
             this.MenuStrip15.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.MenuStrip15.Location = new System.Drawing.Point(608, 49);
+            this.MenuStrip15.Location = new System.Drawing.Point(608, 51);
             this.MenuStrip15.Name = "MenuStrip15";
             this.MenuStrip15.ShowItemToolTips = true;
             this.MenuStrip15.Size = new System.Drawing.Size(200, 28);
             this.MenuStrip15.TabIndex = 613;
             this.MenuStrip15.Text = "MenuStrip15";
-            // 
-            // tver
-            // 
-            this.tver.BackColor = System.Drawing.Color.White;
-            this.tver.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.tver.ForeColor = System.Drawing.Color.Black;
-            this.tver.Image = ((System.Drawing.Image)(resources.GetObject("tver.Image")));
-            this.tver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tver.Name = "tver";
-            this.tver.Size = new System.Drawing.Size(123, 24);
-            this.tver.Text = "Ocultar filtro";
-            this.tver.ToolTipText = "Ver contraseña";
-            this.tver.Click += new System.EventHandler(this.tver_Click);
             // 
             // txtUSUARIOS
             // 
@@ -733,7 +579,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.dataGridViewImageColumn2});
             this.DATALISTADO_PRODUCTOS_Movimientos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DATALISTADO_PRODUCTOS_Movimientos.EnableHeadersVisualStyles = false;
-            this.DATALISTADO_PRODUCTOS_Movimientos.Location = new System.Drawing.Point(50, 45);
+            this.DATALISTADO_PRODUCTOS_Movimientos.Location = new System.Drawing.Point(50, 41);
             this.DATALISTADO_PRODUCTOS_Movimientos.MultiSelect = false;
             this.DATALISTADO_PRODUCTOS_Movimientos.Name = "DATALISTADO_PRODUCTOS_Movimientos";
             this.DATALISTADO_PRODUCTOS_Movimientos.ReadOnly = true;
@@ -762,10 +608,11 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             // txtIdusuario
             // 
             this.txtIdusuario.FormattingEnabled = true;
-            this.txtIdusuario.Location = new System.Drawing.Point(424, 11);
+            this.txtIdusuario.Location = new System.Drawing.Point(9, 27);
             this.txtIdusuario.Name = "txtIdusuario";
             this.txtIdusuario.Size = new System.Drawing.Size(78, 21);
             this.txtIdusuario.TabIndex = 617;
+            this.txtIdusuario.SelectedIndexChanged += new System.EventHandler(this.txtIdusuario_SelectedIndexChanged);
             // 
             // MenuStrip2
             // 
@@ -782,17 +629,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.MenuStrip2.TabIndex = 609;
             this.MenuStrip2.Text = "MenuStrip2";
             // 
-            // ToolStripMenuItem3
-            // 
-            this.ToolStripMenuItem3.BackColor = System.Drawing.Color.Transparent;
-            this.ToolStripMenuItem3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.ToolStripMenuItem3.ForeColor = System.Drawing.Color.Black;
-            this.ToolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem3.Image")));
-            this.ToolStripMenuItem3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ToolStripMenuItem3.Name = "ToolStripMenuItem3";
-            this.ToolStripMenuItem3.Size = new System.Drawing.Size(96, 28);
-            this.ToolStripMenuItem3.Text = "Imprimir";
-            // 
             // MenuStrip1
             // 
             this.MenuStrip1.AutoSize = false;
@@ -808,16 +644,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.MenuStrip1.TabIndex = 610;
             this.MenuStrip1.Text = "MenuStrip7";
             // 
-            // ToolStripMenuItem2
-            // 
-            this.ToolStripMenuItem2.BackColor = System.Drawing.Color.White;
-            this.ToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.ToolStripMenuItem2.ForeColor = System.Drawing.Color.Black;
-            this.ToolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem2.Image")));
-            this.ToolStripMenuItem2.Name = "ToolStripMenuItem2";
-            this.ToolStripMenuItem2.Size = new System.Drawing.Size(28, 27);
-            this.ToolStripMenuItem2.ToolTipText = "Quitar logo";
-            // 
             // MenuStrip6
             // 
             this.MenuStrip6.AutoSize = false;
@@ -832,18 +658,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.MenuStrip6.Size = new System.Drawing.Size(195, 32);
             this.MenuStrip6.TabIndex = 613;
             this.MenuStrip6.Text = "MenuStrip6";
-            // 
-            // ToolStripMenuItem4
-            // 
-            this.ToolStripMenuItem4.BackColor = System.Drawing.Color.Transparent;
-            this.ToolStripMenuItem4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.ToolStripMenuItem4.ForeColor = System.Drawing.Color.Black;
-            this.ToolStripMenuItem4.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem4.Image")));
-            this.ToolStripMenuItem4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ToolStripMenuItem4.Name = "ToolStripMenuItem4";
-            this.ToolStripMenuItem4.Size = new System.Drawing.Size(155, 28);
-            this.ToolStripMenuItem4.Text = "Filtros Avanzados";
-            this.ToolStripMenuItem4.Click += new System.EventHandler(this.ToolStripMenuItem4_Click);
             // 
             // txtbuscarMovimiento
             // 
@@ -870,9 +684,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.PaneliNVENTARIObajo.BackColor = System.Drawing.Color.White;
             this.PaneliNVENTARIObajo.Controls.Add(this.datalistadoInventarioBAJO);
             this.PaneliNVENTARIObajo.Controls.Add(this.panel10);
-            this.PaneliNVENTARIObajo.Location = new System.Drawing.Point(1582, 365);
+            this.PaneliNVENTARIObajo.Location = new System.Drawing.Point(1328, 272);
             this.PaneliNVENTARIObajo.Name = "PaneliNVENTARIObajo";
-            this.PaneliNVENTARIObajo.Size = new System.Drawing.Size(309, 250);
+            this.PaneliNVENTARIObajo.Size = new System.Drawing.Size(272, 149);
             this.PaneliNVENTARIObajo.TabIndex = 603;
             // 
             // datalistadoInventarioBAJO
@@ -884,8 +698,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.datalistadoInventarioBAJO.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.datalistadoInventarioBAJO.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.datalistadoInventarioBAJO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datalistadoInventarioBAJO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewImageColumn3});
             this.datalistadoInventarioBAJO.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datalistadoInventarioBAJO.EnableHeadersVisualStyles = false;
             this.datalistadoInventarioBAJO.Location = new System.Drawing.Point(0, 77);
@@ -897,16 +709,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.datalistadoInventarioBAJO.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.datalistadoInventarioBAJO.RowTemplate.Height = 30;
             this.datalistadoInventarioBAJO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datalistadoInventarioBAJO.Size = new System.Drawing.Size(309, 173);
+            this.datalistadoInventarioBAJO.Size = new System.Drawing.Size(272, 72);
             this.datalistadoInventarioBAJO.TabIndex = 5;
-            // 
-            // dataGridViewImageColumn3
-            // 
-            this.dataGridViewImageColumn3.HeaderText = "";
-            this.dataGridViewImageColumn3.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn3.Image")));
-            this.dataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
-            this.dataGridViewImageColumn3.ReadOnly = true;
             // 
             // panel10
             // 
@@ -916,7 +720,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(309, 77);
+            this.panel10.Size = new System.Drawing.Size(272, 77);
             this.panel10.TabIndex = 0;
             // 
             // menuStrip4
@@ -934,17 +738,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.menuStrip4.TabIndex = 610;
             this.menuStrip4.Text = "menuStrip4";
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
-            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
-            this.toolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(96, 28);
-            this.toolStripMenuItem1.Text = "Imprimir";
-            // 
             // Label6
             // 
             this.Label6.AutoSize = true;
@@ -961,9 +754,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.PanelREPORTEInventario.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PanelREPORTEInventario.Controls.Add(this.datalistadoInventariosReport);
             this.PanelREPORTEInventario.Controls.Add(this.panel11);
-            this.PanelREPORTEInventario.Location = new System.Drawing.Point(1213, 639);
+            this.PanelREPORTEInventario.Location = new System.Drawing.Point(1576, 493);
             this.PanelREPORTEInventario.Name = "PanelREPORTEInventario";
-            this.PanelREPORTEInventario.Size = new System.Drawing.Size(388, 195);
+            this.PanelREPORTEInventario.Size = new System.Drawing.Size(313, 169);
             this.PanelREPORTEInventario.TabIndex = 604;
             // 
             // datalistadoInventariosReport
@@ -975,8 +768,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.datalistadoInventariosReport.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.datalistadoInventariosReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.datalistadoInventariosReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datalistadoInventariosReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewImageColumn4});
             this.datalistadoInventariosReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datalistadoInventariosReport.EnableHeadersVisualStyles = false;
             this.datalistadoInventariosReport.Location = new System.Drawing.Point(0, 119);
@@ -989,16 +780,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.datalistadoInventariosReport.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
             this.datalistadoInventariosReport.RowTemplate.Height = 30;
             this.datalistadoInventariosReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datalistadoInventariosReport.Size = new System.Drawing.Size(388, 76);
+            this.datalistadoInventariosReport.Size = new System.Drawing.Size(313, 50);
             this.datalistadoInventariosReport.TabIndex = 6;
-            // 
-            // dataGridViewImageColumn4
-            // 
-            this.dataGridViewImageColumn4.HeaderText = "";
-            this.dataGridViewImageColumn4.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn4.Image")));
-            this.dataGridViewImageColumn4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
-            this.dataGridViewImageColumn4.ReadOnly = true;
             // 
             // panel11
             // 
@@ -1015,7 +798,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(388, 119);
+            this.panel11.Size = new System.Drawing.Size(313, 119);
             this.panel11.TabIndex = 0;
             // 
             // menuStrip8
@@ -1032,17 +815,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.menuStrip8.Size = new System.Drawing.Size(107, 32);
             this.menuStrip8.TabIndex = 611;
             this.menuStrip8.Text = "menuStrip7";
-            // 
-            // toolStripMenuItem8
-            // 
-            this.toolStripMenuItem8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
-            this.toolStripMenuItem8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.toolStripMenuItem8.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem8.Image")));
-            this.toolStripMenuItem8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(96, 28);
-            this.toolStripMenuItem8.Text = "Imprimir";
             // 
             // menuStrip7
             // 
@@ -1093,16 +865,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.MenuStrip5.Size = new System.Drawing.Size(38, 31);
             this.MenuStrip5.TabIndex = 602;
             this.MenuStrip5.Text = "MenuStrip7";
-            // 
-            // ToolStripMenuItem6
-            // 
-            this.ToolStripMenuItem6.BackColor = System.Drawing.Color.Transparent;
-            this.ToolStripMenuItem6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.ToolStripMenuItem6.ForeColor = System.Drawing.Color.Black;
-            this.ToolStripMenuItem6.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem6.Image")));
-            this.ToolStripMenuItem6.Name = "ToolStripMenuItem6";
-            this.ToolStripMenuItem6.Size = new System.Drawing.Size(28, 27);
-            this.ToolStripMenuItem6.ToolTipText = "Quitar logo";
             // 
             // txtbuscar_inventarios
             // 
@@ -1165,9 +927,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.PanelVencimientos.BackColor = System.Drawing.Color.White;
             this.PanelVencimientos.Controls.Add(this.datalistadoVencimientos);
             this.PanelVencimientos.Controls.Add(this.panel14);
-            this.PanelVencimientos.Location = new System.Drawing.Point(1434, 146);
+            this.PanelVencimientos.Location = new System.Drawing.Point(1617, 119);
             this.PanelVencimientos.Name = "PanelVencimientos";
-            this.PanelVencimientos.Size = new System.Drawing.Size(430, 197);
+            this.PanelVencimientos.Size = new System.Drawing.Size(272, 147);
             this.PanelVencimientos.TabIndex = 605;
             // 
             // datalistadoVencimientos
@@ -1179,8 +941,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.datalistadoVencimientos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.datalistadoVencimientos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.datalistadoVencimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datalistadoVencimientos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewImageColumn5});
             this.datalistadoVencimientos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datalistadoVencimientos.EnableHeadersVisualStyles = false;
             this.datalistadoVencimientos.Location = new System.Drawing.Point(0, 108);
@@ -1192,16 +952,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.datalistadoVencimientos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.datalistadoVencimientos.RowTemplate.Height = 30;
             this.datalistadoVencimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datalistadoVencimientos.Size = new System.Drawing.Size(430, 89);
+            this.datalistadoVencimientos.Size = new System.Drawing.Size(272, 39);
             this.datalistadoVencimientos.TabIndex = 6;
-            // 
-            // dataGridViewImageColumn5
-            // 
-            this.dataGridViewImageColumn5.HeaderText = "";
-            this.dataGridViewImageColumn5.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn5.Image")));
-            this.dataGridViewImageColumn5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn5.Name = "dataGridViewImageColumn5";
-            this.dataGridViewImageColumn5.ReadOnly = true;
             // 
             // panel14
             // 
@@ -1214,7 +966,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Location = new System.Drawing.Point(0, 0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(430, 108);
+            this.panel14.Size = new System.Drawing.Size(272, 108);
             this.panel14.TabIndex = 0;
             // 
             // gtds
@@ -1268,17 +1020,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.menuStrip13.TabIndex = 618;
             this.menuStrip13.Text = "menuStrip13";
             // 
-            // toolStripMenuItem12
-            // 
-            this.toolStripMenuItem12.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripMenuItem12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.toolStripMenuItem12.ForeColor = System.Drawing.Color.Black;
-            this.toolStripMenuItem12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem12.Image")));
-            this.toolStripMenuItem12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(96, 28);
-            this.toolStripMenuItem12.Text = "Imprimir";
-            // 
             // menuStrip9
             // 
             this.menuStrip9.AutoSize = false;
@@ -1293,16 +1034,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.menuStrip9.Size = new System.Drawing.Size(38, 31);
             this.menuStrip9.TabIndex = 614;
             this.menuStrip9.Text = "MenuStrip7";
-            // 
-            // toolStripMenuItem10
-            // 
-            this.toolStripMenuItem10.BackColor = System.Drawing.Color.White;
-            this.toolStripMenuItem10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.toolStripMenuItem10.ForeColor = System.Drawing.Color.Black;
-            this.toolStripMenuItem10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem10.Image")));
-            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(28, 27);
-            this.toolStripMenuItem10.ToolTipText = "Quitar logo";
             // 
             // txtBuscarVencimientos
             // 
@@ -1325,11 +1056,429 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.panel15.Size = new System.Drawing.Size(388, 2);
             this.panel15.TabIndex = 616;
             // 
+            // PanelKardex
+            // 
+            this.PanelKardex.BackColor = System.Drawing.Color.White;
+            this.PanelKardex.Controls.Add(this.datalistadoBusquedaKardex);
+            this.PanelKardex.Controls.Add(this.reportViewer1);
+            this.PanelKardex.Controls.Add(this.panel13);
+            this.PanelKardex.Location = new System.Drawing.Point(1617, 272);
+            this.PanelKardex.Name = "PanelKardex";
+            this.PanelKardex.Size = new System.Drawing.Size(272, 149);
+            this.PanelKardex.TabIndex = 606;
+            // 
+            // datalistadoBusquedaKardex
+            // 
+            this.datalistadoBusquedaKardex.AllowUserToAddRows = false;
+            this.datalistadoBusquedaKardex.AllowUserToDeleteRows = false;
+            this.datalistadoBusquedaKardex.AllowUserToResizeRows = false;
+            this.datalistadoBusquedaKardex.BackgroundColor = System.Drawing.Color.White;
+            this.datalistadoBusquedaKardex.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datalistadoBusquedaKardex.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.datalistadoBusquedaKardex.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistadoBusquedaKardex.ColumnHeadersVisible = false;
+            this.datalistadoBusquedaKardex.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridViewCheckBoxColumn8});
+            this.datalistadoBusquedaKardex.EnableHeadersVisualStyles = false;
+            this.datalistadoBusquedaKardex.Location = new System.Drawing.Point(37, 48);
+            this.datalistadoBusquedaKardex.Name = "datalistadoBusquedaKardex";
+            this.datalistadoBusquedaKardex.ReadOnly = true;
+            this.datalistadoBusquedaKardex.RowHeadersVisible = false;
+            this.datalistadoBusquedaKardex.RowHeadersWidth = 9;
+            this.datalistadoBusquedaKardex.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.datalistadoBusquedaKardex.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.datalistadoBusquedaKardex.RowTemplate.Height = 40;
+            this.datalistadoBusquedaKardex.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datalistadoBusquedaKardex.Size = new System.Drawing.Size(348, 121);
+            this.datalistadoBusquedaKardex.TabIndex = 608;
+            this.datalistadoBusquedaKardex.Visible = false;
+            this.datalistadoBusquedaKardex.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datalistadoBusquedaKardex_CellClick);
+            // 
+            // DataGridViewCheckBoxColumn8
+            // 
+            this.DataGridViewCheckBoxColumn8.DataPropertyName = "Marcar";
+            this.DataGridViewCheckBoxColumn8.HeaderText = "Marcar";
+            this.DataGridViewCheckBoxColumn8.Name = "DataGridViewCheckBoxColumn8";
+            this.DataGridViewCheckBoxColumn8.ReadOnly = true;
+            this.DataGridViewCheckBoxColumn8.Visible = false;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.AccessibilityKeyMap = null;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.Location = new System.Drawing.Point(0, 65);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(272, 84);
+            this.reportViewer1.TabIndex = 1;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Controls.Add(this.panel16);
+            this.panel13.Controls.Add(this.menuStrip12);
+            this.panel13.Controls.Add(this.txtbuscarKardex_movimientos);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(272, 65);
+            this.panel13.TabIndex = 0;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel16.Location = new System.Drawing.Point(37, 45);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(345, 2);
+            this.panel16.TabIndex = 613;
+            // 
+            // menuStrip12
+            // 
+            this.menuStrip12.AutoSize = false;
+            this.menuStrip12.BackColor = System.Drawing.Color.White;
+            this.menuStrip12.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip12.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem11});
+            this.menuStrip12.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.menuStrip12.Location = new System.Drawing.Point(388, 22);
+            this.menuStrip12.Name = "menuStrip12";
+            this.menuStrip12.ShowItemToolTips = true;
+            this.menuStrip12.Size = new System.Drawing.Size(38, 31);
+            this.menuStrip12.TabIndex = 611;
+            this.menuStrip12.Text = "MenuStrip7";
+            // 
+            // txtbuscarKardex_movimientos
+            // 
+            this.txtbuscarKardex_movimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtbuscarKardex_movimientos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbuscarKardex_movimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtbuscarKardex_movimientos.Location = new System.Drawing.Point(37, 25);
+            this.txtbuscarKardex_movimientos.Name = "txtbuscarKardex_movimientos";
+            this.txtbuscarKardex_movimientos.Size = new System.Drawing.Size(345, 19);
+            this.txtbuscarKardex_movimientos.TabIndex = 612;
+            this.txtbuscarKardex_movimientos.Text = "Buscar producto";
+            this.txtbuscarKardex_movimientos.TextChanged += new System.EventHandler(this.txtbuscarKardex_movimientos_TextChanged);
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.txtIdusuario);
+            this.panel17.Location = new System.Drawing.Point(401, 3);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(15, 15);
+            this.panel17.TabIndex = 618;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Visible = false;
+            // 
+            // dataGridViewImageColumn3
+            // 
+            this.dataGridViewImageColumn3.HeaderText = "";
+            this.dataGridViewImageColumn3.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn3.Image")));
+            this.dataGridViewImageColumn3.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
+            this.dataGridViewImageColumn3.ReadOnly = true;
+            this.dataGridViewImageColumn3.Visible = false;
+            // 
+            // toolStripMenuItem11
+            // 
+            this.toolStripMenuItem11.BackColor = System.Drawing.Color.White;
+            this.toolStripMenuItem11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.toolStripMenuItem11.ForeColor = System.Drawing.Color.Black;
+            this.toolStripMenuItem11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem11.Image")));
+            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(28, 27);
+            this.toolStripMenuItem11.ToolTipText = "Buscar";
+            // 
+            // toolStripMenuItem12
+            // 
+            this.toolStripMenuItem12.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.toolStripMenuItem12.ForeColor = System.Drawing.Color.Black;
+            this.toolStripMenuItem12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem12.Image")));
+            this.toolStripMenuItem12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(96, 28);
+            this.toolStripMenuItem12.Text = "Imprimir";
+            // 
+            // toolStripMenuItem10
+            // 
+            this.toolStripMenuItem10.BackColor = System.Drawing.Color.White;
+            this.toolStripMenuItem10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.toolStripMenuItem10.ForeColor = System.Drawing.Color.Black;
+            this.toolStripMenuItem10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem10.Image")));
+            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(28, 27);
+            this.toolStripMenuItem10.ToolTipText = "Quitar logo";
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
+            this.toolStripMenuItem8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.toolStripMenuItem8.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem8.Image")));
+            this.toolStripMenuItem8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(96, 28);
+            this.toolStripMenuItem8.Text = "Imprimir";
+            // 
+            // ToolStripMenuItem6
+            // 
+            this.ToolStripMenuItem6.BackColor = System.Drawing.Color.Transparent;
+            this.ToolStripMenuItem6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.ToolStripMenuItem6.ForeColor = System.Drawing.Color.Black;
+            this.ToolStripMenuItem6.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem6.Image")));
+            this.ToolStripMenuItem6.Name = "ToolStripMenuItem6";
+            this.ToolStripMenuItem6.Size = new System.Drawing.Size(28, 27);
+            this.ToolStripMenuItem6.ToolTipText = "Quitar logo";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
+            this.toolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(96, 28);
+            this.toolStripMenuItem1.Text = "Imprimir";
+            // 
+            // ToolStripMenuItem9
+            // 
+            this.ToolStripMenuItem9.BackColor = System.Drawing.Color.Transparent;
+            this.ToolStripMenuItem9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.ToolStripMenuItem9.ForeColor = System.Drawing.Color.White;
+            this.ToolStripMenuItem9.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem9.Image")));
+            this.ToolStripMenuItem9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ToolStripMenuItem9.Name = "ToolStripMenuItem9";
+            this.ToolStripMenuItem9.Size = new System.Drawing.Size(96, 31);
+            this.ToolStripMenuItem9.Text = "Imprimir";
+            // 
+            // ToolStripMenuItem7
+            // 
+            this.ToolStripMenuItem7.BackColor = System.Drawing.Color.Transparent;
+            this.ToolStripMenuItem7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.ToolStripMenuItem7.ForeColor = System.Drawing.Color.Black;
+            this.ToolStripMenuItem7.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem7.Image")));
+            this.ToolStripMenuItem7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ToolStripMenuItem7.Name = "ToolStripMenuItem7";
+            this.ToolStripMenuItem7.Size = new System.Drawing.Size(96, 31);
+            this.ToolStripMenuItem7.Text = "Imprimir";
+            this.ToolStripMenuItem7.Click += new System.EventHandler(this.ToolStripMenuItem7_Click);
+            // 
+            // tver
+            // 
+            this.tver.BackColor = System.Drawing.Color.White;
+            this.tver.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.tver.ForeColor = System.Drawing.Color.Black;
+            this.tver.Image = ((System.Drawing.Image)(resources.GetObject("tver.Image")));
+            this.tver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tver.Name = "tver";
+            this.tver.Size = new System.Drawing.Size(123, 24);
+            this.tver.Text = "Ocultar filtro";
+            this.tver.ToolTipText = "Ver contraseña";
+            this.tver.Click += new System.EventHandler(this.tver_Click);
+            // 
+            // ToolStripMenuItem3
+            // 
+            this.ToolStripMenuItem3.BackColor = System.Drawing.Color.Transparent;
+            this.ToolStripMenuItem3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.ToolStripMenuItem3.ForeColor = System.Drawing.Color.Black;
+            this.ToolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem3.Image")));
+            this.ToolStripMenuItem3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ToolStripMenuItem3.Name = "ToolStripMenuItem3";
+            this.ToolStripMenuItem3.Size = new System.Drawing.Size(96, 28);
+            this.ToolStripMenuItem3.Text = "Imprimir";
+            this.ToolStripMenuItem3.Click += new System.EventHandler(this.ToolStripMenuItem3_Click);
+            // 
+            // ToolStripMenuItem2
+            // 
+            this.ToolStripMenuItem2.BackColor = System.Drawing.Color.White;
+            this.ToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.ToolStripMenuItem2.ForeColor = System.Drawing.Color.Black;
+            this.ToolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem2.Image")));
+            this.ToolStripMenuItem2.Name = "ToolStripMenuItem2";
+            this.ToolStripMenuItem2.Size = new System.Drawing.Size(28, 27);
+            this.ToolStripMenuItem2.ToolTipText = "Quitar logo";
+            // 
+            // ToolStripMenuItem4
+            // 
+            this.ToolStripMenuItem4.BackColor = System.Drawing.Color.Transparent;
+            this.ToolStripMenuItem4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.ToolStripMenuItem4.ForeColor = System.Drawing.Color.Black;
+            this.ToolStripMenuItem4.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripMenuItem4.Image")));
+            this.ToolStripMenuItem4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ToolStripMenuItem4.Name = "ToolStripMenuItem4";
+            this.ToolStripMenuItem4.Size = new System.Drawing.Size(155, 28);
+            this.ToolStripMenuItem4.Text = "Filtros Avanzados";
+            this.ToolStripMenuItem4.Click += new System.EventHandler(this.ToolStripMenuItem4_Click);
+            // 
+            // PictureBox3
+            // 
+            this.PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
+            this.PictureBox3.Location = new System.Drawing.Point(92, 20);
+            this.PictureBox3.Name = "PictureBox3";
+            this.PictureBox3.Size = new System.Drawing.Size(27, 23);
+            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox3.TabIndex = 601;
+            this.PictureBox3.TabStop = false;
+            // 
+            // PictureBox1
+            // 
+            this.PictureBox1.BackColor = System.Drawing.Color.White;
+            this.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
+            this.PictureBox1.Location = new System.Drawing.Point(5, 4);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(142, 58);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 596;
+            this.PictureBox1.TabStop = false;
+            // 
+            // PictureBox4
+            // 
+            this.PictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox4.Image")));
+            this.PictureBox4.Location = new System.Drawing.Point(93, 20);
+            this.PictureBox4.Name = "PictureBox4";
+            this.PictureBox4.Size = new System.Drawing.Size(27, 23);
+            this.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox4.TabIndex = 601;
+            this.PictureBox4.TabStop = false;
+            // 
+            // PictureBox2
+            // 
+            this.PictureBox2.BackColor = System.Drawing.Color.White;
+            this.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
+            this.PictureBox2.Location = new System.Drawing.Point(4, 4);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(152, 58);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox2.TabIndex = 596;
+            this.PictureBox2.TabStop = false;
+            // 
+            // TKardex
+            // 
+            this.TKardex.AutoSize = false;
+            this.TKardex.BackColor = System.Drawing.Color.White;
+            this.TKardex.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.TKardex.ForeColor = System.Drawing.Color.Black;
+            this.TKardex.Image = ((System.Drawing.Image)(resources.GetObject("TKardex.Image")));
+            this.TKardex.Name = "TKardex";
+            this.TKardex.Size = new System.Drawing.Size(94, 54);
+            this.TKardex.Text = "Kardex";
+            this.TKardex.ToolTipText = "Kardex";
+            this.TKardex.Click += new System.EventHandler(this.TKardex_Click);
+            // 
+            // TMOVIMIENTOS
+            // 
+            this.TMOVIMIENTOS.BackColor = System.Drawing.Color.White;
+            this.TMOVIMIENTOS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.TMOVIMIENTOS.ForeColor = System.Drawing.Color.Black;
+            this.TMOVIMIENTOS.Image = ((System.Drawing.Image)(resources.GetObject("TMOVIMIENTOS.Image")));
+            this.TMOVIMIENTOS.Name = "TMOVIMIENTOS";
+            this.TMOVIMIENTOS.Size = new System.Drawing.Size(139, 54);
+            this.TMOVIMIENTOS.Text = "Movimientos";
+            this.TMOVIMIENTOS.ToolTipText = "Movimientos";
+            this.TMOVIMIENTOS.Click += new System.EventHandler(this.TMOVIMIENTOS_Click);
+            // 
+            // TInventariosBajos
+            // 
+            this.TInventariosBajos.AutoSize = false;
+            this.TInventariosBajos.BackColor = System.Drawing.Color.White;
+            this.TInventariosBajos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.TInventariosBajos.ForeColor = System.Drawing.Color.Black;
+            this.TInventariosBajos.Image = ((System.Drawing.Image)(resources.GetObject("TInventariosBajos.Image")));
+            this.TInventariosBajos.Name = "TInventariosBajos";
+            this.TInventariosBajos.Size = new System.Drawing.Size(169, 54);
+            this.TInventariosBajos.Text = "Inventarios Bajos";
+            this.TInventariosBajos.ToolTipText = "Inventarios Bajos";
+            this.TInventariosBajos.Click += new System.EventHandler(this.TNOTAS_Click);
+            // 
+            // TResporteInventarios
+            // 
+            this.TResporteInventarios.BackColor = System.Drawing.Color.White;
+            this.TResporteInventarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.TResporteInventarios.ForeColor = System.Drawing.Color.Black;
+            this.TResporteInventarios.Image = ((System.Drawing.Image)(resources.GetObject("TResporteInventarios.Image")));
+            this.TResporteInventarios.Name = "TResporteInventarios";
+            this.TResporteInventarios.Size = new System.Drawing.Size(188, 54);
+            this.TResporteInventarios.Text = "Reporte Inventarios";
+            this.TResporteInventarios.ToolTipText = "Reporte Inventarios";
+            this.TResporteInventarios.Click += new System.EventHandler(this.TOTROSPAGOS_Click);
+            // 
+            // dataGridViewImageColumn4
+            // 
+            this.dataGridViewImageColumn4.HeaderText = "";
+            this.dataGridViewImageColumn4.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn4.Image")));
+            this.dataGridViewImageColumn4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
+            // 
+            // dataGridViewImageColumn5
+            // 
+            this.dataGridViewImageColumn5.HeaderText = "";
+            this.dataGridViewImageColumn5.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn5.Image")));
+            this.dataGridViewImageColumn5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn5.Name = "dataGridViewImageColumn5";
+            // 
+            // dataGridViewImageColumn6
+            // 
+            this.dataGridViewImageColumn6.HeaderText = "";
+            this.dataGridViewImageColumn6.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn6.Image")));
+            this.dataGridViewImageColumn6.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn6.Name = "dataGridViewImageColumn6";
+            // 
+            // dataGridViewImageColumn7
+            // 
+            this.dataGridViewImageColumn7.HeaderText = "";
+            this.dataGridViewImageColumn7.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn7.Image")));
+            this.dataGridViewImageColumn7.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn7.Name = "dataGridViewImageColumn7";
+            // 
+            // Eli
+            // 
+            this.Eli.HeaderText = "";
+            this.Eli.Image = ((System.Drawing.Image)(resources.GetObject("Eli.Image")));
+            this.Eli.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Eli.Name = "Eli";
+            this.Eli.ReadOnly = true;
+            // 
+            // DatalistadoMovimientos
+            // 
+            this.DatalistadoMovimientos.AllowUserToAddRows = false;
+            this.DatalistadoMovimientos.AllowUserToResizeRows = false;
+            this.DatalistadoMovimientos.BackgroundColor = System.Drawing.Color.White;
+            this.DatalistadoMovimientos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DatalistadoMovimientos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.DatalistadoMovimientos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DatalistadoMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DatalistadoMovimientos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Eli});
+            this.DatalistadoMovimientos.EnableHeadersVisualStyles = false;
+            this.DatalistadoMovimientos.Location = new System.Drawing.Point(0, 0);
+            this.DatalistadoMovimientos.Name = "DatalistadoMovimientos";
+            this.DatalistadoMovimientos.ReadOnly = true;
+            this.DatalistadoMovimientos.RowHeadersVisible = false;
+            this.DatalistadoMovimientos.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatalistadoMovimientos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DatalistadoMovimientos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.DatalistadoMovimientos.RowTemplate.Height = 30;
+            this.DatalistadoMovimientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DatalistadoMovimientos.Size = new System.Drawing.Size(796, 410);
+            this.DatalistadoMovimientos.TabIndex = 4;
+            // 
             // Inventarios_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.PanelKardex);
             this.Controls.Add(this.PanelVencimientos);
             this.Controls.Add(this.PanelREPORTEInventario);
             this.Controls.Add(this.PaneliNVENTARIObajo);
@@ -1345,16 +1494,11 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.Panel3.PerformLayout();
             this.Panel1.ResumeLayout(false);
             this.Panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
             this.Panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.MenuStrip3.ResumeLayout(false);
             this.MenuStrip3.PerformLayout();
             this.PanelMOVIMIENTOS.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DatalistadoMovimientos)).EndInit();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DatalistadoMovimientosACUMULADO_PRODUCTO)).EndInit();
             this.panel8.ResumeLayout(false);
@@ -1401,6 +1545,18 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             this.menuStrip13.PerformLayout();
             this.menuStrip9.ResumeLayout(false);
             this.menuStrip9.PerformLayout();
+            this.PanelKardex.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadoBusquedaKardex)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.menuStrip12.ResumeLayout(false);
+            this.menuStrip12.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatalistadoMovimientos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1426,13 +1582,11 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
         internal System.Windows.Forms.MenuStrip MenuStrip3;
         internal System.Windows.Forms.ToolStripMenuItem TKardex;
         internal System.Windows.Forms.ToolStripMenuItem TMOVIMIENTOS;
-        internal System.Windows.Forms.ToolStripMenuItem TNOTAS;
-        internal System.Windows.Forms.ToolStripMenuItem TOTROSPAGOS;
+        internal System.Windows.Forms.ToolStripMenuItem TInventariosBajos;
+        internal System.Windows.Forms.ToolStripMenuItem TResporteInventarios;
         internal System.Windows.Forms.ToolStripMenuItem TVencimientos;
         private System.Windows.Forms.Panel PanelMOVIMIENTOS;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridView DatalistadoMovimientos;
-        private System.Windows.Forms.DataGridViewImageColumn Eli;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.DataGridView DatalistadoMovimientosACUMULADO_PRODUCTO;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
@@ -1499,5 +1653,19 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
         internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
         internal System.Windows.Forms.TextBox txtBuscarVencimientos;
         internal System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel PanelKardex;
+        private System.Windows.Forms.Panel panel13;
+        internal System.Windows.Forms.Panel panel16;
+        internal System.Windows.Forms.MenuStrip menuStrip12;
+        internal System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
+        internal System.Windows.Forms.TextBox txtbuscarKardex_movimientos;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn6;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn7;
+        private Telerik.ReportViewer.WinForms.ReportViewer reportViewer1;
+        internal System.Windows.Forms.DataGridView datalistadoBusquedaKardex;
+        internal System.Windows.Forms.DataGridViewCheckBoxColumn DataGridViewCheckBoxColumn8;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.DataGridView DatalistadoMovimientos;
+        private System.Windows.Forms.DataGridViewImageColumn Eli;
     }
 }

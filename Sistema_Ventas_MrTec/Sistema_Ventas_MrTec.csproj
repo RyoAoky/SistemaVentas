@@ -8,9 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Sistema_Ventas_MrTec</RootNamespace>
     <AssemblyName>Sistema_Ventas_MrTec</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -36,6 +37,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,12 +47,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
     <Reference Include="System.Management.Instrumentation" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,6 +78,12 @@
     <Compile Include="Conexion\Encryptacion.cs" />
     <Compile Include="Conexion\Tamaño_automatico_de_datatables.cs" />
     <Compile Include="Conexion\WinAutoComplete.cs" />
+    <Compile Include="MODULOS\Asistente_de_Inicio\Registro_de_Empresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Asistente_de_Inicio\Registro_de_Empresa.Designer.cs">
+      <DependentUpon>Registro_de_Empresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="MODULOS\Caja\Apertura_de_Caja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +120,48 @@
     <Compile Include="MODULOS\Productos\ProductoOK.Designer.cs">
       <DependentUpon>ProductoOK.cs</DependentUpon>
     </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\FormInventariosTodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\FormInventariosTodos.Designer.cs">
+      <DependentUpon>FormInventariosTodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\FormMovimientoBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\FormMovimientoBuscar.Designer.cs">
+      <DependentUpon>FormMovimientoBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\ReporteInventarios_Todos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\ReporteInventarios_Todos.Designer.cs">
+      <DependentUpon>ReporteInventarios_Todos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\FormReporteMovimientoFILTROS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\FormReporteMovimientoFILTROS.Designer.cs">
+      <DependentUpon>FormReporteMovimientoFILTROS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\Reporte_Movimiento_con_filtros.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\Reporte_Movimiento_con_filtros.Designer.cs">
+      <DependentUpon>Reporte_Movimiento_con_filtros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\ReportMovimientoBuscar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\ReportMovimientoBuscar.Designer.cs">
+      <DependentUpon>ReportMovimientoBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_Kardex_diseño\ReportKardex_Movimiento.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_Kardex_diseño\ReportKardex_Movimiento.Designer.cs">
+      <DependentUpon>ReportKardex_Movimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="MODULOS\Usuarios_y_Permisos\Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +176,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MODULOS\Asistente_de_Inicio\Registro_de_Empresa.resx">
+      <DependentUpon>Registro_de_Empresa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MODULOS\Caja\Apertura_de_Caja.resx">
       <DependentUpon>Apertura_de_Caja.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +197,27 @@
     <EmbeddedResource Include="MODULOS\Productos\ProductoOK.resx">
       <DependentUpon>ProductoOK.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\FormInventariosTodos.resx">
+      <DependentUpon>FormInventariosTodos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\FormMovimientoBuscar.resx">
+      <DependentUpon>FormMovimientoBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\FormReporteMovimientoFILTROS.resx">
+      <DependentUpon>FormReporteMovimientoFILTROS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\ReporteInventarios_Todos.resx">
+      <DependentUpon>ReporteInventarios_Todos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\Reporte_Movimiento_con_filtros.resx">
+      <DependentUpon>Reporte_Movimiento_con_filtros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_inventarios_todos\ReportMovimientoBuscar.resx">
+      <DependentUpon>ReportMovimientoBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MODULOS\Reportes\Reportes_de_Kardex\Reporte_de_Kardex_diseño\ReportKardex_Movimiento.resx">
+      <DependentUpon>ReportKardex_Movimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MODULOS\Usuarios_y_Permisos\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +235,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

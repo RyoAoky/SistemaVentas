@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+//MySqlConnection
+
 namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
 {
     public partial class Inventarios_Menu : Form
@@ -20,7 +22,25 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
         private void Inventarios_Menu_Load(object sender, EventArgs e)
         {
             buscar_usuario();
-            
+            PanelMOVIMIENTOS.Dock = DockStyle.None;
+            PanelREPORTEInventario.Dock = DockStyle.None;
+            PaneliNVENTARIObajo.Dock = DockStyle.None;
+            PanelMOVIMIENTOS.Visible = false;
+            PanelREPORTEInventario.Visible = false;
+            PaneliNVENTARIObajo.Visible = false;
+            PanelKardex.Visible = true;
+            PanelKardex.Dock = DockStyle.Fill;
+            Panelv.Visible = false;
+            PanelVencimientos.Visible = false;
+            PanelVencimientos.Dock = DockStyle.None;
+
+            PanelK.Visible = true;
+            PanelI.Visible = false;
+            PanelM.Visible = false;
+            PanelR.Visible = false;
+            Panelv.Visible = false;
+
+            txtbuscarKardex_movimientos.Text = "Buscar producto";
         }
 
         private void txtbuscarMovimiento_TextChanged(object sender, EventArgs e)
@@ -75,7 +95,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
 
@@ -107,16 +128,24 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
+        public static int idProducto;
         private void DATALISTADO_PRODUCTOS_Movimientos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtbuscarMovimiento.Text = DATALISTADO_PRODUCTOS_Movimientos.SelectedCells[2].Value.ToString();
             DATALISTADO_PRODUCTOS_Movimientos.Visible = false;
             buscar_movimientos_de_kardex();
-        }
-
+            try
+            {
+                idProducto = Convert.ToInt32(DATALISTADO_PRODUCTOS_Movimientos.SelectedCells[1].Value.ToString());
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }        
         private void buscar_movimientos_de_kardex()
         {
             try
@@ -142,7 +171,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
                 
@@ -181,7 +211,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
 
@@ -219,14 +250,13 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
 
         private void ToolStripMenuItem4_Click(object sender, EventArgs e)
         {
-           
-
             groupBox1.Visible = true;
             DATALISTADO_PRODUCTOS_Movimientos.Visible = false;
             txtTipoMovi.Text = "-Todos-";
@@ -272,8 +302,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
-
+                //MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -298,13 +328,16 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+                //MessageBox.Show(ex.Message);
                 resultado = "";
             }
         }
 
         private void tver_Click(object sender, EventArgs e)
         {
+            DatalistadoMovimientos.DataSource = new DataTable();
+            DatalistadoMovimientosACUMULADO_PRODUCTO.DataSource = new DataTable();
             panel7.Visible = false;
             groupBox1.Visible = false;
             buscar_movimientos_de_kardex();
@@ -312,6 +345,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             txtbuscarMovimiento.Text = "Buscar producto";
             MenuStrip2.Visible = true;
             MenuStrip6.Visible = true;
+            
         }
 
         private void txtfechaM_ValueChanged(object sender, EventArgs e)
@@ -334,6 +368,23 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
 
         private void TNOTAS_Click(object sender, EventArgs e)
         {
+            PanelMOVIMIENTOS.Dock = DockStyle.None;
+            PanelREPORTEInventario.Dock = DockStyle.None;
+
+            PanelMOVIMIENTOS.Visible = false;
+            PanelREPORTEInventario.Visible = false;
+            PaneliNVENTARIObajo.Visible = true;
+            PaneliNVENTARIObajo.Dock = DockStyle.Fill;
+            PanelKardex.Visible = false;
+            PanelKardex.Dock = DockStyle.None;
+            PanelK.Visible = false;
+            PanelI.Visible = true;
+            PanelM.Visible = false;
+            PanelR.Visible = false;
+            Panelv.Visible = false;
+            PanelVencimientos.Visible = false;
+            PanelVencimientos.Dock = DockStyle.None;
+            Panelv.Visible = false;
             MOSTRAR_Inventario_bajo_minimo();
         }
 
@@ -410,7 +461,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             catch (Exception ex)
             {
                 con.Close();
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+                //MessageBox.Show(ex.Message);
 
                 lblcostoInventario.Text = resultado + " " + 0;
             }
@@ -429,7 +481,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             catch (Exception ex)
             {
                 con.Close();
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+                //MessageBox.Show(ex.Message);
 
                 conteoresultado = "";
                 lblcantidaddeProductosEnInventario.Text = "0";
@@ -439,7 +492,27 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
 
         private void TOTROSPAGOS_Click(object sender, EventArgs e)
         {
+            PanelR.Visible = true;
+            PanelK.Visible = false;
+            PanelI.Visible = false;
+            PanelM.Visible = false;
+            Panelv.Visible = false;
+            PanelMOVIMIENTOS.Visible = false;
+            PanelREPORTEInventario.Visible = true;
+            PaneliNVENTARIObajo.Visible = false;
+            PanelMOVIMIENTOS.Dock = DockStyle.None;
+            PanelREPORTEInventario.Dock = DockStyle.Fill;
+            PaneliNVENTARIObajo.Dock = DockStyle.None;
+            PanelKardex.Visible = false;
+            PanelKardex.Dock = DockStyle.None;
+            PanelVencimientos.Visible = false;
+            PanelVencimientos.Dock = DockStyle.None;
+            Panelv.Visible = false;
+            //mostrar_inventarios_todos();
+            datalistadoInventariosReport.DataSource = new DataTable();
+            txtbuscar_inventarios.Text = "Buscar...";
             sumar_costo_de_inventario_CONTAR_PRODUCTOS();
+
         }
 
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
@@ -485,14 +558,33 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
         }
 
         private void TVencimientos_Click(object sender, EventArgs e)
         {
+            PanelR.Visible = false;
+            PanelK.Visible = false;
+            PanelI.Visible = false;
+            PanelM.Visible = false;
+            Panelv.Visible = true;
+            PanelMOVIMIENTOS.Visible = false;
+            PanelREPORTEInventario.Visible = false;
+            PaneliNVENTARIObajo.Visible = false;
+            PanelMOVIMIENTOS.Dock = DockStyle.None;
+            PanelREPORTEInventario.Dock = DockStyle.None;
+            PaneliNVENTARIObajo.Dock = DockStyle.None;
+            PanelKardex.Visible = false;
+            PanelKardex.Dock = DockStyle.None;
+            PanelVencimientos.Visible = true;
+            PanelVencimientos.Dock = DockStyle.Fill;
+            Panelv.Visible = true;
+            txtBuscarVencimientos.Text = "Buscar producto/Codigo";
+
             txtBuscarVencimientos.Focus();
-            buscar_productos_vencidos();
+            datalistadoVencimientos.DataSource = new DataTable();
         }
 
         private void txtBuscarVencimientos_Click(object sender, EventArgs e)
@@ -524,7 +616,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -557,7 +650,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -565,6 +659,187 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
         {
             mostrar_productos_vencidos();
             txtBuscarVencimientos.Text = "Buscar producto/Codigo";
+            
+        }
+
+        private void TKardex_Click(object sender, EventArgs e)
+        {
+            PanelMOVIMIENTOS.Dock = DockStyle.None;
+            PanelREPORTEInventario.Dock = DockStyle.None;
+            PaneliNVENTARIObajo.Dock = DockStyle.None;
+            PanelMOVIMIENTOS.Visible = false;
+            PanelREPORTEInventario.Visible = false;
+            PaneliNVENTARIObajo.Visible = false;
+            PanelKardex.Visible = true;
+            PanelKardex.Dock = DockStyle.Fill;
+            Panelv.Visible = false;
+            PanelVencimientos.Visible = false;
+            PanelVencimientos.Dock = DockStyle.None;
+
+            PanelK.Visible = true;
+            PanelI.Visible = false;
+            PanelM.Visible = false;
+            PanelR.Visible = false;
+            Panelv.Visible = false;
+
+            txtbuscarKardex_movimientos.Text = "Buscar producto";
+        }
+
+        private void TMOVIMIENTOS_Click(object sender, EventArgs e)
+        {
+            PanelMOVIMIENTOS.Dock = DockStyle.Fill;
+            PanelREPORTEInventario.Dock = DockStyle.None;
+            PaneliNVENTARIObajo.Dock = DockStyle.None;
+            PanelMOVIMIENTOS.Visible = true;
+            PanelREPORTEInventario.Visible = false;
+            PaneliNVENTARIObajo.Visible = false;
+            PanelKardex.Visible = false;
+            PanelKardex.Dock = DockStyle.None;
+            Panelv.Visible = false;
+            PanelVencimientos.Visible = false;
+            PanelVencimientos.Dock = DockStyle.None;
+            panel7.Dock = DockStyle.Right;
+
+            PanelK.Visible = false;
+            PanelI.Visible = false;
+            PanelM.Visible = true;
+            PanelR.Visible = false;
+            Panelv.Visible = false;
+
+            buscar_productos_movimientos();
+            buscar_usuario();
+            Buscar_id_USUARIOS();
+
+            txtbuscarKardex_movimientos.Text = "Buscar producto";
+            DatalistadoMovimientos.DataSource = new DataTable();
+            DatalistadoMovimientosACUMULADO_PRODUCTO.DataSource = new DataTable();
+            txtIdusuario = new ComboBox();
+        }
+
+        private void txtbuscarKardex_movimientos_TextChanged(object sender, EventArgs e)
+        {
+            if(txtbuscarKardex_movimientos.Text == "Buscar producto" | txtbuscarKardex_movimientos.Text == "")
+            {
+                datalistadoBusquedaKardex.Visible = false;
+            }
+            else
+            {
+                datalistadoBusquedaKardex.Visible = true;
+                buscar_productos_kardex();
+                
+            }
+        }
+
+        private void buscar_productos_kardex()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da;
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.Open();
+
+                da = new SqlDataAdapter("BUSCAR_PRODUCTOS_KARDEX", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@letrab", txtbuscarKardex_movimientos.Text);
+                da.Fill(dt);
+                datalistadoBusquedaKardex.DataSource = dt;
+                con.Close();
+
+
+                datalistadoBusquedaKardex.Columns[1].Visible = false;
+                //datalistadoBusquedaKardex.Columns[2].Visible = false;
+                datalistadoBusquedaKardex.Columns[3].Visible = false;
+                datalistadoBusquedaKardex.Columns[4].Visible = false;
+                datalistadoBusquedaKardex.Columns[5].Visible = false;
+                datalistadoBusquedaKardex.Columns[6].Visible = false;
+                datalistadoBusquedaKardex.Columns[7].Visible = false;
+                datalistadoBusquedaKardex.Columns[8].Visible = false;
+                datalistadoBusquedaKardex.Columns[9].Visible = false;
+                datalistadoBusquedaKardex.Columns[10].Visible = false;
+                datalistadoBusquedaKardex.Columns[11].Visible = false;
+                datalistadoBusquedaKardex.Columns[12].Visible = false;
+                datalistadoBusquedaKardex.Columns[13].Visible = false;
+                datalistadoBusquedaKardex.Columns[14].Visible = false;
+                datalistadoBusquedaKardex.Columns[15].Visible = false;
+                datalistadoBusquedaKardex.Columns[16].Visible = false;
+
+                Conexion.Tamaño_automatico_de_datatables.Multilinea(ref datalistadoBusquedaKardex);
+
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        
+        Reportes.Reportes_de_Kardex.Reporte_de_Kardex_diseño.ReportKardex_Movimiento rptFREPORT2 = new Reportes.Reportes_de_Kardex.Reporte_de_Kardex_diseño.ReportKardex_Movimiento();
+        private void mostrar_Kardex_movimiento()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da;
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.Open();
+
+                da = new SqlDataAdapter("MOSTRAR_MOVIMIENTOS_DE_KARDEX", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@idProducto", datalistadoBusquedaKardex.SelectedCells[1].Value.ToString());
+                da.Fill(dt);
+                con.Close();
+                rptFREPORT2 = new Reportes.Reportes_de_Kardex.Reporte_de_Kardex_diseño.ReportKardex_Movimiento();
+                rptFREPORT2.DataSource = dt;
+                rptFREPORT2.table1.DataSource = dt;
+                reportViewer1.Report = rptFREPORT2;
+                reportViewer1.RefreshReport();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                //MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void datalistadoBusquedaKardex_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtbuscarKardex_movimientos.Text = datalistadoBusquedaKardex.SelectedCells[2].Value.ToString();
+            datalistadoBusquedaKardex.Visible = false;
+            mostrar_Kardex_movimiento();
+        }
+
+        private void ToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            MODULOS.Reportes.Reportes_de_Kardex.Reporte_de_inventarios_todos.FormMovimientoBuscar frm = new MODULOS.Reportes.Reportes_de_Kardex.Reporte_de_inventarios_todos.FormMovimientoBuscar();
+            frm.ShowDialog();
+        }
+
+        private void txtIdusuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        public static string Tipo_de_Movimiento;
+        public static DateTime Fecha;
+        public static int id_Usuario;
+        private void ToolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Tipo_de_Movimiento = txtTipoMovi.Text;
+                Fecha = txtfechaM.Value;
+                id_Usuario = Convert.ToInt32(txtIdusuario.Text);
+                MODULOS.Reportes.Reportes_de_Kardex.Reporte_de_inventarios_todos.FormReporteMovimientoFILTROS frm = new MODULOS.Reportes.Reportes_de_Kardex.Reporte_de_inventarios_todos.FormReporteMovimientoFILTROS();
+                frm.ShowDialog();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error,no se encontro datos con los parametros seleccionados, intente nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
         }
     }

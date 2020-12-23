@@ -15,13 +15,16 @@ namespace Sistema_Ventas_MrTec
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
             //Application.Run(new MODULOS.Productos.ProductoOK());
 
-            //Application.Run(new MODULOS.Login());
+            Application.Run(new MODULOS.Login());
 
             //Application.Run(new MODULOS.Panel_de_Administracion_del_Software.Conexion_Manual());
 
-            Application.Run(new MODULOS.Inventarios_KARDEX.Inventarios_Menu());
+            //Application.Run(new MODULOS.Inventarios_KARDEX.Inventarios_Menu());
+
+            //Application.Run(new MODULOS.Reportes.Reportes_de_Kardex.Reporte_de_inventarios_todos.FormInventariosTodos());
         }
     }
 }
