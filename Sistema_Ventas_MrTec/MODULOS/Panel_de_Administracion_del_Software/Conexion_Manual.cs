@@ -14,6 +14,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Panel_de_Administracion_del_Software
     public partial class Conexion_Manual : Form
     {
         private Conexion.AES aes = new Conexion.AES();
+        private string cadenaConexion;
         public Conexion_Manual()
         {
             InitializeComponent();
@@ -21,7 +22,21 @@ namespace Sistema_Ventas_MrTec.MODULOS.Panel_de_Administracion_del_Software
         
         private void Conexion_Manual_Load(object sender,EventArgs e)
         {
+            //cadenaConexion = txtCnString.Text;
             ReadfromXML();
+            Listar();
+            //if (lblEstadoConexion == "CONECTADO")
+            //{
+            //    //Dispose();
+            //    //this.Hide();
+            //    Asistente_de_Inicio.Registro_de_Empresa frm = new Asistente_de_Inicio.Registro_de_Empresa();
+            //    frm.ShowDialog();
+
+            //}
+            //else
+            //{
+
+            //}
         }
 
         public void SavetoXML(object dbcString)
@@ -45,7 +60,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Panel_de_Administracion_del_Software
                 XmlElement root = doc.DocumentElement;
                 dbcString = root.Attributes[0].Value;
                 txtCnString.Text = (aes.Decrypt(dbcString, Conexion.Desencrytacion.appPwdUnique, int.Parse("256")));
-
+                //txtCnString.Text = "";
+                //txtCnString.Text = cadenaConexion;
             }
             catch (System.Security.Cryptography.CryptographicException ex)
             {
@@ -86,6 +102,33 @@ namespace Sistema_Ventas_MrTec.MODULOS.Panel_de_Administracion_del_Software
             Conexion.Tamaño_automatico_de_datatables.Multilinea(ref datalistado);
 
         }
+        private string lblEstadoConexion;
+        private void Listar()
+        {
+            //Sis_Ventas_MrTec
+
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da;
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.Open();
+                da = new SqlDataAdapter("select * from Usuario2", con);
+                da.Fill(dt);
+                datalistadoUsuarioRegistrado.DataSource = dt;
+                con.Close();
+
+                lblEstadoConexion = "CONECTADO";
+            }
+            catch (Exception ex)
+            {
+                lblEstadoConexion = "NO CONECTADO";
+                Console.WriteLine(ex.Message);
+                //MessageBox.Show("Sin conexion a la Base de datos \n" + ex.Message, "Conexion fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void txtCnString_TextChanged(object sender, EventArgs e)
         {

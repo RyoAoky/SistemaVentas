@@ -66,28 +66,9 @@ namespace Sistema_Ventas_MrTec.MODULOS
         //}
         private void Login_Load(object sender, EventArgs e)
         {
-            mostrar_Usuario_Registrado();
-            contar_Usuarios();
-            if (contador_Usuario == 0)
-            {
-                MODULOS.Asistente_de_Inicio.Registro_de_Empresa frm = new MODULOS.Asistente_de_Inicio.Registro_de_Empresa();
-                frm.ShowDialog();
-
-                MODULOS.Login frm1 = new MODULOS.Login();
-                frm1.Hide();
-                frm1.Dispose();
-                
-                //Dispose();
-
-                //timer1.Stop();
-                //timer2.Stop();
-            }
-            else
-            {
-                //mostrar_movimientos_de_caja_por_Serial_y_Usuario();
+            
                 dibujarUsuario();
                 cargar_usuario();
-                //mostrar_correos();
                 panel_Inicio_de_Sesion.Visible = false;
                 panel_Restaurar_Contraseña.Visible = false;
                 progressBar1.Visible = false;
@@ -98,34 +79,8 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 panel_Inicio_de_Sesion.Location = new Point((Width - panel_Inicio_de_Sesion.Width) / 2, (Height - panel_Inicio_de_Sesion.Height) / 2);
 
                 timer1.Start();
-            }
-        }
-        private void mostrar_Usuario_Registrado()
-        {
-            try
-            {
-                DataTable dt = new DataTable();
-                SqlDataAdapter da;
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
-                con.Open();
-                da = new SqlDataAdapter("select * from Usuario2 where Estado='ELIMINADO'", con);
-                da.Fill(dt);
-                dataListado.DataSource = dt;
-                con.Close();
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
-        private void contar_Usuarios()
-        {
-            int x;
-            x = dataListadoUsuario.Rows.Count;
-            contador_Usuario = (x);
-        }
+            
+        }        
 
         public void dibujarUsuario()
         {
@@ -735,7 +690,18 @@ namespace Sistema_Ventas_MrTec.MODULOS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+            mostrar_Usuario_Registrado();
+            contar_Usuarios();
+            if (contador_Usuario == 0)
+            {
+                Dispose();
+                this.Hide();
+                Panel_de_Administracion_del_Software.Conexion_Manual frm = new Panel_de_Administracion_del_Software.Conexion_Manual();
+                frm.ShowDialog();
+            }
+            else
+            {
+                //this.Show();
                 timer1.Stop();
                 try
                 {
@@ -762,7 +728,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 {
                     MessageBox.Show(ex.Message);
                 }
-            
+            }
         }
 
         private void btn_iniciarSesion_Click(object sender, EventArgs e)
@@ -816,6 +782,33 @@ namespace Sistema_Ventas_MrTec.MODULOS
         {
             panel_Inicio_de_Sesion.Visible = false;
             Panel_seleccionar_Cuenta.Visible = true;
+        }
+
+        private void mostrar_Usuario_Registrado()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da;
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.Open();
+                da = new SqlDataAdapter("select * from Usuario2", con);
+                da.Fill(dt);
+                dataListadoUsuario.DataSource = dt;
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        private void contar_Usuarios()
+        {
+            int x;
+            x = dataListadoUsuario.Rows.Count;
+            contador_Usuario = (x);
         }
     }
 }

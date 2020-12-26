@@ -932,7 +932,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
 
             string importe;
             string query;
-            query = "SELECT      CONVERT(NUMERIC(18,2),sum(Producto1.Precio_de_compra * Stock )) as suma FROM  Producto1 where  Usa_inventarios ='SI'";
+            query = "SELECT CONVERT(NUMERIC(18,2),sum(Producto1.Precio_de_compra * Stock )) as suma FROM  Producto1 where  Usa_inventarios ='SI'";
 
             SqlCommand com = new SqlCommand(query, con);
             try

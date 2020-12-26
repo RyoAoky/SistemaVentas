@@ -24,7 +24,6 @@ namespace Sistema_Ventas_MrTec.Conexion
         }
 
 
-
         public string Encrypt(string Data, string Password, int Bits)
         {
             byte[] clearBytes = System.Text.Encoding.Unicode.GetBytes(Data);
@@ -51,8 +50,6 @@ namespace Sistema_Ventas_MrTec.Conexion
 
         }
         private byte[] Decrypt(byte[] cipherData, byte[] Key, byte[] IV)
-
-
         {
             MemoryStream ms = new MemoryStream();
             Rijndael alg = Rijndael.Create();
@@ -69,9 +66,6 @@ namespace Sistema_Ventas_MrTec.Conexion
         {
             try
             {
-
-
-
                 byte[] cipherBytes = Convert.FromBase64String(Data);
                 PasswordDeriveBytes pdb = new PasswordDeriveBytes(Password, new byte[] { 0x0, 0x1, 0x2, 0x1C, 0x1D, 0x1E, 0x3, 0x4, 0x5, 0xF, 0x20, 0x21, 0xAD, 0xAF, 0xA4 });
                 if (Bits == 128)

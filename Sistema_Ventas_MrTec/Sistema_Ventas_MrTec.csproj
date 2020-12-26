@@ -78,6 +78,12 @@
     <Compile Include="Conexion\Encryptacion.cs" />
     <Compile Include="Conexion\Tamaño_automatico_de_datatables.cs" />
     <Compile Include="Conexion\WinAutoComplete.cs" />
+    <Compile Include="MODULOS\Asistente_de_Inicio\Inicio_de_Servidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Asistente_de_Inicio\Inicio_de_Servidor.Designer.cs">
+      <DependentUpon>Inicio_de_Servidor.cs</DependentUpon>
+    </Compile>
     <Compile Include="MODULOS\Asistente_de_Inicio\Registro_de_Empresa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MODULOS\Asistente_de_Inicio\Inicio_de_Servidor.resx">
+      <DependentUpon>Inicio_de_Servidor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MODULOS\Asistente_de_Inicio\Registro_de_Empresa.resx">
       <DependentUpon>Registro_de_Empresa.cs</DependentUpon>
     </EmbeddedResource>
