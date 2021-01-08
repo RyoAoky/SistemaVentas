@@ -168,9 +168,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel3.Controls.Add(this.lblBasededatos);
             this.Panel3.Controls.Add(this.Label6);
             this.Panel3.Controls.Add(this.Label8);
-            this.Panel3.Location = new System.Drawing.Point(415, 100);
+            this.Panel3.Location = new System.Drawing.Point(782, 47);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(883, 548);
+            this.Panel3.Size = new System.Drawing.Size(765, 463);
             this.Panel3.TabIndex = 621;
             // 
             // txtArgumentosini
@@ -218,7 +218,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.txtEliminarBase.Name = "txtEliminarBase";
             this.txtEliminarBase.Size = new System.Drawing.Size(331, 77);
             this.txtEliminarBase.TabIndex = 589;
-            this.txtEliminarBase.Text = "use master;\ngo\n\nDROP DATABASE Sis_Ventas_MrTec_Prueba\ngo";
+            this.txtEliminarBase.Text = "drop database Sis_Ventas_MrTec";
             // 
             // lblRutaInstancia
             // 
@@ -296,9 +296,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.seg3.ForeColor = System.Drawing.Color.White;
             this.seg3.Location = new System.Drawing.Point(208, 7);
             this.seg3.Name = "seg3";
-            this.seg3.Size = new System.Drawing.Size(13, 13);
+            this.seg3.Size = new System.Drawing.Size(19, 13);
             this.seg3.TabIndex = 620;
-            this.seg3.Text = "0";
+            this.seg3.Text = "00";
             // 
             // mil3
             // 
@@ -306,9 +306,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.mil3.ForeColor = System.Drawing.Color.White;
             this.mil3.Location = new System.Drawing.Point(246, 7);
             this.mil3.Name = "mil3";
-            this.mil3.Size = new System.Drawing.Size(13, 13);
+            this.mil3.Size = new System.Drawing.Size(19, 13);
             this.mil3.TabIndex = 619;
-            this.mil3.Text = "0";
+            this.mil3.Text = "00";
             // 
             // GroupBox2
             // 
@@ -345,7 +345,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.TXTbasededatos.Name = "TXTbasededatos";
             this.TXTbasededatos.Size = new System.Drawing.Size(134, 20);
             this.TXTbasededatos.TabIndex = 621;
-            this.TXTbasededatos.Text = "Sis_Ventas_MrTec-Prueba";
+            this.TXTbasededatos.Text = "Sis_Ventas_MrTec_P";
             // 
             // lblcontraseña
             // 
@@ -362,7 +362,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.lblnombredeservicio.Name = "lblnombredeservicio";
             this.lblnombredeservicio.Size = new System.Drawing.Size(134, 20);
             this.lblnombredeservicio.TabIndex = 621;
-            this.lblnombredeservicio.Text = "MSSQLSERVER";
+            this.lblnombredeservicio.Text = "74.208.42.58,1433";
             // 
             // Label11
             // 
@@ -419,7 +419,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel2.Controls.Add(this.Panel4);
             this.Panel2.Controls.Add(this.Panel9);
             this.Panel2.Controls.Add(this.Button2);
-            this.Panel2.Location = new System.Drawing.Point(544, 112);
+            this.Panel2.Location = new System.Drawing.Point(544, 109);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(485, 539);
             this.Panel2.TabIndex = 620;
@@ -623,6 +623,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             // timer4
             // 
             this.timer4.Interval = 10;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
             // 
             // TimerCRARINI
             // 
@@ -635,8 +636,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1659, 807);
             this.Controls.Add(this.Panel3);
-            this.Controls.Add(this.Panel2);
             this.Controls.Add(this.Panel8);
+            this.Controls.Add(this.Panel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inicio_de_Servidor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -1,4 +1,5 @@
-﻿using Sistema_Ventas_MrTec.MODULOS.Caja;
+﻿using Google.Authenticator;
+using Sistema_Ventas_MrTec.MODULOS.Caja;
 using Sistema_Ventas_MrTec.MODULOS.Ventas_Menu_Principal;
 using System;
 using System.Data;
@@ -23,12 +24,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
 
         public Login()
         {
-            InitializeComponent();
-
-           
-            
-
-           
+            InitializeComponent();           
         }
         //private void ejecutar_Procedimientos_Almacenados(string proc, int cantV, string[] Valores, string[] datos,int tipCMD)
         //{
@@ -82,6 +78,27 @@ namespace Sistema_Ventas_MrTec.MODULOS
             
         }        
 
+
+        //public void OTP_Autenticador(object sender, PaintEventArgs e)
+        //{
+        //    TwoFactorAuthenticator autenticador = new TwoFactorAuthenticator();
+
+        //    cargar_usuario();
+        //    string key = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 10);
+
+        //    var setupInfo = autenticador.GenerateSetupCode("Sistema_de_Ventas_MrTEC", txtlogin.Text, key, false, 3);
+
+        //    string qrCodeImageUrl = setupInfo.QrCodeSetupImageUrl;
+        //    string manualEntrySetupCode = setupInfo.ManualEntryKey;
+
+            
+
+        //    imgQrCode.Image = qrCodeImageUrl;
+        //    lblManualSetupCode.Text = manualEntrySetupCode;
+
+
+        //    bool pincorrecto = autenticador.ValidateTwoFactorPIN("we23rf3rvujf23fvaw", "239056");
+        //} 
         public void dibujarUsuario()
         {
             SqlConnection conn = new SqlConnection();
@@ -279,6 +296,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 IDUSUARIO.Text = dataListado.SelectedCells[1].Value.ToString();
                 txtnombre.Text = dataListado.SelectedCells[2].Value.ToString();
                 idusuariovariable = IDUSUARIO.Text;
+
                 
             }
             catch
