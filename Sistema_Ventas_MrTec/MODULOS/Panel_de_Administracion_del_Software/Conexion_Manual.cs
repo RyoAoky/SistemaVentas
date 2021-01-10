@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -22,21 +23,20 @@ namespace Sistema_Ventas_MrTec.MODULOS.Panel_de_Administracion_del_Software
         
         private void Conexion_Manual_Load(object sender,EventArgs e)
         {
-            //cadenaConexion = txtCnString.Text;
             ReadfromXML();
+            //cadenaConexion = txtCnString.Text;
             Listar();
-            //if (lblEstadoConexion == "CONECTADO")
-            //{
-            //    //Dispose();
-            //    //this.Hide();
-            //    Asistente_de_Inicio.Registro_de_Empresa frm = new Asistente_de_Inicio.Registro_de_Empresa();
-            //    frm.ShowDialog();
+            if (lblEstadoConexion == "CONECTADO")
+            {                
+                Hide();
+                Asistente_de_Inicio.Registro_de_Empresa frm = new Asistente_de_Inicio.Registro_de_Empresa();
+                frm.ShowDialog();
+                this.Dispose();
+            }
+            else
+            {
 
-            //}
-            //else
-            //{
-
-            //}
+            }
         }
 
         public void SavetoXML(object dbcString)
@@ -65,48 +65,110 @@ namespace Sistema_Ventas_MrTec.MODULOS.Panel_de_Administracion_del_Software
             }
             catch (System.Security.Cryptography.CryptographicException ex)
             {
-
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //limpiarRuta();
             SavetoXML(aes.Encrypt(txtCnString.Text, Conexion.Desencrytacion.appPwdUnique, int.Parse("256")));
             mostrar();
         }
 
         private void mostrar()
         {
-            try
-            {
-                DataTable dt = new DataTable();
-                SqlDataAdapter da;
-                SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
-                con.Open();
+            Conexion.ConexionMaestra.testConexion(Conexion.ConexionMaestra.Conexion);
+            //SavetoXML(aes.Encrypt(txtCnString.Text, Conexion.Desencrytacion.appPwdUnique, int.Parse("256")));
 
-                da = new SqlDataAdapter("mostrar_usuario", con);
-                da.Fill(dt);
-                datalistado.DataSource = dt;
-                con.Close();
-                MessageBox.Show("Coneccion realizada correctamente", "Conexion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    SqlConnection con = new SqlConnection();
+            //    //String str;
+            //    try
+            //    {
+
+            //        Conexion.ConexionMaestra.testConexion(Conexion.ConexionMaestra.Conexion);
 
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Sin conexion a la Base de datos \n" + ex.Message, "Conexion fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        //con = new SqlConnection(Conexion.ConexionMaestra.Conexion);
 
-            }
+            //        //str = "create DATABASE PSistema";
+            //        //SqlCommand command = new SqlCommand(str, con);
+            //        ////con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            //        //con.Open();
+            //        //command.ExecuteNonQuery();
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        Console.WriteLine(ex.Message);
+            //        MessageBox.Show("Sin conexion a la Base de datos \n" + ex.Message, "Conexion fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //    finally
+            //    {
+            //        if ((con.State == ConnectionState.Open))
+            //        {
+            //            //con = new SqlConnection(Conexion.ConexionMaestra.Conexion);
+            //            //str = "drop DATABASE PSistema";                    
+            //            try
+            //            {
 
-            Conexion.Tamaño_automatico_de_datatables.Multilinea(ref datalistado);
+            //                //SqlCommand command1 = new SqlCommand(str, con);
+            //                //con.Open();
+            //                //command1.ExecuteNonQuery();
 
+            //                con.Close();
+            //                MessageBox.Show("Coneccion realizada correctamente", "Conexion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            }
+            //            catch (Exception ex)
+            //            {
+            //                Console.WriteLine(ex.Message);
+            //            }
+            //        }
+            //    }
+            //    //try
+            //    //{
+            //    //    DataTable dt = new DataTable();
+            //    //    SqlDataAdapter da;
+            //    //    SqlConnection con = new SqlConnection();
+            //    //    con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            //    //    con.Open();
+
+            //    //    da = new SqlDataAdapter("mostrar_usuario", con);
+            //    //    da.Fill(dt);
+            //    //    datalistado.DataSource = dt;
+            //    //    con.Close();
+            //    //    MessageBox.Show("Coneccion realizada correctamente", "Conexion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    //}
+            //    //catch (Exception ex)
+            //    //{
+            //    //    MessageBox.Show("Sin conexion a la Base de datos \n" + ex.Message, "Conexion fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    //}
+            //    //Conexion.Tamaño_automatico_de_datatables.Multilinea(ref datalistado);
         }
         private string lblEstadoConexion;
         private void Listar()
         {
-            //Sis_Ventas_MrTec
 
+            //SqlConnection con = new SqlConnection();
+            try
+            {
+                //con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                //con.Open();
+                Conexion.ConexionMaestra.testConexion(Conexion.ConexionMaestra.Conexion);
+                lblEstadoConexion = "CONECTADO";
+            }
+            catch (Exception ex)
+            {
+                lblEstadoConexion = "NO CONECTADO";
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("Sin conexion a la Base de datos \n" + ex.Message, "Conexion fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            //finally
+            //{
+            //    if ((con.State == ConnectionState.Open))
+            //    {
+            //        con.Close();
+            //        //MessageBox.Show("Coneccion realizada correctamente", "Conexion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //}
             try
             {
                 DataTable dt = new DataTable();
@@ -129,15 +191,40 @@ namespace Sistema_Ventas_MrTec.MODULOS.Panel_de_Administracion_del_Software
             }
         }
 
-
-        private void txtCnString_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        
+        private string ruta;
+        private void limpiarRuta()
+        {
+            ruta = Path.Combine(Directory.GetCurrentDirectory(), "ConnectionString" + ".xml");
+            FileInfo fi = new FileInfo(ruta);
+            StreamWriter sw;
+            try
+            {
+                //if (File.Exists(ruta) == true)
+                //{
+                //    sw = File.CreateText(ruta);
+                //    sw.WriteLine(txtCrearXML.Text);
+                //    sw.Flush();
+                //    sw.Close();
+                //}
+                //else 
+                if (File.Exists(ruta) == true)
+                {
+                    File.Delete(ruta);
+                    sw = File.CreateText(ruta);
+                    sw.WriteLine(txtCrearXML.Text);
+                    sw.Flush();
+                    sw.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

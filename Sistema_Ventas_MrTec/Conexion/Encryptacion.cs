@@ -90,7 +90,7 @@ namespace Sistema_Ventas_MrTec.Conexion
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
                 return String.Concat(Bits);
                 
             }

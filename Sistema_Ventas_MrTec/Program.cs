@@ -22,13 +22,13 @@ namespace Sistema_Ventas_MrTec
 
             //Application.Run(new Usuarios());
 
-            //Application.Run(new MODULOS.Panel_de_Administracion_del_Software.Conexion_Manual());
+            Application.Run(new MODULOS.Panel_de_Administracion_del_Software.Conexion_Manual());
 
             //Application.Run(new MODULOS.Inventarios_KARDEX.Inventarios_Menu());
 
             //Application.Run(new MODULOS.Reportes.Reportes_de_Kardex.Reporte_de_inventarios_todos.FormInventariosTodos());
 
-            Application.Run(new MODULOS.Asistente_de_Inicio.Inicio_de_Servidor());
+            //Application.Run(new MODULOS.Asistente_de_Inicio.Inicio_de_Servidor());
         }
     }
 }

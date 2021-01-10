@@ -164,7 +164,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
         //public static int segundo;
         private void timer4_Tick(object sender, EventArgs e)
         {
-
+            timer2.Stop();
+            timer3.Stop();
             milisegundo += 1;
             mil3.Text = Convert.ToString(milisegundo);
             if(milisegundo == 60)
@@ -173,7 +174,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
                 seg3.Text = Convert.ToString(segundo);
                 milisegundo=0;
             }
-            if (segundo == 15)
+            if (segundo == 35)
             {
                 timer4.Stop();
                 try
@@ -186,6 +187,41 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
                 }
                 Dispose();
                 Application.Restart();
+            }
+        }
+
+        public static int milisegundo1;
+        public static int segundos1;
+        public static int minutos1;
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            milisegundo1 += 1;
+            milise.Text = Convert.ToString(milisegundo1);
+            if (milisegundo1 == 60)
+            {
+                segundos1 += 1;
+                seg.Text = Convert.ToString(segundos1);
+
+                milisegundo1 = 0;
+
+            }
+
+            if (segundos1 == 60)
+            {
+                minutos1 += 1;
+
+                min.Text = Convert.ToString(minutos1);
+                segundos1 = 0;
+            }
+
+            if (minutos1 == 6)
+            {
+                timer2.Enabled = false;
+
+                ejecutar_scrip_EliminarBase_inicio_de_sesion();
+                ejecutar_scrip_CrearBase_Comprobacion_de_Inicio();
+
+                timer3.Start();
             }
         }
     }

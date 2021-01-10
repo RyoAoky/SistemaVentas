@@ -218,7 +218,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.txtEliminarBase.Name = "txtEliminarBase";
             this.txtEliminarBase.Size = new System.Drawing.Size(331, 77);
             this.txtEliminarBase.TabIndex = 589;
-            this.txtEliminarBase.Text = "drop database Sis_Ventas_MrTec";
+            this.txtEliminarBase.Text = "drop database Sis_Ventas_MrTec_P";
             // 
             // lblRutaInstancia
             // 
@@ -345,7 +345,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.TXTbasededatos.Name = "TXTbasededatos";
             this.TXTbasededatos.Size = new System.Drawing.Size(134, 20);
             this.TXTbasededatos.TabIndex = 621;
-            this.TXTbasededatos.Text = "Sis_Ventas_MrTec_P";
+            this.TXTbasededatos.Text = "Sis_Ventas_MrTec_Pe";
             // 
             // lblcontraseña
             // 
@@ -615,6 +615,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             // timer2
             // 
             this.timer2.Interval = 10;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // timer3
             // 

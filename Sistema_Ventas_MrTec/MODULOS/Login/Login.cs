@@ -62,7 +62,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
         //}
         private void Login_Load(object sender, EventArgs e)
         {
-            
+                
                 dibujarUsuario();
                 cargar_usuario();
                 panel_Inicio_de_Sesion.Visible = false;
@@ -75,7 +75,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 panel_Inicio_de_Sesion.Location = new Point((Width - panel_Inicio_de_Sesion.Width) / 2, (Height - panel_Inicio_de_Sesion.Height) / 2);
 
                 timer1.Start();
-            
+
         }        
 
 
@@ -709,44 +709,54 @@ namespace Sistema_Ventas_MrTec.MODULOS
         private void timer1_Tick(object sender, EventArgs e)
         {
             mostrar_Usuario_Registrado();
-            contar_Usuarios();
-            if (contador_Usuario == 0)
+            
+            if (indicador == "CORRECTO")
             {
-                Dispose();
-                this.Hide();
-                Panel_de_Administracion_del_Software.Conexion_Manual frm = new Panel_de_Administracion_del_Software.Conexion_Manual();
-                frm.ShowDialog();
-            }
-            else
-            {
-                //this.Show();
-                timer1.Stop();
-                try
+                contar_Usuarios();
+                if (contador_Usuario == 0)
                 {
+                    Hide();
+                    Asistente_de_Inicio.Registro_de_Empresa frm = new Asistente_de_Inicio.Registro_de_Empresa();
+                    frm.ShowDialog();
+                    this.Dispose();
+                }
+                timer1.Stop();
+            }
+            if (indicador == "INCORRECTO")
+            {
+                Hide();
+                //this.Hide();
+                Asistente_de_Inicio.Inicio_de_Servidor frm = new Asistente_de_Inicio.Inicio_de_Servidor();
+                frm.ShowDialog();
+                this.Dispose();
+            }
+            
+            timer1.Stop();
 
-                    ManagementObjectSearcher MOS = new ManagementObjectSearcher("Select * From Win32_BaseBoard");
-                    foreach (ManagementObject getserial in MOS.Get())
+            try
+            {
+                ManagementObjectSearcher MOS = new ManagementObjectSearcher("Select * From Win32_BaseBoard");
+                foreach (ManagementObject getserial in MOS.Get())
+                {
+                    lblSerialPc.Text = getserial.Properties["SerialNumber"].Value.ToString();
+
+                    MOSTRAR_CAJA_POR_SERIAL();
+                    try
                     {
-                        lblSerialPc.Text = getserial.Properties["SerialNumber"].Value.ToString();
-
-                        MOSTRAR_CAJA_POR_SERIAL();
-                        try
-                        {
-                            txtidcaja.Text = dataListado_Caja.SelectedCells[1].Value.ToString();
-                            lblcaja.Text = dataListado_Caja.SelectedCells[2].Value.ToString();
-                            idcajavariable = txtidcaja.Text;
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        }
+                        txtidcaja.Text = dataListado_Caja.SelectedCells[1].Value.ToString();
+                        lblcaja.Text = dataListado_Caja.SelectedCells[2].Value.ToString();
+                        idcajavariable = txtidcaja.Text;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
+            
         }
 
         private void btn_iniciarSesion_Click(object sender, EventArgs e)
@@ -802,6 +812,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             Panel_seleccionar_Cuenta.Visible = true;
         }
 
+        string indicador;
         private void mostrar_Usuario_Registrado()
         {
             try
@@ -815,10 +826,11 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 da.Fill(dt);
                 dataListadoUsuario.DataSource = dt;
                 con.Close();
-
+                indicador = "CORRECTO";
             }
             catch (Exception ex)
             {
+                indicador = "INCORRECTO";
                 Console.WriteLine(ex.Message);
             }
         }
