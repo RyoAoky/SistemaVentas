@@ -63,7 +63,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("BUSCAR_PRODUCTOS_KARDEX", con);
@@ -96,7 +96,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
             }
         }
 
@@ -107,7 +107,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("MOSTRAR_Inventarios_bajo_minimo", con);
@@ -129,7 +129,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
             }
         }
         public static int idProducto;
@@ -153,7 +153,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("buscar_MOVIMIENTOS_DE_KARDEX", con);
@@ -172,7 +172,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
             }
         }
                 
@@ -183,7 +183,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("buscar_MOVIMIENTOS_DE_KARDEX_filtros_acumulado", con);
@@ -212,7 +212,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
             }
         }
 
@@ -223,7 +223,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("buscar_MOVIMIENTOS_DE_KARDEX_filtros", con);
@@ -251,7 +251,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
             }
         }
 
@@ -284,7 +284,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("select*from USUARIO2", con);
@@ -302,7 +302,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             catch (Exception ex)
             {
 
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.Message);
             }
         }
@@ -314,7 +314,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             string queryMoneda;
             queryMoneda = "Buscar_id_USUARIOS";
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            con.ConnectionString = Conexion.ConexionMaestra.Conexion();
 
             SqlCommand comMoneda = new SqlCommand(queryMoneda, con);
             comMoneda.CommandType = CommandType.StoredProcedure;
@@ -329,7 +329,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
                 resultado = "";
             }
         }
@@ -402,7 +402,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_inventarios_todos", con);
@@ -421,7 +421,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -432,7 +432,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             string queryMoneda;
             queryMoneda = "SELECT Moneda  FROM EMPRESA";
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            con.ConnectionString = Conexion.ConexionMaestra.Conexion();
             SqlCommand comMoneda = new SqlCommand(queryMoneda, con);
             try
             {
@@ -462,7 +462,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             {
                 con.Close();
                 Console.WriteLine(ex.Message);
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
 
                 lblcostoInventario.Text = resultado + " " + 0;
             }
@@ -482,7 +482,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             {
                 con.Close();
                 Console.WriteLine(ex.Message);
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
 
                 conteoresultado = "";
                 lblcantidaddeProductosEnInventario.Text = "0";
@@ -538,7 +538,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("buscar_productos_vencidos", con);
@@ -559,7 +559,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
             }
         }
 
@@ -599,7 +599,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_productos_vencidos_en_menos_de_30_dias", con);
@@ -616,7 +616,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.Message);
             }
         }
@@ -634,7 +634,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_productos_vencidos", con);
@@ -650,7 +650,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.Message);
             }
         }
@@ -737,7 +737,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("BUSCAR_PRODUCTOS_KARDEX", con);
@@ -770,7 +770,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.Message);
             }
         }
@@ -784,7 +784,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("MOSTRAR_MOVIMIENTOS_DE_KARDEX", con);
@@ -802,7 +802,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Inventarios_KARDEX
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                //MessageBox.Show(ex.Message);
+                //Console.WriteLine(ex.Message);
             }
         }
 

@@ -37,6 +37,12 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblwindows = new System.Windows.Forms.Label();
             this.Panel3 = new System.Windows.Forms.Panel();
+            this.milisegundo22 = new System.Windows.Forms.Label();
+            this.segundos22 = new System.Windows.Forms.Label();
+            this.milisegundo21 = new System.Windows.Forms.Label();
+            this.segundos21 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtArgumentosini = new System.Windows.Forms.RichTextBox();
             this.Panel10 = new System.Windows.Forms.Panel();
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
@@ -61,7 +67,14 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.lblBasededatos = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
-            this.Panel2 = new System.Windows.Forms.Panel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
+            this.timer4 = new System.Windows.Forms.Timer(this.components);
+            this.TimerCRARINI = new System.Windows.Forms.Timer(this.components);
+            this.Button2 = new System.Windows.Forms.Button();
+            this.Panel9 = new System.Windows.Forms.Panel();
+            this.lblbuscador_de_servidores = new System.Windows.Forms.Label();
+            this.Panel1 = new System.Windows.Forms.Panel();
             this.Panel4 = new System.Windows.Forms.Panel();
             this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.Panel6 = new System.Windows.Forms.Panel();
@@ -74,14 +87,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Panel5 = new System.Windows.Forms.Panel();
-            this.Panel9 = new System.Windows.Forms.Panel();
-            this.lblbuscador_de_servidores = new System.Windows.Forms.Label();
-            this.Panel1 = new System.Windows.Forms.Panel();
-            this.Button2 = new System.Windows.Forms.Button();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.TimerCRARINI = new System.Windows.Forms.Timer(this.components);
+            this.Panel2 = new System.Windows.Forms.Panel();
             this.Panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMrTEC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,13 +95,13 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel10.SuspendLayout();
             this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
-            this.Panel2.SuspendLayout();
+            this.Panel9.SuspendLayout();
             this.Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.Panel6.SuspendLayout();
             this.Panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.Panel9.SuspendLayout();
+            this.Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel8
@@ -156,6 +162,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             // 
             // Panel3
             // 
+            this.Panel3.Controls.Add(this.label10);
+            this.Panel3.Controls.Add(this.label12);
             this.Panel3.Controls.Add(this.txtArgumentosini);
             this.Panel3.Controls.Add(this.Panel10);
             this.Panel3.Controls.Add(this.GroupBox2);
@@ -168,10 +176,70 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel3.Controls.Add(this.lblBasededatos);
             this.Panel3.Controls.Add(this.Label6);
             this.Panel3.Controls.Add(this.Label8);
-            this.Panel3.Location = new System.Drawing.Point(782, 47);
+            this.Panel3.Location = new System.Drawing.Point(1625, 12);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(765, 463);
+            this.Panel3.Size = new System.Drawing.Size(10, 12);
             this.Panel3.TabIndex = 621;
+            // 
+            // milisegundo22
+            // 
+            this.milisegundo22.AutoSize = true;
+            this.milisegundo22.ForeColor = System.Drawing.Color.White;
+            this.milisegundo22.Location = new System.Drawing.Point(369, 246);
+            this.milisegundo22.Name = "milisegundo22";
+            this.milisegundo22.Size = new System.Drawing.Size(19, 13);
+            this.milisegundo22.TabIndex = 628;
+            this.milisegundo22.Text = "00";
+            // 
+            // segundos22
+            // 
+            this.segundos22.AutoSize = true;
+            this.segundos22.ForeColor = System.Drawing.Color.White;
+            this.segundos22.Location = new System.Drawing.Point(394, 246);
+            this.segundos22.Name = "segundos22";
+            this.segundos22.Size = new System.Drawing.Size(19, 13);
+            this.segundos22.TabIndex = 627;
+            this.segundos22.Text = "00";
+            // 
+            // milisegundo21
+            // 
+            this.milisegundo21.AutoSize = true;
+            this.milisegundo21.ForeColor = System.Drawing.Color.White;
+            this.milisegundo21.Location = new System.Drawing.Point(359, 12);
+            this.milisegundo21.Name = "milisegundo21";
+            this.milisegundo21.Size = new System.Drawing.Size(19, 13);
+            this.milisegundo21.TabIndex = 626;
+            this.milisegundo21.Text = "00";
+            // 
+            // segundos21
+            // 
+            this.segundos21.AutoSize = true;
+            this.segundos21.ForeColor = System.Drawing.Color.White;
+            this.segundos21.Location = new System.Drawing.Point(397, 12);
+            this.segundos21.Name = "segundos21";
+            this.segundos21.Size = new System.Drawing.Size(19, 13);
+            this.segundos21.TabIndex = 625;
+            this.segundos21.Text = "00";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(829, 23);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(19, 13);
+            this.label10.TabIndex = 624;
+            this.label10.Text = "00";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(867, 23);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(19, 13);
+            this.label12.TabIndex = 623;
+            this.label12.Text = "00";
             // 
             // txtArgumentosini
             // 
@@ -218,7 +286,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.txtEliminarBase.Name = "txtEliminarBase";
             this.txtEliminarBase.Size = new System.Drawing.Size(331, 77);
             this.txtEliminarBase.TabIndex = 589;
-            this.txtEliminarBase.Text = "drop database Sis_Ventas_MrTec_P";
+            this.txtEliminarBase.Text = "drop database Sis_Ventas_MrTec";
             // 
             // lblRutaInstancia
             // 
@@ -325,9 +393,9 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             // txtCrear_procedimientos
             // 
             this.txtCrear_procedimientos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCrear_procedimientos.Location = new System.Drawing.Point(6, 32);
+            this.txtCrear_procedimientos.Location = new System.Drawing.Point(6, 19);
             this.txtCrear_procedimientos.Name = "txtCrear_procedimientos";
-            this.txtCrear_procedimientos.Size = new System.Drawing.Size(434, 145);
+            this.txtCrear_procedimientos.Size = new System.Drawing.Size(407, 158);
             this.txtCrear_procedimientos.TabIndex = 589;
             this.txtCrear_procedimientos.Text = resources.GetString("txtCrear_procedimientos.Text");
             // 
@@ -345,7 +413,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.TXTbasededatos.Name = "TXTbasededatos";
             this.TXTbasededatos.Size = new System.Drawing.Size(134, 20);
             this.TXTbasededatos.TabIndex = 621;
-            this.TXTbasededatos.Text = "Sis_Ventas_MrTec_Pe";
+            this.TXTbasededatos.Text = "Sis_Ventas_MrTec_P";
             // 
             // lblcontraseña
             // 
@@ -414,15 +482,71 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Label8.TabIndex = 618;
             this.Label8.Text = "Nombre de Instancia:";
             // 
-            // Panel2
+            // timer2
             // 
-            this.Panel2.Controls.Add(this.Panel4);
-            this.Panel2.Controls.Add(this.Panel9);
-            this.Panel2.Controls.Add(this.Button2);
-            this.Panel2.Location = new System.Drawing.Point(544, 109);
-            this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(485, 539);
-            this.Panel2.TabIndex = 620;
+            this.timer2.Interval = 10;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 10;
+            // 
+            // timer4
+            // 
+            this.timer4.Interval = 10;
+            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
+            // 
+            // TimerCRARINI
+            // 
+            this.TimerCRARINI.Interval = 10;
+            this.TimerCRARINI.Tick += new System.EventHandler(this.TimerCRARINI_Tick);
+            // 
+            // Button2
+            // 
+            this.Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.Button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button2.FlatAppearance.BorderSize = 0;
+            this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
+            this.Button2.ForeColor = System.Drawing.Color.White;
+            this.Button2.Location = new System.Drawing.Point(29, 19);
+            this.Button2.Name = "Button2";
+            this.Button2.Size = new System.Drawing.Size(413, 84);
+            this.Button2.TabIndex = 610;
+            this.Button2.Text = "Iniciar Servidor";
+            this.Button2.UseVisualStyleBackColor = false;
+            this.Button2.Visible = false;
+            // 
+            // Panel9
+            // 
+            this.Panel9.Controls.Add(this.lblbuscador_de_servidores);
+            this.Panel9.Controls.Add(this.Panel1);
+            this.Panel9.Location = new System.Drawing.Point(16, 107);
+            this.Panel9.Name = "Panel9";
+            this.Panel9.Size = new System.Drawing.Size(452, 153);
+            this.Panel9.TabIndex = 619;
+            // 
+            // lblbuscador_de_servidores
+            // 
+            this.lblbuscador_de_servidores.BackColor = System.Drawing.Color.Transparent;
+            this.lblbuscador_de_servidores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblbuscador_de_servidores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblbuscador_de_servidores.ForeColor = System.Drawing.Color.White;
+            this.lblbuscador_de_servidores.Location = new System.Drawing.Point(3, 0);
+            this.lblbuscador_de_servidores.Name = "lblbuscador_de_servidores";
+            this.lblbuscador_de_servidores.Size = new System.Drawing.Size(449, 153);
+            this.lblbuscador_de_servidores.TabIndex = 614;
+            this.lblbuscador_de_servidores.Text = "Buscando servidores instalados...";
+            this.lblbuscador_de_servidores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Panel1
+            // 
+            this.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel1.BackgroundImage")));
+            this.Panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Panel1.Location = new System.Drawing.Point(0, 0);
+            this.Panel1.Name = "Panel1";
+            this.Panel1.Size = new System.Drawing.Size(3, 153);
+            this.Panel1.TabIndex = 615;
             // 
             // Panel4
             // 
@@ -565,70 +689,15 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel5.Size = new System.Drawing.Size(482, 13);
             this.Panel5.TabIndex = 618;
             // 
-            // Panel9
+            // Panel2
             // 
-            this.Panel9.Controls.Add(this.lblbuscador_de_servidores);
-            this.Panel9.Controls.Add(this.Panel1);
-            this.Panel9.Location = new System.Drawing.Point(16, 107);
-            this.Panel9.Name = "Panel9";
-            this.Panel9.Size = new System.Drawing.Size(452, 153);
-            this.Panel9.TabIndex = 619;
-            // 
-            // lblbuscador_de_servidores
-            // 
-            this.lblbuscador_de_servidores.BackColor = System.Drawing.Color.Transparent;
-            this.lblbuscador_de_servidores.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblbuscador_de_servidores.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblbuscador_de_servidores.ForeColor = System.Drawing.Color.White;
-            this.lblbuscador_de_servidores.Location = new System.Drawing.Point(3, 0);
-            this.lblbuscador_de_servidores.Name = "lblbuscador_de_servidores";
-            this.lblbuscador_de_servidores.Size = new System.Drawing.Size(449, 153);
-            this.lblbuscador_de_servidores.TabIndex = 614;
-            this.lblbuscador_de_servidores.Text = "Buscando servidores instalados...";
-            this.lblbuscador_de_servidores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Panel1
-            // 
-            this.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel1.BackgroundImage")));
-            this.Panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Panel1.Location = new System.Drawing.Point(0, 0);
-            this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(3, 153);
-            this.Panel1.TabIndex = 615;
-            // 
-            // Button2
-            // 
-            this.Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button2.FlatAppearance.BorderSize = 0;
-            this.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
-            this.Button2.ForeColor = System.Drawing.Color.White;
-            this.Button2.Location = new System.Drawing.Point(29, 19);
-            this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(413, 84);
-            this.Button2.TabIndex = 610;
-            this.Button2.Text = "Iniciar Servidor";
-            this.Button2.UseVisualStyleBackColor = false;
-            this.Button2.Visible = false;
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 10;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // timer3
-            // 
-            this.timer3.Interval = 10;
-            // 
-            // timer4
-            // 
-            this.timer4.Interval = 10;
-            this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
-            // 
-            // TimerCRARINI
-            // 
-            this.TimerCRARINI.Interval = 10;
+            this.Panel2.Controls.Add(this.Panel4);
+            this.Panel2.Controls.Add(this.Panel9);
+            this.Panel2.Controls.Add(this.Button2);
+            this.Panel2.Location = new System.Drawing.Point(699, 92);
+            this.Panel2.Name = "Panel2";
+            this.Panel2.Size = new System.Drawing.Size(485, 655);
+            this.Panel2.TabIndex = 620;
             // 
             // Inicio_de_Servidor
             // 
@@ -636,9 +705,13 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1659, 807);
+            this.Controls.Add(this.milisegundo22);
+            this.Controls.Add(this.segundos22);
             this.Controls.Add(this.Panel3);
-            this.Controls.Add(this.Panel8);
             this.Controls.Add(this.Panel2);
+            this.Controls.Add(this.milisegundo21);
+            this.Controls.Add(this.segundos21);
+            this.Controls.Add(this.Panel8);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inicio_de_Servidor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -654,15 +727,16 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel10.PerformLayout();
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox2.ResumeLayout(false);
-            this.Panel2.ResumeLayout(false);
+            this.Panel9.ResumeLayout(false);
             this.Panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.Panel6.ResumeLayout(false);
             this.Panel7.ResumeLayout(false);
             this.Panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.Panel9.ResumeLayout(false);
+            this.Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -690,7 +764,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
         internal System.Windows.Forms.GroupBox GroupBox2;
         internal System.Windows.Forms.RichTextBox txtCrear_procedimientos;
         internal System.Windows.Forms.TextBox txtnombre_scrypt;
-        internal System.Windows.Forms.TextBox TXTbasededatos;
         internal System.Windows.Forms.TextBox lblcontraseña;
         internal System.Windows.Forms.TextBox lblnombredeservicio;
         internal System.Windows.Forms.Label Label11;
@@ -698,7 +771,15 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
         internal System.Windows.Forms.Label lblBasededatos;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.Label Label8;
-        internal System.Windows.Forms.Panel Panel2;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
+        private System.Windows.Forms.Timer timer4;
+        private System.Windows.Forms.Timer TimerCRARINI;
+        internal System.Windows.Forms.TextBox TXTbasededatos;
+        internal System.Windows.Forms.Button Button2;
+        internal System.Windows.Forms.Panel Panel9;
+        internal System.Windows.Forms.Label lblbuscador_de_servidores;
+        internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.Panel Panel4;
         internal System.Windows.Forms.PictureBox PictureBox2;
         internal System.Windows.Forms.Panel Panel6;
@@ -711,13 +792,12 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
         internal System.Windows.Forms.Label label3;
         internal System.Windows.Forms.PictureBox pictureBox3;
         internal System.Windows.Forms.Panel Panel5;
-        internal System.Windows.Forms.Panel Panel9;
-        internal System.Windows.Forms.Label lblbuscador_de_servidores;
-        internal System.Windows.Forms.Panel Panel1;
-        internal System.Windows.Forms.Button Button2;
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Timer timer3;
-        private System.Windows.Forms.Timer timer4;
-        private System.Windows.Forms.Timer TimerCRARINI;
+        internal System.Windows.Forms.Panel Panel2;
+        internal System.Windows.Forms.Label milisegundo22;
+        internal System.Windows.Forms.Label segundos22;
+        internal System.Windows.Forms.Label milisegundo21;
+        internal System.Windows.Forms.Label segundos21;
+        internal System.Windows.Forms.Label label10;
+        internal System.Windows.Forms.Label label12;
     }
 }

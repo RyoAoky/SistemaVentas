@@ -32,7 +32,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Reportes.Reportes_de_Kardex.Reporte_de_in
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
                 da = new SqlDataAdapter("buscar_MOVIMIENTOS_DE_KARDEX", con);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
@@ -46,7 +46,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Reportes.Reportes_de_Kardex.Reporte_de_in
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
     }

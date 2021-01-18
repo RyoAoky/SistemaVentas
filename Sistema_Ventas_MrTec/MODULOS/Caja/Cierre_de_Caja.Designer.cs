@@ -117,6 +117,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
             this.Controls.Add(this.lblSerialPc);
             this.Controls.Add(this.txtidcaja);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cierre_de_Caja";
             this.Text = "Cierre_de_Caja";
             this.Load += new System.EventHandler(this.Cierre_de_Caja_Load);

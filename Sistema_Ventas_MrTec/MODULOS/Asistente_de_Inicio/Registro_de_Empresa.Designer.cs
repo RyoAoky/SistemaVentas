@@ -29,6 +29,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro_de_Empresa));
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -47,8 +48,11 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1147, 658);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Registro_de_Empresa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro_de_Empresa";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Registro_de_Empresa_Load);
             this.ResumeLayout(false);
 

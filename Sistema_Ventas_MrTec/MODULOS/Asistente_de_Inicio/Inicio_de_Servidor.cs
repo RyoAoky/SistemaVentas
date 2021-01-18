@@ -11,11 +11,15 @@ using System.Data.SqlClient;
 using System.Xml;
 using System.IO;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
 {
     public partial class Inicio_de_Servidor : Form
     {
+        Process pros = new Process();
+        Process pro = new Process();
+        private string ruta;
         private Conexion.AES aes = new Conexion.AES();
         public Inicio_de_Servidor()
         {
@@ -23,12 +27,13 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
         }
         private void Inicio_de_Servidor_Load(object sender, EventArgs e)
         {
+
             Panel2.Location = new Point((Width - Panel2.Width) / 2, (Height - Panel2.Height) / 2);
             Panel4.Visible = false;
             Panel4.Dock = DockStyle.None;
             string nombre_del_equipo_usuario;
             nombre_del_equipo_usuario = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-            txtservidor.Text = @".\"+lblnombredeservicio.Text;
+            txtservidor.Text = @".\" + lblnombredeservicio.Text;
             //txtEliminarBase.Text = txtEliminarBase.Text.Replace("Sis_Ventas_MrTec", TXTbasededatos.Text);
             txtCrear_procedimientos.Text = txtCrear_procedimientos.Text.Replace("Sis_Ventas_MrTec", TXTbasededatos.Text);
             Cursor = Cursors.WaitCursor;
@@ -56,7 +61,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             {
                 con.Open();
                 command.ExecuteNonQuery();
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -74,19 +80,37 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             //var cnn = new SqlConnection("Server=" + txtservidor.Text + "; " + "database=master; integrated security=yes");
             var cnn = new SqlConnection("Data Source=74.208.42.58,1433;database=master;User Id=sa;Password=Razer123@!;");
             string s = "CREATE DATABASE " + TXTbasededatos.Text;
+            string s1 = "CREATE DATABASE Sis_Ventas_MrTec";
             var cmd = new SqlCommand(s, cnn);
+            var cmd1 = new SqlCommand(s1, cnn);
             try
             {
                 cnn.Open();
                 cmd.ExecuteNonQuery();
-                SavetoXML(aes.Encrypt("Data Source=74.208.42.58,1433;database=master;User Id=sa;Password=Razer123@!;", Conexion.Desencrytacion.appPwdUnique, int.Parse("256")));
-                ejecutar_scryt_crearProcedimientos_almacenados_y_tablas();
+                cmd1.ExecuteNonQuery();
+                SavetoXML(aes.Encrypt("Data Source=74.208.42.58,1433;Initial Catalog=" + TXTbasededatos.Text + ";User Id=sa;Password=Razer123@!;", Conexion.Desencrytacion.appPwdUnique, int.Parse("256")));
+
                 Panel4.Visible = true;
                 Panel4.Dock = DockStyle.Fill;
                 label3.Text = @"Instancia Encontrada...
-            No Cierre esta Ventana, se cerrara Automaticamente cuando este todo Listo";
+                No Cierre esta Ventana, se cerrara Automaticamente cuando este todo Listo";
                 Panel6.Visible = false;
-                timer4.Start();
+
+
+                ejecutar_scryt_crearProcedimientos_almacenados_y_tablas();
+                
+                
+
+
+
+                //TimerCRARINI.Start();
+                if (pros.HasExited)
+                {
+                    //PictureBox2.Hide();
+                    timer2.Stop();
+                    TimerCRARINI.Stop();
+                    timer4.Start();
+                }
             }
             catch (Exception ex)
             {
@@ -106,9 +130,19 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
                     cnn.Close();
             }
         }
-        private string ruta;
+
+        //private async void loading(object sender,EventArgs e)
+        //{
+        //    Task task = new Task(ejecutar_scryt_crearProcedimientos_almacenados_y_tablas);
+        //    task.Start();
+        //    PictureBox2.Show();            
+        //    await task;
+        //}
+        
         private void ejecutar_scryt_crearProcedimientos_almacenados_y_tablas()
         {
+            //PictureBox2.Show();
+
             ruta = Path.Combine(Directory.GetCurrentDirectory(), txtnombre_scrypt.Text + ".txt");
             FileInfo fi = new FileInfo(ruta);
             StreamWriter sw;
@@ -120,7 +154,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
                     sw.WriteLine(txtCrear_procedimientos.Text);
                     sw.Flush();
                     sw.Close();
-                }else if (File.Exists(ruta) == true)
+                }
+                else if (File.Exists(ruta) == true)
                 {
                     File.Delete(ruta);
                     sw = File.CreateText(ruta);
@@ -128,18 +163,59 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
                     sw.Flush();
                     sw.Close();
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-
             try
             {
-                Process pros = new Process();
+                //timer2.Start();
+                try
+                {
+
+                    Panel4.Visible = true;
+                    Panel4.Dock = DockStyle.Fill;
+                    label3.Text = @"Instalando programas necesarios...";
+                    Panel6.Visible = false;
+                    
+
+                    if (Environment.Is64BitOperatingSystem)
+                    {                        
+                        pro.StartInfo.FileName = "MsSqlCmdLnUtils-x64.msi";
+                        pro.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+                        pro.Start();                        
+                    }
+                    else
+                    {                        
+                        pro.StartInfo.FileName = "MsSqlCmdLnUtils-x86.msi";
+                        pro.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+                        pro.Start();                        
+                    }
+
+                    
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                pro.WaitForExit();
+                
+                //TimerCRARINI.Start();
                 pros.StartInfo.FileName = "sqlcmd";
                 pros.StartInfo.Arguments = "-S  tcp:74.208.42.58,1433 -U sa -P Razer123@!" + " -i" + txtnombre_scrypt.Text + ".txt";
                 pros.Start();
-                timer2.Enabled = true;
+
+                Panel4.Visible = true;
+                Panel4.Dock = DockStyle.Fill;
+                label3.Text = @"Instancia Encontrada...
+                No Cierre esta Ventana, se cerrara Automaticamente cuando este todo Listo";
+                Panel6.Visible = false;
+
+                pros.WaitForExit();
+                
+                
+                
             }
             catch (Exception ex)
             {
@@ -147,7 +223,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             }
 
         }
-
         public void SavetoXML(object dbcString)
         {
             XmlDocument doc = new XmlDocument();
@@ -160,28 +235,28 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             writer.Close();
         }
         public static int milisegundo;
-        public static int segundo;
-        //public static int segundo;
+        public static int segundo;        
         private void timer4_Tick(object sender, EventArgs e)
         {
             timer2.Stop();
             timer3.Stop();
             milisegundo += 1;
             mil3.Text = Convert.ToString(milisegundo);
-            if(milisegundo == 60)
+            if (milisegundo == 60)
             {
                 segundo += 1;
                 seg3.Text = Convert.ToString(segundo);
-                milisegundo=0;
+                milisegundo = 0;
             }
-            if (segundo == 35)
+            if (segundo == 4)
             {
                 timer4.Stop();
                 try
                 {
                     File.Delete(ruta);
 
-                }catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
@@ -192,37 +267,46 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
 
         public static int milisegundo1;
         public static int segundos1;
-        public static int minutos1;
+        
         private void timer2_Tick(object sender, EventArgs e)
         {
-            milisegundo1 += 1;
-            milise.Text = Convert.ToString(milisegundo1);
-            if (milisegundo1 == 60)
-            {
-                segundos1 += 1;
-                seg.Text = Convert.ToString(segundos1);
+            //milisegundo1 += 1;
+            //milisegundo22.Text = Convert.ToString(milisegundo1);
+            //if (milisegundo1 == 60)
+            //{
+            //    segundos1 += 1;
+            //    segundos22.Text = Convert.ToString(segundos1);
 
-                milisegundo1 = 0;
+            //    milisegundo1 = 0;                
+            //}
+            //if (segundos1 == 3)
+            //{
+            //    timer2.Stop();
+            //}
+        }
 
-            }
+        public static int milisegundo2;
+        public static int segundos2;
+        public static int minutos2;
 
-            if (segundos1 == 60)
-            {
-                minutos1 += 1;
+        //private string milisegundo21;
+        //private string segundos21;
+        private string minutos21;
+        private void TimerCRARINI_Tick(object sender, EventArgs e)
+        {
+            //milisegundo2 += 1;
+            //milisegundo21.Text = Convert.ToString(milisegundo2);
+            //if (milisegundo2 == 60)
+            //{
+            //    segundos2 += 1;
+            //    segundos21.Text = Convert.ToString(segundos2);
 
-                min.Text = Convert.ToString(minutos1);
-                segundos1 = 0;
-            }
-
-            if (minutos1 == 6)
-            {
-                timer2.Enabled = false;
-
-                ejecutar_scrip_EliminarBase_inicio_de_sesion();
-                ejecutar_scrip_CrearBase_Comprobacion_de_Inicio();
-
-                timer3.Start();
-            }
+            //    milisegundo2 = 0;                
+            //}
+            //if (segundos1 == 20)
+            //{
+            //    TimerCRARINI.Stop();
+            //}
         }
     }
 }

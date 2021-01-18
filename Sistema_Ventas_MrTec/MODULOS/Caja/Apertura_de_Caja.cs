@@ -37,7 +37,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    Console.WriteLine(ex.Message);
                 }
             }
 
@@ -49,7 +49,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
                 
                 
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
                 SqlCommand da = new SqlCommand();
                 da = new SqlCommand("editar_dinero_caja_principal", con);
@@ -67,7 +67,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
             }
         }
@@ -79,7 +79,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_cajas_por_Serial_de_DiscoDuro", con);
@@ -92,7 +92,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
             }
 
@@ -106,7 +106,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
                 DataTable dt1 = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("editar_dinero_caja_principal", con);
@@ -122,7 +122,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Caja
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
             }
         }

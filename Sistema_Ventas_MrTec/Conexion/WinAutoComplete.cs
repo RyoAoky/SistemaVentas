@@ -15,7 +15,7 @@ namespace Sistema_Ventas_MrTec.Conexion
             DataTable dt = new DataTable();
             SqlDataAdapter da ;
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            con.ConnectionString = Conexion.ConexionMaestra.Conexion();
             con.Open();
             da = new SqlDataAdapter("SELECT TOP 100 Descripcion FROM Producto1",con);
             da.Fill(dt);

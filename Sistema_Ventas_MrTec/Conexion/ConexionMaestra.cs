@@ -16,11 +16,18 @@ namespace Sistema_Ventas_MrTec.Conexion
 
 
         //public static string Conexion = "Data Source=74.208.42.58,1433;Initial Catalog=Sis_Ventas_MrTec;User Id=sa;Password=Razer123@!;";
+       
+        
 
-        public static string Conexion = Convert.ToString(Sistema_Ventas_MrTec.Conexion.Desencrytacion.checkServer());
-        //public static string Conexion = "Provider=SQLOLEDB;Data Source=SQL5097.site4now.net;Initial Catalog=;User Id=DB_A699E9_mrtec_admin;Password=admin1234";
-        //SqlConnection conexion = new SqlConnection(Conexion1);
-        // public static string Conexion = Convert.ToString(Sistema_Ventas_MrTec.Conexion.Desencrytacion.checkServer());
+        public static string Conexion()
+        {
+            string cadenaConex = "";
+            cadenaConex = Convert.ToString(Sistema_Ventas_MrTec.Conexion.Desencrytacion.checkServer());
+            //Conexion.ConexionMaestra.CadenaConexion.Replace(default, Convert.ToString(Sistema_Ventas_MrTec.Conexion.Desencrytacion.checkServer()));
+            return cadenaConex;
+        }
+        
+       
         //Data source=DESKTOP-M0SCQGB;Initial Catalog=BASEADACURSO;Integrated Security= true
 
         public static bool testConexion(string cadenaConexion)
@@ -46,6 +53,7 @@ namespace Sistema_Ventas_MrTec.Conexion
                 MessageBox.Show("Sin conexion a la Base de datos \n" + ex.Message, "Conexion fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            
         }
     }
 

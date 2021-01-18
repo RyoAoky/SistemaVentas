@@ -36,7 +36,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
         //    {
 
         //        SqlConnection conn = new SqlConnection();
-        //        conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
+        //        conn.ConnectionString = Conexion.ConexionMaestra.Conexion();
         //        conn.Open();
         //        SqlCommand cmd = new SqlCommand();
         //        cmd = new SqlCommand(proc, conn);
@@ -57,14 +57,17 @@ namespace Sistema_Ventas_MrTec.MODULOS
         //    }
         //    catch (Exception ex)
         //    {
-        //        MessageBox.Show(ex.Message);
+        //        Console.WriteLine(ex.Message);
         //    }
         //}
         private void Login_Load(object sender, EventArgs e)
         {
-                
+            try
+            {
+
                 dibujarUsuario();
                 cargar_usuario();
+                timer1.Start();
                 panel_Inicio_de_Sesion.Visible = false;
                 panel_Restaurar_Contraseña.Visible = false;
                 progressBar1.Visible = false;
@@ -74,8 +77,13 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 panel_Restaurar_Contraseña.Location = new Point((Width - panel_Restaurar_Contraseña.Width) / 2, (Height - panel_Restaurar_Contraseña.Height) / 2);
                 panel_Inicio_de_Sesion.Location = new Point((Width - panel_Inicio_de_Sesion.Width) / 2, (Height - panel_Inicio_de_Sesion.Height) / 2);
 
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
                 timer1.Start();
-
+            }
         }        
 
 
@@ -102,7 +110,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
         public void dibujarUsuario()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            conn.ConnectionString = Conexion.ConexionMaestra.Conexion();
             conn.Open();
             SqlCommand cmd = new SqlCommand();
             cmd = new SqlCommand("SELECT * from USUARIO2 where Estado='ACTIVO'", conn);
@@ -184,7 +192,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt1 = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_movimientos_de_caja_por_Serial", con);
@@ -198,14 +206,14 @@ namespace Sistema_Ventas_MrTec.MODULOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
             }
         }
         private void MOSTRAR_PERMISOS()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            con.ConnectionString = Conexion.ConexionMaestra.Conexion();
 
             SqlCommand com = new SqlCommand("mostrar_permisos_por_usuario_ROL_UNICO", con);
             com.CommandType = CommandType.StoredProcedure;
@@ -221,7 +229,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -250,7 +258,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             {
                 cargar_usuario();
                 SqlConnection conn = new SqlConnection();
-                conn.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                conn.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 conn.Open();
 
 
@@ -282,7 +290,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
         private void Iniciar_Sesion_OK()
@@ -382,7 +390,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_movimientos_de_caja_por_Serial_y_Usuario", con);
@@ -397,7 +405,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
             }
 
@@ -422,7 +430,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("validar_usuario", con);
@@ -436,7 +444,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
             }
 
@@ -456,7 +464,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("select Correo from Usuario2 where Estado='ACTIVO'", con);
@@ -468,7 +476,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
             }
 
@@ -501,7 +509,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             try
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 SqlCommand da = new SqlCommand("buscar_usuario_por_correo", con);
                 da.CommandType = CommandType.StoredProcedure;
                 da.Parameters.AddWithValue("@correo", txtcorreo.Text);
@@ -511,7 +519,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
             }
         }
@@ -521,7 +529,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             {
                 //string resultado;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
 
 
                 SqlCommand da = new SqlCommand("buscar_usuario1_por_correo", con);
@@ -534,7 +542,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
             }
         }
@@ -686,7 +694,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                 DataTable dt1 = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_cajas_por_Serial_de_DiscoDuro", con);
@@ -699,7 +707,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
             }
 
@@ -708,8 +716,9 @@ namespace Sistema_Ventas_MrTec.MODULOS
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            timer1.Stop();
             mostrar_Usuario_Registrado();
-            
+            verificarBD();
             if (indicador == "CORRECTO")
             {
                 contar_Usuarios();
@@ -749,7 +758,7 @@ namespace Sistema_Ventas_MrTec.MODULOS
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        Console.WriteLine(ex.Message);
                     }
                 }
             }catch(Exception ex)
@@ -812,15 +821,15 @@ namespace Sistema_Ventas_MrTec.MODULOS
             Panel_seleccionar_Cuenta.Visible = true;
         }
 
-        string indicador;
+        private static string indicador;
         private void mostrar_Usuario_Registrado()
-        {
+        {            
             try
             {
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
                 da = new SqlDataAdapter("select * from Usuario2", con);
                 da.Fill(dt);
@@ -839,6 +848,40 @@ namespace Sistema_Ventas_MrTec.MODULOS
             int x;
             x = dataListadoUsuario.Rows.Count;
             contador_Usuario = (x);
+        }
+
+
+        
+        private void verificarBD()
+        {
+            //Asistente_de_Inicio.Inicio_de_Servidor ini = new Asistente_de_Inicio.Inicio_de_Servidor();
+            var con = new SqlConnection(Conexion.ConexionMaestra.Conexion());
+            //string sqlCreate = "USE [" + ini.TXTbasededatos.Text + "]\n" +
+            //              "GO\n" +
+            //              "CREATE TABLE dbo.Pru\n" +
+            //              "GO\n";
+            //string sqlDrop= "USE [" + ini.TXTbasededatos.Text + "]\n" +
+            //              "GO\n" +
+            //              "DROP TABLE dbo.Pru\n" +
+            //              "GO\n";
+
+            string sqlCreate = consultaBD.Text;
+            string sqlDrop = "drop table PruebaConex";
+            var cmd = new SqlCommand(sqlCreate, con);
+            var cmd2 = new SqlCommand(sqlDrop, con);
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+                indicador = "CORRECTO";
+                cmd2.ExecuteNonQuery();
+            }
+            catch(Exception ex)
+            {
+                con.Close();
+                indicador = "INCORRECTO";
+                Console.WriteLine(ex.Message);                
+            }
         }
     }
 }

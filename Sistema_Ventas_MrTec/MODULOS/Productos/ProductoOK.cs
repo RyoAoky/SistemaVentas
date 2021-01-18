@@ -110,7 +110,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_grupos", con);
@@ -128,7 +128,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
 
             Conexion.Tamaño_automatico_de_datatables.Multilinea(ref datalistado);
@@ -138,7 +138,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             try
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
                 SqlCommand cmd = new SqlCommand("insertar_Grupo", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -158,7 +158,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
             }
         }
@@ -293,7 +293,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             try
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd = new SqlCommand("insertar_Producto", con);
@@ -353,7 +353,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
 
         }
@@ -365,7 +365,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             try
             {
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd = new SqlCommand("editar_Producto1", con);
@@ -422,7 +422,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
 
         }
@@ -434,7 +434,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("buscar_producto_por_descripcion", con);
@@ -453,7 +453,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
             }
 
@@ -480,7 +480,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                                 try
                                 {
                                     SqlConnection con = new SqlConnection();
-                                    con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                                    con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                                     con.Open();
                                     cmd = new SqlCommand("eliminar_grupo", con);
                                     cmd.CommandType = CommandType.StoredProcedure;
@@ -489,11 +489,11 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                                     con.Close();
                                 }catch(Exception ex)
                                 {
-                                    MessageBox.Show(ex.Message);
+                                    Console.WriteLine(ex.Message);
                                 }
                             }catch(Exception ex)
                             {
-                                MessageBox.Show(ex.Message);
+                                Console.WriteLine(ex.Message);
                             }
                         }
                         txtgrupo.Text = "GENERAL";
@@ -502,7 +502,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                         PanelGRUPOSSELECT.Visible = true;
                     }catch(Exception ex)
                     {
-                        MessageBox.Show(ex.Message);
+                        Console.WriteLine(ex.Message);
                     }
                 }
             }
@@ -543,7 +543,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             string queryMoneda;
             queryMoneda = "SELECT max(Id_Producto1) FROM Producto1";
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            con.ConnectionString = Conexion.ConexionMaestra.Conexion();
             SqlCommand conMoneda = new SqlCommand(queryMoneda, con);
             try
             {
@@ -611,7 +611,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                 DataTable dt = new DataTable();
                 SqlDataAdapter da;
                 SqlConnection con = new SqlConnection();
-                con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                 con.Open();
 
                 da = new SqlDataAdapter("mostrar_descripcion_producto_sin_repetir", con);
@@ -627,7 +627,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
             }
 
@@ -643,7 +643,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                 DATALISTADO_PRODUCTOS_OKA.Visible = false;
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -733,7 +733,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                                 try
                                 {
                                     SqlConnection con = new SqlConnection();
-                                    con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+                                    con.ConnectionString = Conexion.ConexionMaestra.Conexion();
                                     con.Open();
                                     cmd = new SqlCommand("eliminar_Producto1", con);
                                     cmd.CommandType = CommandType.StoredProcedure;
@@ -743,12 +743,12 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                                 }
                                 catch (Exception ex)
                                 {
-                                    MessageBox.Show(ex.Message);
+                                    Console.WriteLine(ex.Message);
                                 }
                             }
                             catch (Exception ex)
                             {
-                                MessageBox.Show(ex.Message);
+                                Console.WriteLine(ex.Message);
                             }
                         }
                         buscar();
@@ -792,7 +792,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             try
             {
@@ -855,7 +855,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    Console.WriteLine(ex.Message);
 
                 }
                 if (LBL_ESSERVICIO.Text == "SI")
@@ -887,7 +887,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -916,7 +916,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             string queryMoneda;
             queryMoneda = "SELECT Moneda  FROM EMPRESA";
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = Conexion.ConexionMaestra.Conexion;
+            con.ConnectionString = Conexion.ConexionMaestra.Conexion();
             SqlCommand comMoneda = new SqlCommand(queryMoneda, con);
             try
             {
@@ -945,7 +945,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             catch (Exception ex)
             {
                 con.Close();
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
                 lblcosto_inventario.Text = resultado + " " + 0;
             }
@@ -964,7 +964,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             catch (Exception ex)
             {
                 con.Close();
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
 
                 conteoresultado = "";
                 lblcantidad_productos.Text = "0";
