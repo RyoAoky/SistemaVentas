@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Management;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -21,27 +22,196 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
 
         private void Registro_de_Empresa_Load(object sender, EventArgs e)
         {
-
+            
+            txtempresa.Focus();
+            try
+            {
+                ManagementObjectSearcher MOS = new ManagementObjectSearcher("Select * From Win32_BaseBoard");
+                foreach (ManagementObject getserial in MOS.Get())
+                {
+                    lblIDSERIAL.Text = getserial.Properties["SerialNumber"].Value.ToString();
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void TSIGUIENTE_Y_GUARDAR__Click(object sender, EventArgs e)
         {
+            
             if (validarCorreo(txtcorreo.Text) == false)
             {
                 MessageBox.Show("Correo electrónico no válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtcorreo.Focus();
                 txtcorreo.SelectAll();
             }
+            else
+            {
+                if (TXTPAIS.Text != "")
+                {
+                    if (txtmoneda.Text != "")
+                    {
+                        if (TXTCON_LECTORA.Checked == true || txtteclado.Checked == true)
+                        {
+                            if (si.Checked == true || no.Checked == true)
+                            {
+                                if (txtempresa.Text != "")
+                                {
+                                    if (txtRuta.Text != "")
+                                    {
+                                        if (no.Checked == true)
+                                        {
+                                            TXTTRABAJASCONIMPUESTOS.Text = "NO";
+                                        }
+                                        if (si.Checked == true)
+                                        {
+                                            TXTTRABAJASCONIMPUESTOS.Text = "SI";
+                                        }
+                                        Ingresar_empresa();
+                                        Ingresar_Caja();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Seleccione una Ruta para Guardar las Copias de Seguridad", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Ingrese un nombre de Empresa", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Seleccione una opción ,si Vendes con Impuestos", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Seleccione una opción de Búsqueda de Productos con Frecuencia", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese un simbolo de Moneda", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese un nombre de País", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
-            if (no.Checked == true)
-            {
-                TXTTRABAJASCONIMPUESTOS.Text = "NO";
+
             }
-            if (si.Checked == true)
+        }
+
+        private void Insertar_3_comprobantes_por_defecto()
+        {
+            try
             {
-                TXTTRABAJASCONIMPUESTOS.Text = "SI";
+
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd = new SqlCommand("insertar_Serializacion", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Serie", "T");
+                cmd.Parameters.AddWithValue("@numeroinicio", 6);
+                cmd.Parameters.AddWithValue("@numerofin", 0);                
+                cmd.Parameters.AddWithValue("@tipodoc", "TICKET");
+                cmd.Parameters.AddWithValue("@Destino", "VENTAS");
+                cmd.Parameters.AddWithValue("@Por_defecto", "SI");
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+
+                con.Open();                
+                cmd = new SqlCommand("insertar_Serializacion", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Serie", "B");
+                cmd.Parameters.AddWithValue("@numeroinicio", 6);
+                cmd.Parameters.AddWithValue("@numerofin", 0);
+                cmd.Parameters.AddWithValue("@tipodoc", "BOLETA");
+                cmd.Parameters.AddWithValue("@Destino", "VENTAS");
+                cmd.Parameters.AddWithValue("@Por_defecto", "-");
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+
+                con.Open();
+                cmd = new SqlCommand("insertar_Serializacion", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Serie", "F");
+                cmd.Parameters.AddWithValue("@numeroinicio", 6);
+                cmd.Parameters.AddWithValue("@numerofin", 0);
+                cmd.Parameters.AddWithValue("@tipodoc", "FACTURA");
+                cmd.Parameters.AddWithValue("@Destino", "VENTAS");
+                cmd.Parameters.AddWithValue("@Por_defecto", "-");
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+
+                con.Open();
+                cmd = new SqlCommand("insertar_Serializacion", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Serie", "I");
+                cmd.Parameters.AddWithValue("@numeroinicio", 6);
+                cmd.Parameters.AddWithValue("@numerofin", 0);
+                cmd.Parameters.AddWithValue("@tipodoc", "INGRESO");
+                cmd.Parameters.AddWithValue("@Destino", "INGRESO DE COBROS");
+                cmd.Parameters.AddWithValue("@Por_defecto", "-");
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                con.Open();
+                cmd = new SqlCommand("insertar_Serializacion", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Serie", "E");
+                cmd.Parameters.AddWithValue("@numeroinicio", 6);
+                cmd.Parameters.AddWithValue("@numerofin", 0);
+                cmd.Parameters.AddWithValue("@tipodoc", "EGRESO");
+                cmd.Parameters.AddWithValue("@Destino", "EGRESO DE PAGOS");
+                cmd.Parameters.AddWithValue("@Por_defecto", "-");
+                cmd.ExecuteNonQuery();
+                con.Close();
             }
-            Ingresar_empresa();
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void Ingresar_Caja()
+        {
+            try
+            {
+
+
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = Conexion.ConexionMaestra.Conexion();
+                con.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd = new SqlCommand("Insertar_caja", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@descripcion", txtcaja.Text);
+                cmd.Parameters.AddWithValue("@Tema", "Redentor");
+                cmd.Parameters.AddWithValue("@Serial_PC", lblIDSERIAL.Text);
+                cmd.Parameters.AddWithValue("@Impresora_Ticket", "Ninguna");
+                cmd.Parameters.AddWithValue("@Impresora_A4", "Ninguna");
+                cmd.Parameters.AddWithValue("@Tipo", "PRINCIPAL");
+
+                cmd.ExecuteNonQuery();
+                con.Close();                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void Ingresar_empresa()
@@ -224,5 +394,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
                 }
             }
         }
+        
     }
 }

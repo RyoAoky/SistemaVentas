@@ -31,19 +31,19 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro_de_Empresa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Panel16 = new System.Windows.Forms.Panel();
             this.Panel2 = new System.Windows.Forms.Panel();
-            this.Panel8 = new System.Windows.Forms.Panel();
-            this.LBLIDEMPRESA = new System.Windows.Forms.Label();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.listlblCorreo = new System.Windows.Forms.ImageList(this.components);
             this.txtcorreo = new System.Windows.Forms.TextBox();
             this.txtRuta = new System.Windows.Forms.TextBox();
             this.Label18 = new System.Windows.Forms.Label();
@@ -72,16 +72,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Label16 = new System.Windows.Forms.Label();
             this.no = new System.Windows.Forms.RadioButton();
             this.si = new System.Windows.Forms.RadioButton();
-            this.Panel10 = new System.Windows.Forms.Panel();
-            this.txtidempresa = new System.Windows.Forms.Label();
-            this.lblvendesconimpuestos = new System.Windows.Forms.Label();
-            this.datalistado_empresas_nuevas = new System.Windows.Forms.DataGridView();
-            this.DataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.txtcontadorcajas = new System.Windows.Forms.Label();
-            this.lblmododebusqueda = new System.Windows.Forms.Label();
-            this.TXTTRABAJASCONIMPUESTOS = new System.Windows.Forms.Label();
-            this.txtcontador_empresas = new System.Windows.Forms.Label();
-            this.lblIDSERIAL = new System.Windows.Forms.Label();
             this.Panel6 = new System.Windows.Forms.Panel();
             this.txtmoneda = new System.Windows.Forms.ComboBox();
             this.TXTPAIS = new System.Windows.Forms.ComboBox();
@@ -98,8 +88,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.TabPage6 = new System.Windows.Forms.TabPage();
             this.PictureBox4 = new System.Windows.Forms.PictureBox();
             this.Label17 = new System.Windows.Forms.Label();
-            this.txtmsbox = new System.Windows.Forms.Label();
-            this.txtfecha = new System.Windows.Forms.DateTimePicker();
             this.Panel15 = new System.Windows.Forms.Panel();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,7 +98,11 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel9 = new System.Windows.Forms.Panel();
             this.PADVER = new System.Windows.Forms.PictureBox();
             this.Label2 = new System.Windows.Forms.Label();
-            this.Panel7 = new System.Windows.Forms.Panel();
+            this.Panel8 = new System.Windows.Forms.Panel();
+            this.LBLIDEMPRESA = new System.Windows.Forms.Label();
+            this.txtmsbox = new System.Windows.Forms.Label();
+            this.txtfecha = new System.Windows.Forms.DateTimePicker();
+            this.Panel10 = new System.Windows.Forms.Panel();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.datalistado_EMPRESASNUEVAS = new System.Windows.Forms.DataGridView();
             this.DataGridViewCheckBoxColumn5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -139,22 +131,27 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Label12 = new System.Windows.Forms.Label();
             this.Label11 = new System.Windows.Forms.Label();
             this.txtcontador = new System.Windows.Forms.Label();
+            this.txtidempresa = new System.Windows.Forms.Label();
+            this.lblvendesconimpuestos = new System.Windows.Forms.Label();
+            this.datalistado_empresas_nuevas = new System.Windows.Forms.DataGridView();
+            this.DataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.txtcontadorcajas = new System.Windows.Forms.Label();
+            this.lblmododebusqueda = new System.Windows.Forms.Label();
+            this.TXTTRABAJASCONIMPUESTOS = new System.Windows.Forms.Label();
+            this.txtcontador_empresas = new System.Windows.Forms.Label();
+            this.lblIDSERIAL = new System.Windows.Forms.Label();
+            this.Panel7 = new System.Windows.Forms.Panel();
             this.FolderBrowserDialog2 = new System.Windows.Forms.FolderBrowserDialog();
             this.FolderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.dlg = new System.Windows.Forms.OpenFileDialog();
-            this.listlblCorreo = new System.Windows.Forms.ImageList(this.components);
-            this.lblCorreo = new System.Windows.Forms.Label();
             this.Panel16.SuspendLayout();
             this.Panel2.SuspendLayout();
-            this.Panel8.SuspendLayout();
             this.Panel3.SuspendLayout();
             this.MenuStrip5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadocajas)).BeginInit();
             this.ToolStrip1.SuspendLayout();
             this.Panel13.SuspendLayout();
             this.Panel11.SuspendLayout();
-            this.Panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datalistado_empresas_nuevas)).BeginInit();
             this.Panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenEmpresa)).BeginInit();
             this.TabControl3.SuspendLayout();
@@ -167,13 +164,16 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.TSIGUIENTE.SuspendLayout();
             this.Panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PADVER)).BeginInit();
-            this.Panel7.SuspendLayout();
+            this.Panel8.SuspendLayout();
+            this.Panel10.SuspendLayout();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datalistado_EMPRESASNUEVAS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datalistado)).BeginInit();
             this.Panel14.SuspendLayout();
             this.Panel4.SuspendLayout();
             this.MenuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistado_empresas_nuevas)).BeginInit();
+            this.Panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel16
@@ -206,26 +206,22 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel2.Size = new System.Drawing.Size(649, 560);
             this.Panel2.TabIndex = 360;
             // 
-            // Panel8
+            // lblCorreo
             // 
-            this.Panel8.Controls.Add(this.LBLIDEMPRESA);
-            this.Panel8.Controls.Add(this.txtmsbox);
-            this.Panel8.Controls.Add(this.txtfecha);
-            this.Panel8.Location = new System.Drawing.Point(74, 177);
-            this.Panel8.Name = "Panel8";
-            this.Panel8.Size = new System.Drawing.Size(35, 11);
-            this.Panel8.TabIndex = 599;
+            this.lblCorreo.ImageList = this.listlblCorreo;
+            this.lblCorreo.Location = new System.Drawing.Point(69, 528);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(213, 17);
+            this.lblCorreo.TabIndex = 599;
+            this.lblCorreo.Text = "Ingrese su correo electrónico";
+            this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // LBLIDEMPRESA
+            // listlblCorreo
             // 
-            this.LBLIDEMPRESA.AutoSize = true;
-            this.LBLIDEMPRESA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.LBLIDEMPRESA.ForeColor = System.Drawing.Color.Black;
-            this.LBLIDEMPRESA.Location = new System.Drawing.Point(76, 77);
-            this.LBLIDEMPRESA.Name = "LBLIDEMPRESA";
-            this.LBLIDEMPRESA.Size = new System.Drawing.Size(41, 13);
-            this.LBLIDEMPRESA.TabIndex = 556;
-            this.LBLIDEMPRESA.Text = "CAJA:";
+            this.listlblCorreo.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("listlblCorreo.ImageStream")));
+            this.listlblCorreo.TransparentColor = System.Drawing.Color.Transparent;
+            this.listlblCorreo.Images.SetKeyName(0, "1.png");
+            this.listlblCorreo.Images.SetKeyName(1, "2.png");
             // 
             // txtcorreo
             // 
@@ -579,150 +575,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.si.Text = "SI";
             this.si.UseVisualStyleBackColor = true;
             // 
-            // Panel10
-            // 
-            this.Panel10.Controls.Add(this.Panel8);
-            this.Panel10.Controls.Add(this.Panel1);
-            this.Panel10.Controls.Add(this.txtidempresa);
-            this.Panel10.Controls.Add(this.lblvendesconimpuestos);
-            this.Panel10.Controls.Add(this.datalistado_empresas_nuevas);
-            this.Panel10.Controls.Add(this.txtcontadorcajas);
-            this.Panel10.Controls.Add(this.lblmododebusqueda);
-            this.Panel10.Controls.Add(this.TXTTRABAJASCONIMPUESTOS);
-            this.Panel10.Controls.Add(this.txtcontador_empresas);
-            this.Panel10.Controls.Add(this.lblIDSERIAL);
-            this.Panel10.Location = new System.Drawing.Point(799, 12);
-            this.Panel10.Name = "Panel10";
-            this.Panel10.Size = new System.Drawing.Size(10, 10);
-            this.Panel10.TabIndex = 563;
-            // 
-            // txtidempresa
-            // 
-            this.txtidempresa.AutoSize = true;
-            this.txtidempresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtidempresa.ForeColor = System.Drawing.Color.Black;
-            this.txtidempresa.Location = new System.Drawing.Point(94, 46);
-            this.txtidempresa.Name = "txtidempresa";
-            this.txtidempresa.Size = new System.Drawing.Size(92, 20);
-            this.txtidempresa.TabIndex = 556;
-            this.txtidempresa.Text = "idempresa";
-            // 
-            // lblvendesconimpuestos
-            // 
-            this.lblvendesconimpuestos.AutoSize = true;
-            this.lblvendesconimpuestos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblvendesconimpuestos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblvendesconimpuestos.Location = new System.Drawing.Point(31, 50);
-            this.lblvendesconimpuestos.Name = "lblvendesconimpuestos";
-            this.lblvendesconimpuestos.Size = new System.Drawing.Size(191, 20);
-            this.lblvendesconimpuestos.TabIndex = 342;
-            this.lblvendesconimpuestos.Text = "¿Vendes con Impuestos?";
-            // 
-            // datalistado_empresas_nuevas
-            // 
-            this.datalistado_empresas_nuevas.AllowUserToAddRows = false;
-            this.datalistado_empresas_nuevas.AllowUserToDeleteRows = false;
-            this.datalistado_empresas_nuevas.BackgroundColor = System.Drawing.Color.White;
-            this.datalistado_empresas_nuevas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datalistado_empresas_nuevas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.datalistado_empresas_nuevas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datalistado_empresas_nuevas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DataGridViewCheckBoxColumn2});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datalistado_empresas_nuevas.DefaultCellStyle = dataGridViewCellStyle20;
-            this.datalistado_empresas_nuevas.EnableHeadersVisualStyles = false;
-            this.datalistado_empresas_nuevas.Location = new System.Drawing.Point(91, 33);
-            this.datalistado_empresas_nuevas.Name = "datalistado_empresas_nuevas";
-            this.datalistado_empresas_nuevas.ReadOnly = true;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datalistado_empresas_nuevas.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
-            this.datalistado_empresas_nuevas.RowHeadersVisible = false;
-            this.datalistado_empresas_nuevas.RowHeadersWidth = 5;
-            this.datalistado_empresas_nuevas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datalistado_empresas_nuevas.Size = new System.Drawing.Size(155, 94);
-            this.datalistado_empresas_nuevas.TabIndex = 557;
-            // 
-            // DataGridViewCheckBoxColumn2
-            // 
-            this.DataGridViewCheckBoxColumn2.HeaderText = "Eliminar";
-            this.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2";
-            this.DataGridViewCheckBoxColumn2.ReadOnly = true;
-            this.DataGridViewCheckBoxColumn2.Visible = false;
-            // 
-            // txtcontadorcajas
-            // 
-            this.txtcontadorcajas.AutoSize = true;
-            this.txtcontadorcajas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtcontadorcajas.ForeColor = System.Drawing.Color.Black;
-            this.txtcontadorcajas.Location = new System.Drawing.Point(38, 66);
-            this.txtcontadorcajas.Name = "txtcontadorcajas";
-            this.txtcontadorcajas.Size = new System.Drawing.Size(66, 20);
-            this.txtcontadorcajas.TabIndex = 556;
-            this.txtcontadorcajas.Text = "CAJAS";
-            // 
-            // lblmododebusqueda
-            // 
-            this.lblmododebusqueda.AutoSize = true;
-            this.lblmododebusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblmododebusqueda.ForeColor = System.Drawing.Color.Black;
-            this.lblmododebusqueda.Location = new System.Drawing.Point(79, 77);
-            this.lblmododebusqueda.Name = "lblmododebusqueda";
-            this.lblmododebusqueda.Size = new System.Drawing.Size(66, 20);
-            this.lblmododebusqueda.TabIndex = 556;
-            this.lblmododebusqueda.Text = "CAJAS";
-            // 
-            // TXTTRABAJASCONIMPUESTOS
-            // 
-            this.TXTTRABAJASCONIMPUESTOS.AutoSize = true;
-            this.TXTTRABAJASCONIMPUESTOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.TXTTRABAJASCONIMPUESTOS.ForeColor = System.Drawing.Color.Black;
-            this.TXTTRABAJASCONIMPUESTOS.Location = new System.Drawing.Point(94, 62);
-            this.TXTTRABAJASCONIMPUESTOS.Name = "TXTTRABAJASCONIMPUESTOS";
-            this.TXTTRABAJASCONIMPUESTOS.Size = new System.Drawing.Size(23, 20);
-            this.TXTTRABAJASCONIMPUESTOS.TabIndex = 342;
-            this.TXTTRABAJASCONIMPUESTOS.Text = "%";
-            // 
-            // txtcontador_empresas
-            // 
-            this.txtcontador_empresas.AutoSize = true;
-            this.txtcontador_empresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtcontador_empresas.ForeColor = System.Drawing.Color.Black;
-            this.txtcontador_empresas.Location = new System.Drawing.Point(19, 33);
-            this.txtcontador_empresas.Name = "txtcontador_empresas";
-            this.txtcontador_empresas.Size = new System.Drawing.Size(66, 20);
-            this.txtcontador_empresas.TabIndex = 556;
-            this.txtcontador_empresas.Text = "CAJAS";
-            // 
-            // lblIDSERIAL
-            // 
-            this.lblIDSERIAL.AutoSize = true;
-            this.lblIDSERIAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lblIDSERIAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblIDSERIAL.Location = new System.Drawing.Point(38, 7);
-            this.lblIDSERIAL.Name = "lblIDSERIAL";
-            this.lblIDSERIAL.Size = new System.Drawing.Size(111, 20);
-            this.lblIDSERIAL.TabIndex = 342;
-            this.lblIDSERIAL.Text = "lblIDSERIAL";
-            // 
             // Panel6
             // 
             this.Panel6.BackColor = System.Drawing.Color.White;
@@ -954,28 +806,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Label17.TabIndex = 340;
             this.Label17.Text = "Ficha tecnica:";
             // 
-            // txtmsbox
-            // 
-            this.txtmsbox.BackColor = System.Drawing.Color.Transparent;
-            this.txtmsbox.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmsbox.ForeColor = System.Drawing.Color.White;
-            this.txtmsbox.Location = new System.Drawing.Point(72, 126);
-            this.txtmsbox.Name = "txtmsbox";
-            this.txtmsbox.Size = new System.Drawing.Size(45, 11);
-            this.txtmsbox.TabIndex = 381;
-            this.txtmsbox.Text = "Listo";
-            this.txtmsbox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txtmsbox.Visible = false;
-            // 
-            // txtfecha
-            // 
-            this.txtfecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtfecha.Location = new System.Drawing.Point(98, 30);
-            this.txtfecha.Name = "txtfecha";
-            this.txtfecha.Size = new System.Drawing.Size(124, 20);
-            this.txtfecha.TabIndex = 600;
-            this.txtfecha.Value = new System.DateTime(2021, 1, 21, 12, 28, 27, 0);
-            // 
             // Panel15
             // 
             this.Panel15.BackColor = System.Drawing.Color.White;
@@ -1099,15 +929,65 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Label2.TabIndex = 556;
             this.Label2.Text = "Ya registraste tu Empresa /Modificala \r\nmas adelante";
             // 
-            // Panel7
+            // Panel8
             // 
-            this.Panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.Panel7.Controls.Add(this.Panel10);
-            this.Panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Panel7.Location = new System.Drawing.Point(0, 0);
-            this.Panel7.Name = "Panel7";
-            this.Panel7.Size = new System.Drawing.Size(1138, 233);
-            this.Panel7.TabIndex = 611;
+            this.Panel8.Controls.Add(this.LBLIDEMPRESA);
+            this.Panel8.Controls.Add(this.txtmsbox);
+            this.Panel8.Controls.Add(this.txtfecha);
+            this.Panel8.Location = new System.Drawing.Point(74, 177);
+            this.Panel8.Name = "Panel8";
+            this.Panel8.Size = new System.Drawing.Size(35, 11);
+            this.Panel8.TabIndex = 599;
+            // 
+            // LBLIDEMPRESA
+            // 
+            this.LBLIDEMPRESA.AutoSize = true;
+            this.LBLIDEMPRESA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.LBLIDEMPRESA.ForeColor = System.Drawing.Color.Black;
+            this.LBLIDEMPRESA.Location = new System.Drawing.Point(76, 77);
+            this.LBLIDEMPRESA.Name = "LBLIDEMPRESA";
+            this.LBLIDEMPRESA.Size = new System.Drawing.Size(41, 13);
+            this.LBLIDEMPRESA.TabIndex = 556;
+            this.LBLIDEMPRESA.Text = "CAJA:";
+            // 
+            // txtmsbox
+            // 
+            this.txtmsbox.BackColor = System.Drawing.Color.Transparent;
+            this.txtmsbox.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmsbox.ForeColor = System.Drawing.Color.White;
+            this.txtmsbox.Location = new System.Drawing.Point(72, 126);
+            this.txtmsbox.Name = "txtmsbox";
+            this.txtmsbox.Size = new System.Drawing.Size(45, 11);
+            this.txtmsbox.TabIndex = 381;
+            this.txtmsbox.Text = "Listo";
+            this.txtmsbox.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtmsbox.Visible = false;
+            // 
+            // txtfecha
+            // 
+            this.txtfecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtfecha.Location = new System.Drawing.Point(98, 30);
+            this.txtfecha.Name = "txtfecha";
+            this.txtfecha.Size = new System.Drawing.Size(124, 20);
+            this.txtfecha.TabIndex = 600;
+            this.txtfecha.Value = new System.DateTime(2021, 1, 21, 12, 28, 27, 0);
+            // 
+            // Panel10
+            // 
+            this.Panel10.Controls.Add(this.Panel8);
+            this.Panel10.Controls.Add(this.Panel1);
+            this.Panel10.Controls.Add(this.txtidempresa);
+            this.Panel10.Controls.Add(this.lblvendesconimpuestos);
+            this.Panel10.Controls.Add(this.datalistado_empresas_nuevas);
+            this.Panel10.Controls.Add(this.txtcontadorcajas);
+            this.Panel10.Controls.Add(this.lblmododebusqueda);
+            this.Panel10.Controls.Add(this.TXTTRABAJASCONIMPUESTOS);
+            this.Panel10.Controls.Add(this.txtcontador_empresas);
+            this.Panel10.Controls.Add(this.lblIDSERIAL);
+            this.Panel10.Location = new System.Drawing.Point(707, 12);
+            this.Panel10.Name = "Panel10";
+            this.Panel10.Size = new System.Drawing.Size(10, 10);
+            this.Panel10.TabIndex = 563;
             // 
             // Panel1
             // 
@@ -1484,33 +1364,153 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.txtcontador.TabIndex = 530;
             this.txtcontador.Text = "Unidad de medida por presentacion:";
             // 
+            // txtidempresa
+            // 
+            this.txtidempresa.AutoSize = true;
+            this.txtidempresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtidempresa.ForeColor = System.Drawing.Color.Black;
+            this.txtidempresa.Location = new System.Drawing.Point(94, 46);
+            this.txtidempresa.Name = "txtidempresa";
+            this.txtidempresa.Size = new System.Drawing.Size(92, 20);
+            this.txtidempresa.TabIndex = 556;
+            this.txtidempresa.Text = "idempresa";
+            // 
+            // lblvendesconimpuestos
+            // 
+            this.lblvendesconimpuestos.AutoSize = true;
+            this.lblvendesconimpuestos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblvendesconimpuestos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblvendesconimpuestos.Location = new System.Drawing.Point(31, 50);
+            this.lblvendesconimpuestos.Name = "lblvendesconimpuestos";
+            this.lblvendesconimpuestos.Size = new System.Drawing.Size(191, 20);
+            this.lblvendesconimpuestos.TabIndex = 342;
+            this.lblvendesconimpuestos.Text = "¿Vendes con Impuestos?";
+            // 
+            // datalistado_empresas_nuevas
+            // 
+            this.datalistado_empresas_nuevas.AllowUserToAddRows = false;
+            this.datalistado_empresas_nuevas.AllowUserToDeleteRows = false;
+            this.datalistado_empresas_nuevas.BackgroundColor = System.Drawing.Color.White;
+            this.datalistado_empresas_nuevas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datalistado_empresas_nuevas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.datalistado_empresas_nuevas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistado_empresas_nuevas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridViewCheckBoxColumn2});
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datalistado_empresas_nuevas.DefaultCellStyle = dataGridViewCellStyle20;
+            this.datalistado_empresas_nuevas.EnableHeadersVisualStyles = false;
+            this.datalistado_empresas_nuevas.Location = new System.Drawing.Point(91, 33);
+            this.datalistado_empresas_nuevas.Name = "datalistado_empresas_nuevas";
+            this.datalistado_empresas_nuevas.ReadOnly = true;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datalistado_empresas_nuevas.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            this.datalistado_empresas_nuevas.RowHeadersVisible = false;
+            this.datalistado_empresas_nuevas.RowHeadersWidth = 5;
+            this.datalistado_empresas_nuevas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datalistado_empresas_nuevas.Size = new System.Drawing.Size(155, 94);
+            this.datalistado_empresas_nuevas.TabIndex = 557;
+            // 
+            // DataGridViewCheckBoxColumn2
+            // 
+            this.DataGridViewCheckBoxColumn2.HeaderText = "Eliminar";
+            this.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2";
+            this.DataGridViewCheckBoxColumn2.ReadOnly = true;
+            this.DataGridViewCheckBoxColumn2.Visible = false;
+            // 
+            // txtcontadorcajas
+            // 
+            this.txtcontadorcajas.AutoSize = true;
+            this.txtcontadorcajas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtcontadorcajas.ForeColor = System.Drawing.Color.Black;
+            this.txtcontadorcajas.Location = new System.Drawing.Point(38, 66);
+            this.txtcontadorcajas.Name = "txtcontadorcajas";
+            this.txtcontadorcajas.Size = new System.Drawing.Size(66, 20);
+            this.txtcontadorcajas.TabIndex = 556;
+            this.txtcontadorcajas.Text = "CAJAS";
+            // 
+            // lblmododebusqueda
+            // 
+            this.lblmododebusqueda.AutoSize = true;
+            this.lblmododebusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblmododebusqueda.ForeColor = System.Drawing.Color.Black;
+            this.lblmododebusqueda.Location = new System.Drawing.Point(79, 77);
+            this.lblmododebusqueda.Name = "lblmododebusqueda";
+            this.lblmododebusqueda.Size = new System.Drawing.Size(66, 20);
+            this.lblmododebusqueda.TabIndex = 556;
+            this.lblmododebusqueda.Text = "CAJAS";
+            // 
+            // TXTTRABAJASCONIMPUESTOS
+            // 
+            this.TXTTRABAJASCONIMPUESTOS.AutoSize = true;
+            this.TXTTRABAJASCONIMPUESTOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.TXTTRABAJASCONIMPUESTOS.ForeColor = System.Drawing.Color.Black;
+            this.TXTTRABAJASCONIMPUESTOS.Location = new System.Drawing.Point(94, 62);
+            this.TXTTRABAJASCONIMPUESTOS.Name = "TXTTRABAJASCONIMPUESTOS";
+            this.TXTTRABAJASCONIMPUESTOS.Size = new System.Drawing.Size(23, 20);
+            this.TXTTRABAJASCONIMPUESTOS.TabIndex = 342;
+            this.TXTTRABAJASCONIMPUESTOS.Text = "%";
+            // 
+            // txtcontador_empresas
+            // 
+            this.txtcontador_empresas.AutoSize = true;
+            this.txtcontador_empresas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtcontador_empresas.ForeColor = System.Drawing.Color.Black;
+            this.txtcontador_empresas.Location = new System.Drawing.Point(19, 33);
+            this.txtcontador_empresas.Name = "txtcontador_empresas";
+            this.txtcontador_empresas.Size = new System.Drawing.Size(66, 20);
+            this.txtcontador_empresas.TabIndex = 556;
+            this.txtcontador_empresas.Text = "CAJAS";
+            // 
+            // lblIDSERIAL
+            // 
+            this.lblIDSERIAL.AutoSize = true;
+            this.lblIDSERIAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lblIDSERIAL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblIDSERIAL.Location = new System.Drawing.Point(38, 7);
+            this.lblIDSERIAL.Name = "lblIDSERIAL";
+            this.lblIDSERIAL.Size = new System.Drawing.Size(111, 20);
+            this.lblIDSERIAL.TabIndex = 342;
+            this.lblIDSERIAL.Text = "lblIDSERIAL";
+            // 
+            // Panel7
+            // 
+            this.Panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.Panel7.Controls.Add(this.Panel10);
+            this.Panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panel7.Location = new System.Drawing.Point(0, 0);
+            this.Panel7.Name = "Panel7";
+            this.Panel7.Size = new System.Drawing.Size(772, 233);
+            this.Panel7.TabIndex = 611;
+            // 
             // dlg
             // 
             this.dlg.FileName = "OpenFileDialog1";
-            // 
-            // listlblCorreo
-            // 
-            this.listlblCorreo.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("listlblCorreo.ImageStream")));
-            this.listlblCorreo.TransparentColor = System.Drawing.Color.Transparent;
-            this.listlblCorreo.Images.SetKeyName(0, "1.png");
-            this.listlblCorreo.Images.SetKeyName(1, "2.png");
-            // 
-            // lblCorreo
-            // 
-            this.lblCorreo.ImageList = this.listlblCorreo;
-            this.lblCorreo.Location = new System.Drawing.Point(68, 528);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(213, 17);
-            this.lblCorreo.TabIndex = 599;
-            this.lblCorreo.Text = "Ingrese su correo electrónico";
-            this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Registro_de_Empresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1138, 776);
+            this.ClientSize = new System.Drawing.Size(772, 691);
             this.Controls.Add(this.Panel16);
             this.Controls.Add(this.Panel7);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1522,8 +1522,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel16.ResumeLayout(false);
             this.Panel2.ResumeLayout(false);
             this.Panel2.PerformLayout();
-            this.Panel8.ResumeLayout(false);
-            this.Panel8.PerformLayout();
             this.Panel3.ResumeLayout(false);
             this.Panel3.PerformLayout();
             this.MenuStrip5.ResumeLayout(false);
@@ -1535,9 +1533,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel13.PerformLayout();
             this.Panel11.ResumeLayout(false);
             this.Panel11.PerformLayout();
-            this.Panel10.ResumeLayout(false);
-            this.Panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datalistado_empresas_nuevas)).EndInit();
             this.Panel6.ResumeLayout(false);
             this.Panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenEmpresa)).EndInit();
@@ -1557,7 +1552,10 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel9.ResumeLayout(false);
             this.Panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PADVER)).EndInit();
-            this.Panel7.ResumeLayout(false);
+            this.Panel8.ResumeLayout(false);
+            this.Panel8.PerformLayout();
+            this.Panel10.ResumeLayout(false);
+            this.Panel10.PerformLayout();
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datalistado_EMPRESASNUEVAS)).EndInit();
@@ -1568,6 +1566,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel4.PerformLayout();
             this.MenuStrip2.ResumeLayout(false);
             this.MenuStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistado_empresas_nuevas)).EndInit();
+            this.Panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

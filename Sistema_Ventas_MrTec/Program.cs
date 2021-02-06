@@ -18,7 +18,9 @@ namespace Sistema_Ventas_MrTec
 
             //Application.Run(new MODULOS.Login());
 
-            Application.Run(new MODULOS.Panel_de_Administracion_del_Software.Conexion_Manual());
+            //Application.Run(new MODULOS.Panel_de_Administracion_del_Software.Conexion_Manual());
+
+            Application.Run(new MODULOS.Asistente_de_Inicio.Registro_de_Empresa());
 
 
 
