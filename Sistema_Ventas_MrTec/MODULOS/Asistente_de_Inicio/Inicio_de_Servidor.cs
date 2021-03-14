@@ -54,7 +54,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             string str;
             //SqlConnection con = new SqlConnection("Server=" + txtservidor.Text + "; " + "database=master; integrated security=yes");
             //SqlConnection con = new SqlConnection("Data Source=" + txtservidor.Text + "; " + "database=master; User Id=sa;Password=Razer123@!;");
-            SqlConnection con = new SqlConnection("Data Source=74.208.42.58,1433;database=master;User Id=sa;Password=Razer123@!;");
+            SqlConnection con = new SqlConnection("Data Source=161.97.169.141,1433;database=master;User Id=sa;Password=Razer123@!;");
             str = txtEliminarBase.Text;
             SqlCommand command = new SqlCommand(str, con);
             try
@@ -78,7 +78,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
         private void ejecutar_scrip_CrearBase_Comprobacion_de_Inicio()
         {
             //var cnn = new SqlConnection("Server=" + txtservidor.Text + "; " + "database=master; integrated security=yes");
-            var cnn = new SqlConnection("Data Source=74.208.42.58,1433;database=master;User Id=sa;Password=Razer123@!;");
+            var cnn = new SqlConnection("Data Source=161.97.169.141,1433;database=master;User Id=sa;Password=Razer123@!;");
             string s = "CREATE DATABASE " + TXTbasededatos.Text;
             string s1 = "CREATE DATABASE Sis_Ventas_MrTec";
             var cmd = new SqlCommand(s, cnn);
@@ -88,7 +88,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
                 cnn.Open();
                 cmd.ExecuteNonQuery();
                 cmd1.ExecuteNonQuery();
-                SavetoXML(aes.Encrypt("Data Source=74.208.42.58,1433;Initial Catalog=" + TXTbasededatos.Text + ";User Id=sa;Password=Razer123@!;", Conexion.Desencrytacion.appPwdUnique, int.Parse("256")));
+                SavetoXML(aes.Encrypt("Data Source=161.97.169.141,1433;Initial Catalog=" + TXTbasededatos.Text + ";User Id=sa;Password=Razer123@!;", Conexion.Desencrytacion.appPwdUnique, int.Parse("256")));
 
                 Panel4.Visible = true;
                 Panel4.Dock = DockStyle.Fill;
@@ -203,7 +203,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
                 
                 //TimerCRARINI.Start();
                 pros.StartInfo.FileName = "sqlcmd";
-                pros.StartInfo.Arguments = "-S  tcp:74.208.42.58,1433 -U sa -P Razer123@!" + " -i" + txtnombre_scrypt.Text + ".txt";
+                pros.StartInfo.Arguments = "-S  tcp:161.97.169.141,1433 -U sa -P Razer123@!" + " -i" + txtnombre_scrypt.Text + ".txt";
                 pros.Start();
 
                 Panel4.Visible = true;

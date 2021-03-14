@@ -971,5 +971,10 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             }
 
         }
+
+        private void txtcosto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,10 +37,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblwindows = new System.Windows.Forms.Label();
             this.Panel3 = new System.Windows.Forms.Panel();
-            this.milisegundo22 = new System.Windows.Forms.Label();
-            this.segundos22 = new System.Windows.Forms.Label();
-            this.milisegundo21 = new System.Windows.Forms.Label();
-            this.segundos21 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtArgumentosini = new System.Windows.Forms.RichTextBox();
@@ -67,6 +63,10 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.lblBasededatos = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label8 = new System.Windows.Forms.Label();
+            this.milisegundo22 = new System.Windows.Forms.Label();
+            this.segundos22 = new System.Windows.Forms.Label();
+            this.milisegundo21 = new System.Windows.Forms.Label();
+            this.segundos21 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
@@ -178,48 +178,8 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel3.Controls.Add(this.Label8);
             this.Panel3.Location = new System.Drawing.Point(1625, 12);
             this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(10, 12);
+            this.Panel3.Size = new System.Drawing.Size(10, 11);
             this.Panel3.TabIndex = 621;
-            // 
-            // milisegundo22
-            // 
-            this.milisegundo22.AutoSize = true;
-            this.milisegundo22.ForeColor = System.Drawing.Color.White;
-            this.milisegundo22.Location = new System.Drawing.Point(369, 246);
-            this.milisegundo22.Name = "milisegundo22";
-            this.milisegundo22.Size = new System.Drawing.Size(19, 13);
-            this.milisegundo22.TabIndex = 628;
-            this.milisegundo22.Text = "00";
-            // 
-            // segundos22
-            // 
-            this.segundos22.AutoSize = true;
-            this.segundos22.ForeColor = System.Drawing.Color.White;
-            this.segundos22.Location = new System.Drawing.Point(394, 246);
-            this.segundos22.Name = "segundos22";
-            this.segundos22.Size = new System.Drawing.Size(19, 13);
-            this.segundos22.TabIndex = 627;
-            this.segundos22.Text = "00";
-            // 
-            // milisegundo21
-            // 
-            this.milisegundo21.AutoSize = true;
-            this.milisegundo21.ForeColor = System.Drawing.Color.White;
-            this.milisegundo21.Location = new System.Drawing.Point(359, 12);
-            this.milisegundo21.Name = "milisegundo21";
-            this.milisegundo21.Size = new System.Drawing.Size(19, 13);
-            this.milisegundo21.TabIndex = 626;
-            this.milisegundo21.Text = "00";
-            // 
-            // segundos21
-            // 
-            this.segundos21.AutoSize = true;
-            this.segundos21.ForeColor = System.Drawing.Color.White;
-            this.segundos21.Location = new System.Drawing.Point(397, 12);
-            this.segundos21.Name = "segundos21";
-            this.segundos21.Size = new System.Drawing.Size(19, 13);
-            this.segundos21.TabIndex = 625;
-            this.segundos21.Text = "00";
             // 
             // label10
             // 
@@ -430,7 +390,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.lblnombredeservicio.Name = "lblnombredeservicio";
             this.lblnombredeservicio.Size = new System.Drawing.Size(134, 20);
             this.lblnombredeservicio.TabIndex = 621;
-            this.lblnombredeservicio.Text = "74.208.42.58,1433";
+            this.lblnombredeservicio.Text = "161.97.169.141,1433";
             // 
             // Label11
             // 
@@ -481,6 +441,46 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Label8.Size = new System.Drawing.Size(108, 13);
             this.Label8.TabIndex = 618;
             this.Label8.Text = "Nombre de Instancia:";
+            // 
+            // milisegundo22
+            // 
+            this.milisegundo22.AutoSize = true;
+            this.milisegundo22.ForeColor = System.Drawing.Color.White;
+            this.milisegundo22.Location = new System.Drawing.Point(369, 246);
+            this.milisegundo22.Name = "milisegundo22";
+            this.milisegundo22.Size = new System.Drawing.Size(19, 13);
+            this.milisegundo22.TabIndex = 628;
+            this.milisegundo22.Text = "00";
+            // 
+            // segundos22
+            // 
+            this.segundos22.AutoSize = true;
+            this.segundos22.ForeColor = System.Drawing.Color.White;
+            this.segundos22.Location = new System.Drawing.Point(394, 246);
+            this.segundos22.Name = "segundos22";
+            this.segundos22.Size = new System.Drawing.Size(19, 13);
+            this.segundos22.TabIndex = 627;
+            this.segundos22.Text = "00";
+            // 
+            // milisegundo21
+            // 
+            this.milisegundo21.AutoSize = true;
+            this.milisegundo21.ForeColor = System.Drawing.Color.White;
+            this.milisegundo21.Location = new System.Drawing.Point(359, 12);
+            this.milisegundo21.Name = "milisegundo21";
+            this.milisegundo21.Size = new System.Drawing.Size(19, 13);
+            this.milisegundo21.TabIndex = 626;
+            this.milisegundo21.Text = "00";
+            // 
+            // segundos21
+            // 
+            this.segundos21.AutoSize = true;
+            this.segundos21.ForeColor = System.Drawing.Color.White;
+            this.segundos21.Location = new System.Drawing.Point(397, 12);
+            this.segundos21.Name = "segundos21";
+            this.segundos21.Size = new System.Drawing.Size(19, 13);
+            this.segundos21.TabIndex = 625;
+            this.segundos21.Text = "00";
             // 
             // timer2
             // 

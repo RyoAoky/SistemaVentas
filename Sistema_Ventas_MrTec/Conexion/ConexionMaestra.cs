@@ -15,7 +15,7 @@ namespace Sistema_Ventas_MrTec.Conexion
         //public static string Conexion = "Data Source=SQL5063.site4now.net;Initial Catalog=DB_A699E9_ryoaoki;User Id=DB_A699E9_ryoaoki_admin;Password=Razer123@!;";
 
 
-        //public static string Conexion = "Data Source=74.208.42.58,1433;Initial Catalog=Sis_Ventas_MrTec;User Id=sa;Password=Razer123@!;";
+        //public static string Conexion = "Data Source=161.97.169.141,1433;Initial Catalog=Sis_Ventas_MrTec;User Id=sa;Password=Razer123@!;   ";
        
         
 

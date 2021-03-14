@@ -31,15 +31,15 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro_de_Empresa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Panel16 = new System.Windows.Forms.Panel();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.lblCorreo = new System.Windows.Forms.Label();
@@ -47,56 +47,19 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.txtcorreo = new System.Windows.Forms.TextBox();
             this.txtRuta = new System.Windows.Forms.TextBox();
             this.Label18 = new System.Windows.Forms.Label();
-            this.Panel3 = new System.Windows.Forms.Panel();
-            this.Panel17 = new System.Windows.Forms.Panel();
-            this.MenuStrip5 = new System.Windows.Forms.MenuStrip();
-            this.GUARDAR = new System.Windows.Forms.ToolStripMenuItem();
-            this.GUARDARCAMBIOS = new System.Windows.Forms.ToolStripMenuItem();
-            this.VOLVEROK = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtcaja = new System.Windows.Forms.TextBox();
-            this.Label19 = new System.Windows.Forms.Label();
-            this.datalistadocajas = new System.Windows.Forms.DataGridView();
-            this.DataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Label9 = new System.Windows.Forms.Label();
             this.ToolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.ToolStripButton22 = new System.Windows.Forms.ToolStripButton();
-            this.Panel13 = new System.Windows.Forms.Panel();
-            this.txtteclado = new System.Windows.Forms.CheckBox();
-            this.TXTCON_LECTORA = new System.Windows.Forms.CheckBox();
-            this.Panel11 = new System.Windows.Forms.Panel();
-            this.Panel12 = new System.Windows.Forms.Panel();
-            this.txtimpuesto = new System.Windows.Forms.ComboBox();
-            this.Label14 = new System.Windows.Forms.Label();
-            this.txtporcentaje = new System.Windows.Forms.ComboBox();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.Label16 = new System.Windows.Forms.Label();
-            this.no = new System.Windows.Forms.RadioButton();
-            this.si = new System.Windows.Forms.RadioButton();
-            this.Panel6 = new System.Windows.Forms.Panel();
-            this.txtmoneda = new System.Windows.Forms.ComboBox();
-            this.TXTPAIS = new System.Windows.Forms.ComboBox();
-            this.lbleditarLogo = new System.Windows.Forms.Label();
-            this.ImagenEmpresa = new System.Windows.Forms.PictureBox();
-            this.Panel5 = new System.Windows.Forms.Panel();
-            this.txtempresa = new System.Windows.Forms.TextBox();
-            this.lblempresa = new System.Windows.Forms.Label();
-            this.Label8 = new System.Windows.Forms.Label();
-            this.Label7 = new System.Windows.Forms.Label();
             this.TabControl3 = new System.Windows.Forms.TabControl();
             this.TabPage5 = new System.Windows.Forms.TabPage();
             this.Label4 = new System.Windows.Forms.Label();
             this.TabPage6 = new System.Windows.Forms.TabPage();
-            this.PictureBox4 = new System.Windows.Forms.PictureBox();
             this.Label17 = new System.Windows.Forms.Label();
             this.Panel15 = new System.Windows.Forms.Panel();
             this.MenuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSIGUIENTE_Y_GUARDAR = new System.Windows.Forms.MenuStrip();
-            this.TSIGUIENTE_Y_GUARDAR_ = new System.Windows.Forms.ToolStripMenuItem();
             this.TSIGUIENTE = new System.Windows.Forms.MenuStrip();
-            this.TSIGUIENTE_ = new System.Windows.Forms.ToolStripMenuItem();
             this.Panel9 = new System.Windows.Forms.Panel();
-            this.PADVER = new System.Windows.Forms.PictureBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.Panel8 = new System.Windows.Forms.Panel();
             this.LBLIDEMPRESA = new System.Windows.Forms.Label();
@@ -144,26 +107,54 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.FolderBrowserDialog2 = new System.Windows.Forms.FolderBrowserDialog();
             this.FolderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.dlg = new System.Windows.Forms.OpenFileDialog();
+            this.Panel3 = new System.Windows.Forms.Panel();
+            this.Panel17 = new System.Windows.Forms.Panel();
+            this.MenuStrip5 = new System.Windows.Forms.MenuStrip();
+            this.GUARDAR = new System.Windows.Forms.ToolStripMenuItem();
+            this.GUARDARCAMBIOS = new System.Windows.Forms.ToolStripMenuItem();
+            this.VOLVEROK = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtcaja = new System.Windows.Forms.TextBox();
+            this.Label19 = new System.Windows.Forms.Label();
+            this.datalistadocajas = new System.Windows.Forms.DataGridView();
+            this.DataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ToolStripButton22 = new System.Windows.Forms.ToolStripButton();
+            this.Panel13 = new System.Windows.Forms.Panel();
+            this.txtteclado = new System.Windows.Forms.CheckBox();
+            this.TXTCON_LECTORA = new System.Windows.Forms.CheckBox();
+            this.Panel11 = new System.Windows.Forms.Panel();
+            this.Panel12 = new System.Windows.Forms.Panel();
+            this.txtimpuesto = new System.Windows.Forms.ComboBox();
+            this.Label14 = new System.Windows.Forms.Label();
+            this.txtporcentaje = new System.Windows.Forms.ComboBox();
+            this.Label1 = new System.Windows.Forms.Label();
+            this.Label16 = new System.Windows.Forms.Label();
+            this.no = new System.Windows.Forms.RadioButton();
+            this.si = new System.Windows.Forms.RadioButton();
+            this.Panel6 = new System.Windows.Forms.Panel();
+            this.txtmoneda = new System.Windows.Forms.ComboBox();
+            this.TXTPAIS = new System.Windows.Forms.ComboBox();
+            this.lbleditarLogo = new System.Windows.Forms.Label();
+            this.ImagenEmpresa = new System.Windows.Forms.PictureBox();
+            this.Panel5 = new System.Windows.Forms.Panel();
+            this.txtempresa = new System.Windows.Forms.TextBox();
+            this.lblempresa = new System.Windows.Forms.Label();
+            this.Label8 = new System.Windows.Forms.Label();
+            this.Label7 = new System.Windows.Forms.Label();
+            this.PictureBox4 = new System.Windows.Forms.PictureBox();
+            this.TSIGUIENTE_Y_GUARDAR_ = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSIGUIENTE_ = new System.Windows.Forms.ToolStripMenuItem();
+            this.PADVER = new System.Windows.Forms.PictureBox();
             this.Panel16.SuspendLayout();
             this.Panel2.SuspendLayout();
-            this.Panel3.SuspendLayout();
-            this.MenuStrip5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datalistadocajas)).BeginInit();
             this.ToolStrip1.SuspendLayout();
-            this.Panel13.SuspendLayout();
-            this.Panel11.SuspendLayout();
-            this.Panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImagenEmpresa)).BeginInit();
             this.TabControl3.SuspendLayout();
             this.TabPage5.SuspendLayout();
             this.TabPage6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
             this.Panel15.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
             this.TSIGUIENTE_Y_GUARDAR.SuspendLayout();
             this.TSIGUIENTE.SuspendLayout();
             this.Panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PADVER)).BeginInit();
             this.Panel8.SuspendLayout();
             this.Panel10.SuspendLayout();
             this.Panel1.SuspendLayout();
@@ -174,6 +165,15 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.MenuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datalistado_empresas_nuevas)).BeginInit();
             this.Panel7.SuspendLayout();
+            this.Panel3.SuspendLayout();
+            this.MenuStrip5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadocajas)).BeginInit();
+            this.Panel13.SuspendLayout();
+            this.Panel11.SuspendLayout();
+            this.Panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenEmpresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PADVER)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel16
@@ -182,7 +182,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel16.Controls.Add(this.Panel2);
             this.Panel16.Controls.Add(this.Panel15);
             this.Panel16.Controls.Add(this.Panel9);
-            this.Panel16.Location = new System.Drawing.Point(49, 36);
+            this.Panel16.Location = new System.Drawing.Point(71, 65);
             this.Panel16.Name = "Panel16";
             this.Panel16.Size = new System.Drawing.Size(649, 632);
             this.Panel16.TabIndex = 612;
@@ -258,130 +258,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Label18.TabIndex = 596;
             this.Label18.Text = "Registra un Correo para enviarte Reporte del Cierre de Caja";
             // 
-            // Panel3
-            // 
-            this.Panel3.BackColor = System.Drawing.Color.White;
-            this.Panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel3.BackgroundImage")));
-            this.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Panel3.Controls.Add(this.Panel17);
-            this.Panel3.Controls.Add(this.MenuStrip5);
-            this.Panel3.Controls.Add(this.txtcaja);
-            this.Panel3.Controls.Add(this.Label19);
-            this.Panel3.Controls.Add(this.datalistadocajas);
-            this.Panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Panel3.Location = new System.Drawing.Point(37, 355);
-            this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(563, 48);
-            this.Panel3.TabIndex = 558;
-            // 
-            // Panel17
-            // 
-            this.Panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(1)))));
-            this.Panel17.Location = new System.Drawing.Point(86, 34);
-            this.Panel17.Name = "Panel17";
-            this.Panel17.Size = new System.Drawing.Size(400, 2);
-            this.Panel17.TabIndex = 558;
-            // 
-            // MenuStrip5
-            // 
-            this.MenuStrip5.AutoSize = false;
-            this.MenuStrip5.BackColor = System.Drawing.Color.Transparent;
-            this.MenuStrip5.Dock = System.Windows.Forms.DockStyle.None;
-            this.MenuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.GUARDAR,
-            this.GUARDARCAMBIOS,
-            this.VOLVEROK});
-            this.MenuStrip5.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.MenuStrip5.Location = new System.Drawing.Point(2, 97);
-            this.MenuStrip5.Name = "MenuStrip5";
-            this.MenuStrip5.ShowItemToolTips = true;
-            this.MenuStrip5.Size = new System.Drawing.Size(463, 34);
-            this.MenuStrip5.TabIndex = 532;
-            this.MenuStrip5.Text = "MenuStrip5";
-            // 
-            // GUARDAR
-            // 
-            this.GUARDAR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
-            this.GUARDAR.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GUARDAR.ForeColor = System.Drawing.Color.White;
-            this.GUARDAR.Name = "GUARDAR";
-            this.GUARDAR.Size = new System.Drawing.Size(79, 30);
-            this.GUARDAR.Text = "&Guardar";
-            this.GUARDAR.ToolTipText = "Guardar ";
-            // 
-            // GUARDARCAMBIOS
-            // 
-            this.GUARDARCAMBIOS.BackColor = System.Drawing.Color.Gray;
-            this.GUARDARCAMBIOS.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.GUARDARCAMBIOS.ForeColor = System.Drawing.Color.White;
-            this.GUARDARCAMBIOS.Name = "GUARDARCAMBIOS";
-            this.GUARDARCAMBIOS.Size = new System.Drawing.Size(144, 30);
-            this.GUARDARCAMBIOS.Text = "&Guardar Cambios";
-            // 
-            // VOLVEROK
-            // 
-            this.VOLVEROK.BackColor = System.Drawing.Color.Gray;
-            this.VOLVEROK.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.VOLVEROK.ForeColor = System.Drawing.Color.White;
-            this.VOLVEROK.Name = "VOLVEROK";
-            this.VOLVEROK.Size = new System.Drawing.Size(79, 30);
-            this.VOLVEROK.Text = "VOLVER";
-            // 
-            // txtcaja
-            // 
-            this.txtcaja.BackColor = System.Drawing.Color.White;
-            this.txtcaja.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcaja.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtcaja.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtcaja.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.txtcaja.ForeColor = System.Drawing.Color.Black;
-            this.txtcaja.Location = new System.Drawing.Point(86, 11);
-            this.txtcaja.Name = "txtcaja";
-            this.txtcaja.Size = new System.Drawing.Size(441, 22);
-            this.txtcaja.TabIndex = 532;
-            this.txtcaja.Text = "NOMBRE DE CAJA";
-            // 
-            // Label19
-            // 
-            this.Label19.AutoSize = true;
-            this.Label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.Label19.ForeColor = System.Drawing.Color.Black;
-            this.Label19.Location = new System.Drawing.Point(21, 12);
-            this.Label19.Name = "Label19";
-            this.Label19.Size = new System.Drawing.Size(59, 20);
-            this.Label19.TabIndex = 556;
-            this.Label19.Text = "CAJA:";
-            // 
-            // datalistadocajas
-            // 
-            this.datalistadocajas.AllowUserToAddRows = false;
-            this.datalistadocajas.AllowUserToDeleteRows = false;
-            this.datalistadocajas.BackgroundColor = System.Drawing.Color.White;
-            this.datalistadocajas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.datalistadocajas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.datalistadocajas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datalistadocajas.ColumnHeadersVisible = false;
-            this.datalistadocajas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DataGridViewCheckBoxColumn1});
-            this.datalistadocajas.EnableHeadersVisualStyles = false;
-            this.datalistadocajas.Location = new System.Drawing.Point(371, 16);
-            this.datalistadocajas.Name = "datalistadocajas";
-            this.datalistadocajas.ReadOnly = true;
-            this.datalistadocajas.RowHeadersWidth = 5;
-            this.datalistadocajas.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.datalistadocajas.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.datalistadocajas.RowTemplate.Height = 40;
-            this.datalistadocajas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datalistadocajas.Size = new System.Drawing.Size(51, 10);
-            this.datalistadocajas.TabIndex = 557;
-            // 
-            // DataGridViewCheckBoxColumn1
-            // 
-            this.DataGridViewCheckBoxColumn1.HeaderText = "Eliminar";
-            this.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1";
-            this.DataGridViewCheckBoxColumn1.ReadOnly = true;
-            this.DataGridViewCheckBoxColumn1.Visible = false;
-            // 
             // Label9
             // 
             this.Label9.AutoSize = true;
@@ -411,336 +287,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.ToolStrip1.Size = new System.Drawing.Size(72, 49);
             this.ToolStrip1.TabIndex = 598;
             this.ToolStrip1.Text = "ToolStrip1";
-            // 
-            // ToolStripButton22
-            // 
-            this.ToolStripButton22.BackColor = System.Drawing.Color.White;
-            this.ToolStripButton22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ToolStripButton22.ForeColor = System.Drawing.Color.Black;
-            this.ToolStripButton22.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton22.Image")));
-            this.ToolStripButton22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ToolStripButton22.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ToolStripButton22.Name = "ToolStripButton22";
-            this.ToolStripButton22.Size = new System.Drawing.Size(37, 46);
-            this.ToolStripButton22.Text = "+";
-            this.ToolStripButton22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ToolStripButton22.ToolTipText = "Buscar Ruta";
-            this.ToolStripButton22.Click += new System.EventHandler(this.ToolStripButton22_Click);
-            // 
-            // Panel13
-            // 
-            this.Panel13.BackColor = System.Drawing.Color.White;
-            this.Panel13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel13.BackgroundImage")));
-            this.Panel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Panel13.Controls.Add(this.txtteclado);
-            this.Panel13.Controls.Add(this.TXTCON_LECTORA);
-            this.Panel13.Controls.Add(this.Panel11);
-            this.Panel13.Controls.Add(this.Label1);
-            this.Panel13.Controls.Add(this.Label16);
-            this.Panel13.Controls.Add(this.no);
-            this.Panel13.Controls.Add(this.si);
-            this.Panel13.Location = new System.Drawing.Point(37, 154);
-            this.Panel13.Name = "Panel13";
-            this.Panel13.Size = new System.Drawing.Size(563, 191);
-            this.Panel13.TabIndex = 590;
-            // 
-            // txtteclado
-            // 
-            this.txtteclado.AutoSize = true;
-            this.txtteclado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtteclado.Location = new System.Drawing.Point(35, 157);
-            this.txtteclado.Name = "txtteclado";
-            this.txtteclado.Size = new System.Drawing.Size(221, 24);
-            this.txtteclado.TabIndex = 565;
-            this.txtteclado.Text = "Escribiendo con mi Teclado";
-            this.txtteclado.UseVisualStyleBackColor = true;
-            this.txtteclado.CheckedChanged += new System.EventHandler(this.txtteclado_CheckedChanged);
-            // 
-            // TXTCON_LECTORA
-            // 
-            this.TXTCON_LECTORA.AutoSize = true;
-            this.TXTCON_LECTORA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.TXTCON_LECTORA.Location = new System.Drawing.Point(33, 125);
-            this.TXTCON_LECTORA.Name = "TXTCON_LECTORA";
-            this.TXTCON_LECTORA.Size = new System.Drawing.Size(219, 24);
-            this.TXTCON_LECTORA.TabIndex = 565;
-            this.TXTCON_LECTORA.Text = "Con una Lectora de Barras";
-            this.TXTCON_LECTORA.UseVisualStyleBackColor = true;
-            this.TXTCON_LECTORA.CheckedChanged += new System.EventHandler(this.TXTCON_LECTORA_CheckedChanged);
-            // 
-            // Panel11
-            // 
-            this.Panel11.Controls.Add(this.Panel12);
-            this.Panel11.Controls.Add(this.txtimpuesto);
-            this.Panel11.Controls.Add(this.Label14);
-            this.Panel11.Controls.Add(this.txtporcentaje);
-            this.Panel11.Location = new System.Drawing.Point(41, 39);
-            this.Panel11.Name = "Panel11";
-            this.Panel11.Size = new System.Drawing.Size(233, 41);
-            this.Panel11.TabIndex = 564;
-            // 
-            // Panel12
-            // 
-            this.Panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(1)))));
-            this.Panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Panel12.Location = new System.Drawing.Point(0, 37);
-            this.Panel12.Name = "Panel12";
-            this.Panel12.Size = new System.Drawing.Size(233, 4);
-            this.Panel12.TabIndex = 555;
-            // 
-            // txtimpuesto
-            // 
-            this.txtimpuesto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.txtimpuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtimpuesto.FormattingEnabled = true;
-            this.txtimpuesto.Items.AddRange(new object[] {
-            "IGV ",
-            "IVA"});
-            this.txtimpuesto.Location = new System.Drawing.Point(3, 3);
-            this.txtimpuesto.Name = "txtimpuesto";
-            this.txtimpuesto.Size = new System.Drawing.Size(64, 28);
-            this.txtimpuesto.TabIndex = 553;
-            this.txtimpuesto.Text = "IGV";
-            // 
-            // Label14
-            // 
-            this.Label14.AutoSize = true;
-            this.Label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Label14.ForeColor = System.Drawing.Color.Black;
-            this.Label14.Location = new System.Drawing.Point(158, 6);
-            this.Label14.Name = "Label14";
-            this.Label14.Size = new System.Drawing.Size(23, 20);
-            this.Label14.TabIndex = 342;
-            this.Label14.Text = "%";
-            // 
-            // txtporcentaje
-            // 
-            this.txtporcentaje.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.txtporcentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtporcentaje.FormattingEnabled = true;
-            this.txtporcentaje.Items.AddRange(new object[] {
-            "21",
-            "18",
-            "3",
-            "5"});
-            this.txtporcentaje.Location = new System.Drawing.Point(88, 3);
-            this.txtporcentaje.Name = "txtporcentaje";
-            this.txtporcentaje.Size = new System.Drawing.Size(64, 28);
-            this.txtporcentaje.TabIndex = 553;
-            this.txtporcentaje.Text = "18";
-            // 
-            // Label1
-            // 
-            this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Label1.Location = new System.Drawing.Point(28, 94);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(402, 20);
-            this.Label1.TabIndex = 342;
-            this.Label1.Text = "¿Como Buscaras tus Productos Con Frecuencia?";
-            // 
-            // Label16
-            // 
-            this.Label16.AutoSize = true;
-            this.Label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.Label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Label16.Location = new System.Drawing.Point(31, 10);
-            this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(193, 20);
-            this.Label16.TabIndex = 342;
-            this.Label16.Text = "Vendes con Impuestos";
-            // 
-            // no
-            // 
-            this.no.AutoSize = true;
-            this.no.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.no.Location = new System.Drawing.Point(282, 5);
-            this.no.Name = "no";
-            this.no.Size = new System.Drawing.Size(59, 28);
-            this.no.TabIndex = 555;
-            this.no.TabStop = true;
-            this.no.Text = "NO";
-            this.no.UseVisualStyleBackColor = true;
-            // 
-            // si
-            // 
-            this.si.AutoSize = true;
-            this.si.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.si.Location = new System.Drawing.Point(230, 5);
-            this.si.Name = "si";
-            this.si.Size = new System.Drawing.Size(46, 28);
-            this.si.TabIndex = 555;
-            this.si.TabStop = true;
-            this.si.Text = "SI";
-            this.si.UseVisualStyleBackColor = true;
-            // 
-            // Panel6
-            // 
-            this.Panel6.BackColor = System.Drawing.Color.White;
-            this.Panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel6.BackgroundImage")));
-            this.Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Panel6.Controls.Add(this.txtmoneda);
-            this.Panel6.Controls.Add(this.TXTPAIS);
-            this.Panel6.Controls.Add(this.lbleditarLogo);
-            this.Panel6.Controls.Add(this.ImagenEmpresa);
-            this.Panel6.Controls.Add(this.Panel5);
-            this.Panel6.Controls.Add(this.txtempresa);
-            this.Panel6.Controls.Add(this.lblempresa);
-            this.Panel6.Controls.Add(this.Label8);
-            this.Panel6.Controls.Add(this.Label7);
-            this.Panel6.Location = new System.Drawing.Point(37, 9);
-            this.Panel6.Name = "Panel6";
-            this.Panel6.Size = new System.Drawing.Size(564, 137);
-            this.Panel6.TabIndex = 589;
-            // 
-            // txtmoneda
-            // 
-            this.txtmoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtmoneda.DropDownWidth = 230;
-            this.txtmoneda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.txtmoneda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.txtmoneda.FormattingEnabled = true;
-            this.txtmoneda.IntegralHeight = false;
-            this.txtmoneda.Items.AddRange(new object[] {
-            "$",
-            "₡",
-            "Q",
-            "L",
-            "C$",
-            "B/.",
-            "$",
-            "$",
-            "$",
-            "$",
-            "Bs.",
-            "$",
-            "$",
-            "$",
-            "₲",
-            "S/.",
-            "$",
-            "Bs F",
-            "€"});
-            this.txtmoneda.Location = new System.Drawing.Point(444, 70);
-            this.txtmoneda.Name = "txtmoneda";
-            this.txtmoneda.Size = new System.Drawing.Size(83, 28);
-            this.txtmoneda.TabIndex = 590;
-            // 
-            // TXTPAIS
-            // 
-            this.TXTPAIS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TXTPAIS.DropDownWidth = 230;
-            this.TXTPAIS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.TXTPAIS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.TXTPAIS.FormattingEnabled = true;
-            this.TXTPAIS.IntegralHeight = false;
-            this.TXTPAIS.Items.AddRange(new object[] {
-            "México",
-            "Costa Rica",
-            "Guatemala",
-            "Honduras",
-            "Nicaragua",
-            "Panamá",
-            "Cuba",
-            "Puerto Rico",
-            "República Dominicana",
-            "Argentina",
-            "Bolivia",
-            "Chile",
-            "Colombia",
-            "Ecuador",
-            "Paraguay",
-            "Perú",
-            "Uruguay",
-            "Venezuela",
-            "España"});
-            this.TXTPAIS.Location = new System.Drawing.Point(194, 70);
-            this.TXTPAIS.Name = "TXTPAIS";
-            this.TXTPAIS.Size = new System.Drawing.Size(163, 28);
-            this.TXTPAIS.TabIndex = 589;
-            this.TXTPAIS.SelectedIndexChanged += new System.EventHandler(this.TXTPAIS_SelectedIndexChanged);
-            // 
-            // lbleditarLogo
-            // 
-            this.lbleditarLogo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbleditarLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbleditarLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.lbleditarLogo.ForeColor = System.Drawing.Color.White;
-            this.lbleditarLogo.Location = new System.Drawing.Point(25, 106);
-            this.lbleditarLogo.Name = "lbleditarLogo";
-            this.lbleditarLogo.Size = new System.Drawing.Size(107, 22);
-            this.lbleditarLogo.TabIndex = 588;
-            this.lbleditarLogo.Text = "Cambiar";
-            this.lbleditarLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbleditarLogo.Click += new System.EventHandler(this.lbleditarLogo_Click);
-            // 
-            // ImagenEmpresa
-            // 
-            this.ImagenEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("ImagenEmpresa.Image")));
-            this.ImagenEmpresa.Location = new System.Drawing.Point(25, 20);
-            this.ImagenEmpresa.Name = "ImagenEmpresa";
-            this.ImagenEmpresa.Size = new System.Drawing.Size(107, 108);
-            this.ImagenEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ImagenEmpresa.TabIndex = 533;
-            this.ImagenEmpresa.TabStop = false;
-            this.ImagenEmpresa.Click += new System.EventHandler(this.ImagenEmpresa_Click);
-            // 
-            // Panel5
-            // 
-            this.Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(1)))));
-            this.Panel5.Location = new System.Drawing.Point(140, 45);
-            this.Panel5.Name = "Panel5";
-            this.Panel5.Size = new System.Drawing.Size(400, 2);
-            this.Panel5.TabIndex = 554;
-            // 
-            // txtempresa
-            // 
-            this.txtempresa.BackColor = System.Drawing.Color.White;
-            this.txtempresa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtempresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtempresa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtempresa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.txtempresa.ForeColor = System.Drawing.Color.Black;
-            this.txtempresa.Location = new System.Drawing.Point(140, 22);
-            this.txtempresa.Name = "txtempresa";
-            this.txtempresa.Size = new System.Drawing.Size(360, 22);
-            this.txtempresa.TabIndex = 532;
-            this.txtempresa.Text = "NOMBRE DE TU EMPRESA";
-            // 
-            // lblempresa
-            // 
-            this.lblempresa.AutoSize = true;
-            this.lblempresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.lblempresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblempresa.Location = new System.Drawing.Point(137, 4);
-            this.lblempresa.Name = "lblempresa";
-            this.lblempresa.Size = new System.Drawing.Size(155, 15);
-            this.lblempresa.TabIndex = 342;
-            this.lblempresa.Text = "Nombre de tu Empresa";
-            this.lblempresa.Visible = false;
-            // 
-            // Label8
-            // 
-            this.Label8.AutoSize = true;
-            this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.Label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Label8.Location = new System.Drawing.Point(363, 73);
-            this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(78, 20);
-            this.Label8.TabIndex = 342;
-            this.Label8.Text = "moneda:";
-            // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.Label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Label7.Location = new System.Drawing.Point(140, 73);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(48, 20);
-            this.Label7.TabIndex = 342;
-            this.Label7.Text = "Pais:";
             // 
             // TabControl3
             // 
@@ -784,17 +330,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.TabPage6.TabIndex = 1;
             this.TabPage6.Text = "Ficha tecnica";
             this.TabPage6.UseVisualStyleBackColor = true;
-            // 
-            // PictureBox4
-            // 
-            this.PictureBox4.BackColor = System.Drawing.Color.White;
-            this.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PictureBox4.Location = new System.Drawing.Point(92, 6);
-            this.PictureBox4.Name = "PictureBox4";
-            this.PictureBox4.Size = new System.Drawing.Size(79, 57);
-            this.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PictureBox4.TabIndex = 346;
-            this.PictureBox4.TabStop = false;
             // 
             // Label17
             // 
@@ -857,19 +392,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.TSIGUIENTE_Y_GUARDAR.TabIndex = 583;
             this.TSIGUIENTE_Y_GUARDAR.Text = "MenuStrip4";
             // 
-            // TSIGUIENTE_Y_GUARDAR_
-            // 
-            this.TSIGUIENTE_Y_GUARDAR_.BackColor = System.Drawing.Color.Gainsboro;
-            this.TSIGUIENTE_Y_GUARDAR_.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.TSIGUIENTE_Y_GUARDAR_.ForeColor = System.Drawing.Color.Black;
-            this.TSIGUIENTE_Y_GUARDAR_.Image = ((System.Drawing.Image)(resources.GetObject("TSIGUIENTE_Y_GUARDAR_.Image")));
-            this.TSIGUIENTE_Y_GUARDAR_.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TSIGUIENTE_Y_GUARDAR_.Name = "TSIGUIENTE_Y_GUARDAR_";
-            this.TSIGUIENTE_Y_GUARDAR_.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TSIGUIENTE_Y_GUARDAR_.Size = new System.Drawing.Size(99, 28);
-            this.TSIGUIENTE_Y_GUARDAR_.Text = "Siguiente";
-            this.TSIGUIENTE_Y_GUARDAR_.Click += new System.EventHandler(this.TSIGUIENTE_Y_GUARDAR__Click);
-            // 
             // TSIGUIENTE
             // 
             this.TSIGUIENTE.AutoSize = false;
@@ -885,18 +407,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.TSIGUIENTE.TabIndex = 583;
             this.TSIGUIENTE.Text = "MenuStrip4";
             // 
-            // TSIGUIENTE_
-            // 
-            this.TSIGUIENTE_.BackColor = System.Drawing.Color.Gainsboro;
-            this.TSIGUIENTE_.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.TSIGUIENTE_.ForeColor = System.Drawing.Color.Black;
-            this.TSIGUIENTE_.Image = ((System.Drawing.Image)(resources.GetObject("TSIGUIENTE_.Image")));
-            this.TSIGUIENTE_.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TSIGUIENTE_.Name = "TSIGUIENTE_";
-            this.TSIGUIENTE_.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TSIGUIENTE_.Size = new System.Drawing.Size(105, 28);
-            this.TSIGUIENTE_.Text = "Siguiente*";
-            // 
             // Panel9
             // 
             this.Panel9.BackColor = System.Drawing.Color.White;
@@ -906,16 +416,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel9.Name = "Panel9";
             this.Panel9.Size = new System.Drawing.Size(371, 55);
             this.Panel9.TabIndex = 585;
-            // 
-            // PADVER
-            // 
-            this.PADVER.Image = ((System.Drawing.Image)(resources.GetObject("PADVER.Image")));
-            this.PADVER.Location = new System.Drawing.Point(4, 5);
-            this.PADVER.Name = "PADVER";
-            this.PADVER.Size = new System.Drawing.Size(43, 40);
-            this.PADVER.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PADVER.TabIndex = 568;
-            this.PADVER.TabStop = false;
             // 
             // Label2
             // 
@@ -1009,36 +509,36 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.datalistado_EMPRESASNUEVAS.AllowUserToResizeRows = false;
             this.datalistado_EMPRESASNUEVAS.BackgroundColor = System.Drawing.Color.White;
             this.datalistado_EMPRESASNUEVAS.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datalistado_EMPRESASNUEVAS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datalistado_EMPRESASNUEVAS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.datalistado_EMPRESASNUEVAS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datalistado_EMPRESASNUEVAS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DataGridViewCheckBoxColumn5});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datalistado_EMPRESASNUEVAS.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datalistado_EMPRESASNUEVAS.DefaultCellStyle = dataGridViewCellStyle38;
             this.datalistado_EMPRESASNUEVAS.Location = new System.Drawing.Point(28, 59);
             this.datalistado_EMPRESASNUEVAS.Name = "datalistado_EMPRESASNUEVAS";
             this.datalistado_EMPRESASNUEVAS.ReadOnly = true;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datalistado_EMPRESASNUEVAS.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datalistado_EMPRESASNUEVAS.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
             this.datalistado_EMPRESASNUEVAS.RowHeadersVisible = false;
             this.datalistado_EMPRESASNUEVAS.RowHeadersWidth = 5;
             this.datalistado_EMPRESASNUEVAS.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.ForestGreen;
@@ -1062,39 +562,39 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.datalistado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datalistado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.datalistado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datalistado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datalistado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle40;
             this.datalistado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datalistado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Eliminar});
             this.datalistado.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datalistado.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datalistado.DefaultCellStyle = dataGridViewCellStyle41;
             this.datalistado.EnableHeadersVisualStyles = false;
             this.datalistado.GridColor = System.Drawing.Color.LightGray;
             this.datalistado.Location = new System.Drawing.Point(291, 58);
             this.datalistado.Name = "datalistado";
             this.datalistado.ReadOnly = true;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datalistado.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datalistado.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.datalistado.RowHeadersVisible = false;
             this.datalistado.RowHeadersWidth = 5;
             this.datalistado.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -1392,37 +892,37 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.datalistado_empresas_nuevas.AllowUserToDeleteRows = false;
             this.datalistado_empresas_nuevas.BackgroundColor = System.Drawing.Color.White;
             this.datalistado_empresas_nuevas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datalistado_empresas_nuevas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datalistado_empresas_nuevas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle43;
             this.datalistado_empresas_nuevas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datalistado_empresas_nuevas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DataGridViewCheckBoxColumn2});
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datalistado_empresas_nuevas.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datalistado_empresas_nuevas.DefaultCellStyle = dataGridViewCellStyle44;
             this.datalistado_empresas_nuevas.EnableHeadersVisualStyles = false;
             this.datalistado_empresas_nuevas.Location = new System.Drawing.Point(91, 33);
             this.datalistado_empresas_nuevas.Name = "datalistado_empresas_nuevas";
             this.datalistado_empresas_nuevas.ReadOnly = true;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datalistado_empresas_nuevas.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datalistado_empresas_nuevas.RowHeadersDefaultCellStyle = dataGridViewCellStyle45;
             this.datalistado_empresas_nuevas.RowHeadersVisible = false;
             this.datalistado_empresas_nuevas.RowHeadersWidth = 5;
             this.datalistado_empresas_nuevas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -1498,50 +998,540 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.Panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel7.Location = new System.Drawing.Point(0, 0);
             this.Panel7.Name = "Panel7";
-            this.Panel7.Size = new System.Drawing.Size(772, 233);
+            this.Panel7.Size = new System.Drawing.Size(784, 233);
             this.Panel7.TabIndex = 611;
             // 
             // dlg
             // 
             this.dlg.FileName = "OpenFileDialog1";
             // 
+            // Panel3
+            // 
+            this.Panel3.BackColor = System.Drawing.Color.White;
+            this.Panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel3.BackgroundImage")));
+            this.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Panel3.Controls.Add(this.Panel17);
+            this.Panel3.Controls.Add(this.MenuStrip5);
+            this.Panel3.Controls.Add(this.txtcaja);
+            this.Panel3.Controls.Add(this.Label19);
+            this.Panel3.Controls.Add(this.datalistadocajas);
+            this.Panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Panel3.Location = new System.Drawing.Point(37, 355);
+            this.Panel3.Name = "Panel3";
+            this.Panel3.Size = new System.Drawing.Size(563, 48);
+            this.Panel3.TabIndex = 558;
+            // 
+            // Panel17
+            // 
+            this.Panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(1)))));
+            this.Panel17.Location = new System.Drawing.Point(86, 34);
+            this.Panel17.Name = "Panel17";
+            this.Panel17.Size = new System.Drawing.Size(400, 2);
+            this.Panel17.TabIndex = 558;
+            // 
+            // MenuStrip5
+            // 
+            this.MenuStrip5.AutoSize = false;
+            this.MenuStrip5.BackColor = System.Drawing.Color.Transparent;
+            this.MenuStrip5.Dock = System.Windows.Forms.DockStyle.None;
+            this.MenuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.GUARDAR,
+            this.GUARDARCAMBIOS,
+            this.VOLVEROK});
+            this.MenuStrip5.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.MenuStrip5.Location = new System.Drawing.Point(2, 97);
+            this.MenuStrip5.Name = "MenuStrip5";
+            this.MenuStrip5.ShowItemToolTips = true;
+            this.MenuStrip5.Size = new System.Drawing.Size(463, 34);
+            this.MenuStrip5.TabIndex = 532;
+            this.MenuStrip5.Text = "MenuStrip5";
+            // 
+            // GUARDAR
+            // 
+            this.GUARDAR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(166)))), ((int)(((byte)(63)))));
+            this.GUARDAR.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GUARDAR.ForeColor = System.Drawing.Color.White;
+            this.GUARDAR.Name = "GUARDAR";
+            this.GUARDAR.Size = new System.Drawing.Size(79, 30);
+            this.GUARDAR.Text = "&Guardar";
+            this.GUARDAR.ToolTipText = "Guardar ";
+            // 
+            // GUARDARCAMBIOS
+            // 
+            this.GUARDARCAMBIOS.BackColor = System.Drawing.Color.Gray;
+            this.GUARDARCAMBIOS.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.GUARDARCAMBIOS.ForeColor = System.Drawing.Color.White;
+            this.GUARDARCAMBIOS.Name = "GUARDARCAMBIOS";
+            this.GUARDARCAMBIOS.Size = new System.Drawing.Size(144, 30);
+            this.GUARDARCAMBIOS.Text = "&Guardar Cambios";
+            // 
+            // VOLVEROK
+            // 
+            this.VOLVEROK.BackColor = System.Drawing.Color.Gray;
+            this.VOLVEROK.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.VOLVEROK.ForeColor = System.Drawing.Color.White;
+            this.VOLVEROK.Name = "VOLVEROK";
+            this.VOLVEROK.Size = new System.Drawing.Size(79, 30);
+            this.VOLVEROK.Text = "VOLVER";
+            // 
+            // txtcaja
+            // 
+            this.txtcaja.BackColor = System.Drawing.Color.White;
+            this.txtcaja.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtcaja.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtcaja.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtcaja.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.txtcaja.ForeColor = System.Drawing.Color.Black;
+            this.txtcaja.Location = new System.Drawing.Point(86, 11);
+            this.txtcaja.Name = "txtcaja";
+            this.txtcaja.Size = new System.Drawing.Size(441, 22);
+            this.txtcaja.TabIndex = 532;
+            this.txtcaja.Text = "NOMBRE DE CAJA";
+            // 
+            // Label19
+            // 
+            this.Label19.AutoSize = true;
+            this.Label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.Label19.ForeColor = System.Drawing.Color.Black;
+            this.Label19.Location = new System.Drawing.Point(21, 12);
+            this.Label19.Name = "Label19";
+            this.Label19.Size = new System.Drawing.Size(59, 20);
+            this.Label19.TabIndex = 556;
+            this.Label19.Text = "CAJA:";
+            // 
+            // datalistadocajas
+            // 
+            this.datalistadocajas.AllowUserToAddRows = false;
+            this.datalistadocajas.AllowUserToDeleteRows = false;
+            this.datalistadocajas.BackgroundColor = System.Drawing.Color.White;
+            this.datalistadocajas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.datalistadocajas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.datalistadocajas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistadocajas.ColumnHeadersVisible = false;
+            this.datalistadocajas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DataGridViewCheckBoxColumn1});
+            this.datalistadocajas.EnableHeadersVisualStyles = false;
+            this.datalistadocajas.Location = new System.Drawing.Point(371, 16);
+            this.datalistadocajas.Name = "datalistadocajas";
+            this.datalistadocajas.ReadOnly = true;
+            this.datalistadocajas.RowHeadersWidth = 5;
+            this.datalistadocajas.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.datalistadocajas.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.datalistadocajas.RowTemplate.Height = 40;
+            this.datalistadocajas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.datalistadocajas.Size = new System.Drawing.Size(51, 10);
+            this.datalistadocajas.TabIndex = 557;
+            // 
+            // DataGridViewCheckBoxColumn1
+            // 
+            this.DataGridViewCheckBoxColumn1.HeaderText = "Eliminar";
+            this.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1";
+            this.DataGridViewCheckBoxColumn1.ReadOnly = true;
+            this.DataGridViewCheckBoxColumn1.Visible = false;
+            // 
+            // ToolStripButton22
+            // 
+            this.ToolStripButton22.BackColor = System.Drawing.Color.White;
+            this.ToolStripButton22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.ToolStripButton22.ForeColor = System.Drawing.Color.Black;
+            this.ToolStripButton22.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton22.Image")));
+            this.ToolStripButton22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ToolStripButton22.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ToolStripButton22.Name = "ToolStripButton22";
+            this.ToolStripButton22.Size = new System.Drawing.Size(37, 46);
+            this.ToolStripButton22.Text = "+";
+            this.ToolStripButton22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ToolStripButton22.ToolTipText = "Buscar Ruta";
+            this.ToolStripButton22.Click += new System.EventHandler(this.ToolStripButton22_Click);
+            // 
+            // Panel13
+            // 
+            this.Panel13.BackColor = System.Drawing.Color.White;
+            this.Panel13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel13.BackgroundImage")));
+            this.Panel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Panel13.Controls.Add(this.txtteclado);
+            this.Panel13.Controls.Add(this.TXTCON_LECTORA);
+            this.Panel13.Controls.Add(this.Panel11);
+            this.Panel13.Controls.Add(this.Label1);
+            this.Panel13.Controls.Add(this.Label16);
+            this.Panel13.Controls.Add(this.no);
+            this.Panel13.Controls.Add(this.si);
+            this.Panel13.Location = new System.Drawing.Point(37, 154);
+            this.Panel13.Name = "Panel13";
+            this.Panel13.Size = new System.Drawing.Size(563, 191);
+            this.Panel13.TabIndex = 590;
+            // 
+            // txtteclado
+            // 
+            this.txtteclado.AutoSize = true;
+            this.txtteclado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtteclado.Location = new System.Drawing.Point(35, 157);
+            this.txtteclado.Name = "txtteclado";
+            this.txtteclado.Size = new System.Drawing.Size(221, 24);
+            this.txtteclado.TabIndex = 565;
+            this.txtteclado.Text = "Escribiendo con mi Teclado";
+            this.txtteclado.UseVisualStyleBackColor = true;
+            this.txtteclado.CheckedChanged += new System.EventHandler(this.txtteclado_CheckedChanged);
+            // 
+            // TXTCON_LECTORA
+            // 
+            this.TXTCON_LECTORA.AutoSize = true;
+            this.TXTCON_LECTORA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.TXTCON_LECTORA.Location = new System.Drawing.Point(33, 125);
+            this.TXTCON_LECTORA.Name = "TXTCON_LECTORA";
+            this.TXTCON_LECTORA.Size = new System.Drawing.Size(219, 24);
+            this.TXTCON_LECTORA.TabIndex = 565;
+            this.TXTCON_LECTORA.Text = "Con una Lectora de Barras";
+            this.TXTCON_LECTORA.UseVisualStyleBackColor = true;
+            this.TXTCON_LECTORA.CheckedChanged += new System.EventHandler(this.TXTCON_LECTORA_CheckedChanged);
+            // 
+            // Panel11
+            // 
+            this.Panel11.Controls.Add(this.Panel12);
+            this.Panel11.Controls.Add(this.txtimpuesto);
+            this.Panel11.Controls.Add(this.Label14);
+            this.Panel11.Controls.Add(this.txtporcentaje);
+            this.Panel11.Location = new System.Drawing.Point(41, 39);
+            this.Panel11.Name = "Panel11";
+            this.Panel11.Size = new System.Drawing.Size(233, 41);
+            this.Panel11.TabIndex = 564;
+            // 
+            // Panel12
+            // 
+            this.Panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(1)))));
+            this.Panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Panel12.Location = new System.Drawing.Point(0, 37);
+            this.Panel12.Name = "Panel12";
+            this.Panel12.Size = new System.Drawing.Size(233, 4);
+            this.Panel12.TabIndex = 555;
+            // 
+            // txtimpuesto
+            // 
+            this.txtimpuesto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.txtimpuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtimpuesto.FormattingEnabled = true;
+            this.txtimpuesto.Items.AddRange(new object[] {
+            "IGV ",
+            "IVA"});
+            this.txtimpuesto.Location = new System.Drawing.Point(3, 3);
+            this.txtimpuesto.Name = "txtimpuesto";
+            this.txtimpuesto.Size = new System.Drawing.Size(64, 28);
+            this.txtimpuesto.TabIndex = 553;
+            this.txtimpuesto.Text = "IGV";
+            // 
+            // Label14
+            // 
+            this.Label14.AutoSize = true;
+            this.Label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Label14.ForeColor = System.Drawing.Color.Black;
+            this.Label14.Location = new System.Drawing.Point(158, 6);
+            this.Label14.Name = "Label14";
+            this.Label14.Size = new System.Drawing.Size(23, 20);
+            this.Label14.TabIndex = 342;
+            this.Label14.Text = "%";
+            // 
+            // txtporcentaje
+            // 
+            this.txtporcentaje.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.txtporcentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtporcentaje.FormattingEnabled = true;
+            this.txtporcentaje.Items.AddRange(new object[] {
+            "21",
+            "18",
+            "3",
+            "5"});
+            this.txtporcentaje.Location = new System.Drawing.Point(88, 3);
+            this.txtporcentaje.Name = "txtporcentaje";
+            this.txtporcentaje.Size = new System.Drawing.Size(64, 28);
+            this.txtporcentaje.TabIndex = 553;
+            this.txtporcentaje.Text = "18";
+            // 
+            // Label1
+            // 
+            this.Label1.AutoSize = true;
+            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Label1.Location = new System.Drawing.Point(28, 94);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(402, 20);
+            this.Label1.TabIndex = 342;
+            this.Label1.Text = "¿Como Buscaras tus Productos Con Frecuencia?";
+            // 
+            // Label16
+            // 
+            this.Label16.AutoSize = true;
+            this.Label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.Label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Label16.Location = new System.Drawing.Point(31, 10);
+            this.Label16.Name = "Label16";
+            this.Label16.Size = new System.Drawing.Size(193, 20);
+            this.Label16.TabIndex = 342;
+            this.Label16.Text = "Vendes con Impuestos";
+            // 
+            // no
+            // 
+            this.no.AutoSize = true;
+            this.no.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.no.Location = new System.Drawing.Point(282, 5);
+            this.no.Name = "no";
+            this.no.Size = new System.Drawing.Size(59, 28);
+            this.no.TabIndex = 555;
+            this.no.TabStop = true;
+            this.no.Text = "NO";
+            this.no.UseVisualStyleBackColor = true;
+            this.no.CheckedChanged += new System.EventHandler(this.no_CheckedChanged);
+            // 
+            // si
+            // 
+            this.si.AutoSize = true;
+            this.si.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.si.Location = new System.Drawing.Point(230, 5);
+            this.si.Name = "si";
+            this.si.Size = new System.Drawing.Size(46, 28);
+            this.si.TabIndex = 555;
+            this.si.TabStop = true;
+            this.si.Text = "SI";
+            this.si.UseVisualStyleBackColor = true;
+            this.si.CheckedChanged += new System.EventHandler(this.si_CheckedChanged);
+            // 
+            // Panel6
+            // 
+            this.Panel6.BackColor = System.Drawing.Color.White;
+            this.Panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel6.BackgroundImage")));
+            this.Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Panel6.Controls.Add(this.txtmoneda);
+            this.Panel6.Controls.Add(this.TXTPAIS);
+            this.Panel6.Controls.Add(this.lbleditarLogo);
+            this.Panel6.Controls.Add(this.ImagenEmpresa);
+            this.Panel6.Controls.Add(this.Panel5);
+            this.Panel6.Controls.Add(this.txtempresa);
+            this.Panel6.Controls.Add(this.lblempresa);
+            this.Panel6.Controls.Add(this.Label8);
+            this.Panel6.Controls.Add(this.Label7);
+            this.Panel6.Location = new System.Drawing.Point(37, 9);
+            this.Panel6.Name = "Panel6";
+            this.Panel6.Size = new System.Drawing.Size(564, 137);
+            this.Panel6.TabIndex = 589;
+            // 
+            // txtmoneda
+            // 
+            this.txtmoneda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtmoneda.DropDownWidth = 230;
+            this.txtmoneda.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.txtmoneda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtmoneda.FormattingEnabled = true;
+            this.txtmoneda.IntegralHeight = false;
+            this.txtmoneda.Items.AddRange(new object[] {
+            "$",
+            "₡",
+            "Q",
+            "L",
+            "C$",
+            "B/.",
+            "$",
+            "$",
+            "$",
+            "$",
+            "Bs.",
+            "$",
+            "$",
+            "$",
+            "₲",
+            "S/.",
+            "$",
+            "Bs F",
+            "€"});
+            this.txtmoneda.Location = new System.Drawing.Point(444, 70);
+            this.txtmoneda.Name = "txtmoneda";
+            this.txtmoneda.Size = new System.Drawing.Size(83, 28);
+            this.txtmoneda.TabIndex = 590;
+            // 
+            // TXTPAIS
+            // 
+            this.TXTPAIS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TXTPAIS.DropDownWidth = 230;
+            this.TXTPAIS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.TXTPAIS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.TXTPAIS.FormattingEnabled = true;
+            this.TXTPAIS.IntegralHeight = false;
+            this.TXTPAIS.Items.AddRange(new object[] {
+            "México",
+            "Costa Rica",
+            "Guatemala",
+            "Honduras",
+            "Nicaragua",
+            "Panamá",
+            "Cuba",
+            "Puerto Rico",
+            "República Dominicana",
+            "Argentina",
+            "Bolivia",
+            "Chile",
+            "Colombia",
+            "Ecuador",
+            "Paraguay",
+            "Perú",
+            "Uruguay",
+            "Venezuela",
+            "España"});
+            this.TXTPAIS.Location = new System.Drawing.Point(194, 70);
+            this.TXTPAIS.Name = "TXTPAIS";
+            this.TXTPAIS.Size = new System.Drawing.Size(163, 28);
+            this.TXTPAIS.TabIndex = 589;
+            this.TXTPAIS.SelectedIndexChanged += new System.EventHandler(this.TXTPAIS_SelectedIndexChanged);
+            // 
+            // lbleditarLogo
+            // 
+            this.lbleditarLogo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbleditarLogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbleditarLogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.lbleditarLogo.ForeColor = System.Drawing.Color.White;
+            this.lbleditarLogo.Location = new System.Drawing.Point(25, 106);
+            this.lbleditarLogo.Name = "lbleditarLogo";
+            this.lbleditarLogo.Size = new System.Drawing.Size(107, 22);
+            this.lbleditarLogo.TabIndex = 588;
+            this.lbleditarLogo.Text = "Cambiar";
+            this.lbleditarLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbleditarLogo.Click += new System.EventHandler(this.lbleditarLogo_Click);
+            // 
+            // ImagenEmpresa
+            // 
+            this.ImagenEmpresa.Image = ((System.Drawing.Image)(resources.GetObject("ImagenEmpresa.Image")));
+            this.ImagenEmpresa.Location = new System.Drawing.Point(25, 20);
+            this.ImagenEmpresa.Name = "ImagenEmpresa";
+            this.ImagenEmpresa.Size = new System.Drawing.Size(107, 108);
+            this.ImagenEmpresa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ImagenEmpresa.TabIndex = 533;
+            this.ImagenEmpresa.TabStop = false;
+            this.ImagenEmpresa.Click += new System.EventHandler(this.ImagenEmpresa_Click);
+            // 
+            // Panel5
+            // 
+            this.Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(204)))), ((int)(((byte)(1)))));
+            this.Panel5.Location = new System.Drawing.Point(140, 45);
+            this.Panel5.Name = "Panel5";
+            this.Panel5.Size = new System.Drawing.Size(400, 2);
+            this.Panel5.TabIndex = 554;
+            // 
+            // txtempresa
+            // 
+            this.txtempresa.BackColor = System.Drawing.Color.White;
+            this.txtempresa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtempresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtempresa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtempresa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.txtempresa.ForeColor = System.Drawing.Color.Black;
+            this.txtempresa.Location = new System.Drawing.Point(140, 22);
+            this.txtempresa.Name = "txtempresa";
+            this.txtempresa.Size = new System.Drawing.Size(360, 22);
+            this.txtempresa.TabIndex = 532;
+            this.txtempresa.Text = "NOMBRE DE TU EMPRESA";
+            // 
+            // lblempresa
+            // 
+            this.lblempresa.AutoSize = true;
+            this.lblempresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.lblempresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblempresa.Location = new System.Drawing.Point(137, 4);
+            this.lblempresa.Name = "lblempresa";
+            this.lblempresa.Size = new System.Drawing.Size(155, 15);
+            this.lblempresa.TabIndex = 342;
+            this.lblempresa.Text = "Nombre de tu Empresa";
+            this.lblempresa.Visible = false;
+            // 
+            // Label8
+            // 
+            this.Label8.AutoSize = true;
+            this.Label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.Label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Label8.Location = new System.Drawing.Point(363, 73);
+            this.Label8.Name = "Label8";
+            this.Label8.Size = new System.Drawing.Size(78, 20);
+            this.Label8.TabIndex = 342;
+            this.Label8.Text = "moneda:";
+            // 
+            // Label7
+            // 
+            this.Label7.AutoSize = true;
+            this.Label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.Label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Label7.Location = new System.Drawing.Point(140, 73);
+            this.Label7.Name = "Label7";
+            this.Label7.Size = new System.Drawing.Size(48, 20);
+            this.Label7.TabIndex = 342;
+            this.Label7.Text = "Pais:";
+            // 
+            // PictureBox4
+            // 
+            this.PictureBox4.BackColor = System.Drawing.Color.White;
+            this.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PictureBox4.Location = new System.Drawing.Point(92, 6);
+            this.PictureBox4.Name = "PictureBox4";
+            this.PictureBox4.Size = new System.Drawing.Size(79, 57);
+            this.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox4.TabIndex = 346;
+            this.PictureBox4.TabStop = false;
+            // 
+            // TSIGUIENTE_Y_GUARDAR_
+            // 
+            this.TSIGUIENTE_Y_GUARDAR_.BackColor = System.Drawing.Color.Gainsboro;
+            this.TSIGUIENTE_Y_GUARDAR_.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.TSIGUIENTE_Y_GUARDAR_.ForeColor = System.Drawing.Color.Black;
+            this.TSIGUIENTE_Y_GUARDAR_.Image = ((System.Drawing.Image)(resources.GetObject("TSIGUIENTE_Y_GUARDAR_.Image")));
+            this.TSIGUIENTE_Y_GUARDAR_.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TSIGUIENTE_Y_GUARDAR_.Name = "TSIGUIENTE_Y_GUARDAR_";
+            this.TSIGUIENTE_Y_GUARDAR_.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TSIGUIENTE_Y_GUARDAR_.Size = new System.Drawing.Size(99, 28);
+            this.TSIGUIENTE_Y_GUARDAR_.Text = "Siguiente";
+            this.TSIGUIENTE_Y_GUARDAR_.Click += new System.EventHandler(this.TSIGUIENTE_Y_GUARDAR__Click);
+            // 
+            // TSIGUIENTE_
+            // 
+            this.TSIGUIENTE_.BackColor = System.Drawing.Color.Gainsboro;
+            this.TSIGUIENTE_.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.TSIGUIENTE_.ForeColor = System.Drawing.Color.Black;
+            this.TSIGUIENTE_.Image = ((System.Drawing.Image)(resources.GetObject("TSIGUIENTE_.Image")));
+            this.TSIGUIENTE_.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TSIGUIENTE_.Name = "TSIGUIENTE_";
+            this.TSIGUIENTE_.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TSIGUIENTE_.Size = new System.Drawing.Size(105, 28);
+            this.TSIGUIENTE_.Text = "Siguiente*";
+            // 
+            // PADVER
+            // 
+            this.PADVER.Image = ((System.Drawing.Image)(resources.GetObject("PADVER.Image")));
+            this.PADVER.Location = new System.Drawing.Point(4, 5);
+            this.PADVER.Name = "PADVER";
+            this.PADVER.Size = new System.Drawing.Size(43, 40);
+            this.PADVER.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PADVER.TabIndex = 568;
+            this.PADVER.TabStop = false;
+            // 
             // Registro_de_Empresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(772, 691);
+            this.ClientSize = new System.Drawing.Size(784, 761);
             this.Controls.Add(this.Panel16);
             this.Controls.Add(this.Panel7);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Registro_de_Empresa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registro_de_Empresa";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Text = "Empresa";
             this.Load += new System.EventHandler(this.Registro_de_Empresa_Load);
             this.Panel16.ResumeLayout(false);
             this.Panel2.ResumeLayout(false);
             this.Panel2.PerformLayout();
-            this.Panel3.ResumeLayout(false);
-            this.Panel3.PerformLayout();
-            this.MenuStrip5.ResumeLayout(false);
-            this.MenuStrip5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.datalistadocajas)).EndInit();
             this.ToolStrip1.ResumeLayout(false);
             this.ToolStrip1.PerformLayout();
-            this.Panel13.ResumeLayout(false);
-            this.Panel13.PerformLayout();
-            this.Panel11.ResumeLayout(false);
-            this.Panel11.PerformLayout();
-            this.Panel6.ResumeLayout(false);
-            this.Panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImagenEmpresa)).EndInit();
             this.TabControl3.ResumeLayout(false);
             this.TabPage5.ResumeLayout(false);
             this.TabPage5.PerformLayout();
             this.TabPage6.ResumeLayout(false);
             this.TabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
             this.Panel15.ResumeLayout(false);
             this.MenuStrip1.ResumeLayout(false);
             this.MenuStrip1.PerformLayout();
@@ -1551,7 +1541,6 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.TSIGUIENTE.PerformLayout();
             this.Panel9.ResumeLayout(false);
             this.Panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PADVER)).EndInit();
             this.Panel8.ResumeLayout(false);
             this.Panel8.PerformLayout();
             this.Panel10.ResumeLayout(false);
@@ -1568,6 +1557,20 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             this.MenuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datalistado_empresas_nuevas)).EndInit();
             this.Panel7.ResumeLayout(false);
+            this.Panel3.ResumeLayout(false);
+            this.Panel3.PerformLayout();
+            this.MenuStrip5.ResumeLayout(false);
+            this.MenuStrip5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.datalistadocajas)).EndInit();
+            this.Panel13.ResumeLayout(false);
+            this.Panel13.PerformLayout();
+            this.Panel11.ResumeLayout(false);
+            this.Panel11.PerformLayout();
+            this.Panel6.ResumeLayout(false);
+            this.Panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImagenEmpresa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PADVER)).EndInit();
             this.ResumeLayout(false);
 
         }

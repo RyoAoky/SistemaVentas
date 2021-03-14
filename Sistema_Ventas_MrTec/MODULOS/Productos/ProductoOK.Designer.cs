@@ -684,7 +684,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.DATALISTADO_PRODUCTOS_OKA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DataGridViewCheckBoxColumn8});
             this.DATALISTADO_PRODUCTOS_OKA.EnableHeadersVisualStyles = false;
-            this.DATALISTADO_PRODUCTOS_OKA.Location = new System.Drawing.Point(251, 65);
+            this.DATALISTADO_PRODUCTOS_OKA.Location = new System.Drawing.Point(207, 69);
             this.DATALISTADO_PRODUCTOS_OKA.Name = "DATALISTADO_PRODUCTOS_OKA";
             this.DATALISTADO_PRODUCTOS_OKA.ReadOnly = true;
             this.DATALISTADO_PRODUCTOS_OKA.RowHeadersVisible = false;
@@ -2021,6 +2021,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.txtcosto.Size = new System.Drawing.Size(149, 26);
             this.txtcosto.TabIndex = 5;
             this.txtcosto.Text = "0";
+            this.txtcosto.TextChanged += new System.EventHandler(this.txtcosto_TextChanged);
             // 
             // Label47
             // 
@@ -2326,13 +2327,7 @@ namespace Sistema_Ventas_MrTec.MODULOS.Productos
             this.Name = "ProductoOK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            
-            
             this.Load += new System.EventHandler(this.ProductoOK_Load);
-
-
-
-
             this.Panel3.ResumeLayout(false);
             this.Panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();

@@ -37,8 +37,16 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
             {
                 Console.WriteLine(ex.Message);
             }
-        }
 
+            TXTCON_LECTORA.Checked = false;
+            txtteclado.Checked = true;
+            no.Checked = true;
+            Panel11.Visible = false;
+            Panel9.Visible = false;
+            TSIGUIENTE.Visible = false;
+            TSIGUIENTE_Y_GUARDAR.Visible = true;
+        }
+        public static string correo;
         private void TSIGUIENTE_Y_GUARDAR__Click(object sender, EventArgs e)
         {
             
@@ -72,6 +80,12 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
                                         }
                                         Ingresar_empresa();
                                         Ingresar_Caja();
+                                        Insertar_3_comprobantes_por_defecto();
+                                        correo = txtcorreo.Text;
+                                        Hide();
+                                        Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio.Usuarios_autorizados_al_sistema frm = new Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio.Usuarios_autorizados_al_sistema();
+                                        frm.ShowDialog();
+                                        this.Dispose();
                                     }
                                     else
                                     {
@@ -178,6 +192,25 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
                 cmd.Parameters.AddWithValue("@Por_defecto", "-");
                 cmd.ExecuteNonQuery();
                 con.Close();
+
+
+
+                con.Open();
+                cmd = new SqlCommand("Insertar_FORMATO_TICKET", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Identificador_fiscal", "RUC Identificador Fiscal de la Empresa");
+                cmd.Parameters.AddWithValue("@Direccion", "Calle, Nro, avenida");
+                cmd.Parameters.AddWithValue("@Provincia_Departamento_Pais", "Provincia - Departamento - Pais");
+                cmd.Parameters.AddWithValue("@Nombre_de_Moneda", "Nombre de Moneda");
+                cmd.Parameters.AddWithValue("@Agradecimiento", "Agradecimiento");
+                cmd.Parameters.AddWithValue("@pagina_Web_Facebook", "Pagina Web ó Facebook");
+                cmd.Parameters.AddWithValue("@Anuncio", "Anuncio");
+                cmd.Parameters.AddWithValue("@Datos_fiscales_de_autorizacion", "Datos Fiscales - Numero de Autorizacion, Resolucion...");
+                cmd.Parameters.AddWithValue("@Por_defecto", "Ticket No Fiscal");
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+
             }
             catch (Exception ex)
             {
@@ -394,6 +427,15 @@ namespace Sistema_Ventas_MrTec.MODULOS.Asistente_de_Inicio
                 }
             }
         }
-        
+
+        private void si_CheckedChanged(object sender, EventArgs e)
+        {
+            Panel11.Visible = true;
+        }
+
+        private void no_CheckedChanged(object sender, EventArgs e)
+        {
+            Panel11.Visible = false;
+        }
     }
 }

@@ -85,6 +85,7 @@
     <Compile Include="Conexion\ConexionMaestra.cs" />
     <Compile Include="Conexion\Desencrytacion.cs" />
     <Compile Include="Conexion\Encryptacion.cs" />
+    <Compile Include="Conexion\Encryptar_en_texto.cs" />
     <Compile Include="Conexion\Tamaño_automatico_de_datatables.cs" />
     <Compile Include="Conexion\WinAutoComplete.cs" />
     <Compile Include="MODULOS\Asistente_de_Inicio\Inicio_de_Servidor.cs">
@@ -93,11 +94,23 @@
     <Compile Include="MODULOS\Asistente_de_Inicio\Inicio_de_Servidor.Designer.cs">
       <DependentUpon>Inicio_de_Servidor.cs</DependentUpon>
     </Compile>
+    <Compile Include="MODULOS\Asistente_de_Inicio\Instalacion_del_servidorSQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Asistente_de_Inicio\Instalacion_del_servidorSQL.Designer.cs">
+      <DependentUpon>Instalacion_del_servidorSQL.cs</DependentUpon>
+    </Compile>
     <Compile Include="MODULOS\Asistente_de_Inicio\Registro_de_Empresa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MODULOS\Asistente_de_Inicio\Registro_de_Empresa.Designer.cs">
       <DependentUpon>Registro_de_Empresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODULOS\Asistente_de_Inicio\Usuarios_autorizados_al_sistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODULOS\Asistente_de_Inicio\Usuarios_autorizados_al_sistema.Designer.cs">
+      <DependentUpon>Usuarios_autorizados_al_sistema.cs</DependentUpon>
     </Compile>
     <Compile Include="MODULOS\Caja\Apertura_de_Caja.cs">
       <SubType>Form</SubType>
@@ -196,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MODULOS\Asistente_de_Inicio\Registro_de_Empresa.resx">
       <DependentUpon>Registro_de_Empresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MODULOS\Asistente_de_Inicio\Usuarios_autorizados_al_sistema.resx">
+      <DependentUpon>Usuarios_autorizados_al_sistema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MODULOS\Caja\Apertura_de_Caja.resx">
       <DependentUpon>Apertura_de_Caja.cs</DependentUpon>
